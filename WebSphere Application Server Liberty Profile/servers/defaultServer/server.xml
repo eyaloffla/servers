@@ -1,0 +1,48 @@
+<server description="new server">
+
+    <!-- Enable features -->
+    
+     <featureManager>
+        <feature>appSecurity-2.0</feature>
+        <feature>localConnector-1.0</feature>
+        <feature>jndi-1.0</feature>
+		<feature>jaxrs-2.0</feature>
+		<feature>jpa-2.1</feature>
+	    <feature>jsp-2.3</feature>
+        <feature>ejbLite-3.2</feature>
+    </featureManager>
+    
+    
+	<keyStore password="{xor}GDYpOhI6EzY9Oi0rJg=="/> 
+	
+	<basicRegistry id="basic" realm="customRealm">
+     <user name="eyal" password="{xor}GDYpOhI6EzY9Oi0rJg=="/>
+     
+     
+     <group name="students">
+         <member name="eyal"/>
+     </group>
+</basicRegistry>
+    
+    <!-- To access this server from a remote client add a host attribute to the following element, e.g. host="*" -->
+    <httpEndpoint httpPort="9080" httpsPort="9443" id="defaultHttpEndpoint"/>
+    
+
+
+    <applicationMonitor updateTrigger="mbean"/>
+    
+    
+    <dataSource id="jdbc/postgresql-cloud" jndiName="jdbc/postgresql-cloud">
+    <jdbcDriver javax.sql.XADataSource="org.postgresql.xa.PGXADataSource" libraryRef="postgresql-library"/>
+        <properties databaseName="offla01" portNumber="10929" serverName="aws-us-east-1-portal.5.dblayer.com"/> 
+     </dataSource>     
+
+	<library id="postgresql-library">       
+      <fileset dir="${shared.config.dir}" includes="postgresql-9.4-1205.jdbc4.jar"/>
+	</library>
+    
+
+    <webApplication id="offlaserver01WS" location="offlaserver01WS.war" name="offlaserver01WS"/>
+
+    <webApplication id="offlaFrontEnd" location="offlaFrontEnd.war" name="offlaFrontEnd"/>
+</server>

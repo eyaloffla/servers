@@ -1,0 +1,1681 @@
+------Start of DE processing------ = [12/8/15 11:16:35:359 IST]
+Exception = javax.transaction.RollbackException
+Source = com.ibm.ejs.j2c.XATransactionWrapper.addSync
+probeid = 237
+Stack Dump = javax.transaction.RollbackException: Transaction rolled back
+	at com.ibm.tx.jta.impl.TransactionImpl.registerSynchronization(TransactionImpl.java:2544)
+	at com.ibm.tx.jta.embeddable.impl.EmbeddableTranManagerSet.registerSynchronization(EmbeddableTranManagerSet.java:247)
+	at com.ibm.tx.jta.embeddable.impl.EmbeddableTranManagerSet.registerSynchronization(EmbeddableTranManagerSet.java:234)
+	at com.ibm.ws.transaction.services.TransactionManagerService.registerSynchronization(TransactionManagerService.java:410)
+	at com.ibm.ejs.j2c.XATransactionWrapper.addSync(XATransactionWrapper.java:195)
+	at com.ibm.ejs.j2c.ConnectionManager.initializeForUOW(ConnectionManager.java:1570)
+	at com.ibm.ejs.j2c.ConnectionManager.involveMCInTran(ConnectionManager.java:1280)
+	at com.ibm.ejs.j2c.ConnectionManager.allocateConnection(ConnectionManager.java:712)
+	at com.ibm.ws.rsadapter.jdbc.WSJdbcDataSource.getConnection(WSJdbcDataSource.java:354)
+	at com.ibm.ws.rsadapter.jdbc.WSJdbcDataSource.getConnection(WSJdbcDataSource.java:440)
+	at org.eclipse.persistence.sessions.JNDIConnector.connect(JNDIConnector.java:144)
+	at org.eclipse.persistence.sessions.DatasourceLogin.connectToDatasource(DatasourceLogin.java:162)
+	at org.eclipse.persistence.internal.sessions.DatabaseSessionImpl.setOrDetectDatasource(DatabaseSessionImpl.java:212)
+	at org.eclipse.persistence.internal.sessions.DatabaseSessionImpl.loginAndDetectDatasource(DatabaseSessionImpl.java:764)
+	at org.eclipse.persistence.internal.jpa.EntityManagerFactoryProvider.login(EntityManagerFactoryProvider.java:253)
+	at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl.deploy(EntityManagerSetupImpl.java:733)
+	at org.eclipse.persistence.internal.jpa.EntityManagerFactoryDelegate.getAbstractSession(EntityManagerFactoryDelegate.java:205)
+	at org.eclipse.persistence.internal.jpa.EntityManagerFactoryDelegate.createEntityManagerImpl(EntityManagerFactoryDelegate.java:305)
+	at org.eclipse.persistence.internal.jpa.EntityManagerFactoryImpl.createEntityManagerImpl(EntityManagerFactoryImpl.java:337)
+	at org.eclipse.persistence.internal.jpa.EntityManagerFactoryImpl.createEntityManager(EntityManagerFactoryImpl.java:318)
+	at com.ibm.ws.jpa.container.v21.internal.JPA21Runtime.createEntityManagerInstance(JPA21Runtime.java:104)
+	at com.ibm.ws.jpa.management.JPAEMPool.getEntityManager(JPAEMPool.java:177)
+	at com.ibm.ws.jpa.management.JPATxEntityManager.getEMInvocationInfo(JPATxEntityManager.java:256)
+	at com.ibm.ws.jpa.management.JPATxEntityManager.getEMInvocationInfo(JPATxEntityManager.java:166)
+	at com.ibm.ws.jpa.management.JPAEntityManager.find(JPAEntityManager.java:236)
+	at com.offla.services.Appfr1Bean.getAppfr1ById(Appfr1Bean.java:33)
+	at com.offla.services.Appfr1Bean.isPersonInDB(Appfr1Bean.java:22)
+	at com.offla.services.EJSLocal0SLAppfr1Bean_8d03ba1d.isPersonInDB(EJSLocal0SLAppfr1Bean_8d03ba1d.java)
+	at com.offla.ws.IsPersonOnDB.isPersonOnDataBase(IsPersonOnDB.java:43)
+	at com.offla.ws.EJSLocalNSLIsPersonOnDB_1c315ab8.isPersonOnDataBase(EJSLocalNSLIsPersonOnDB_1c315ab8.java)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at com.ibm.ws.jaxrs20.ejb.JaxRsFactoryBeanEJBCustomizer.serviceInvoke(JaxRsFactoryBeanEJBCustomizer.java:349)
+	at com.ibm.ws.jaxrs20.server.LibertyJaxRsServerFactoryBean.performInvocation(LibertyJaxRsServerFactoryBean.java:593)
+	at com.ibm.ws.jaxrs20.server.LibertyJaxRsInvoker.performInvocation(LibertyJaxRsInvoker.java:114)
+	at org.apache.cxf.service.invoker.AbstractInvoker.invoke(AbstractInvoker.java:97)
+	at com.ibm.ws.jaxrs20.server.LibertyJaxRsInvoker.invoke(LibertyJaxRsInvoker.java:195)
+	at org.apache.cxf.jaxrs.JAXRSInvoker.invoke(JAXRSInvoker.java:200)
+	at com.ibm.ws.jaxrs20.server.LibertyJaxRsInvoker.invoke(LibertyJaxRsInvoker.java:366)
+	at org.apache.cxf.jaxrs.JAXRSInvoker.invoke(JAXRSInvoker.java:99)
+	at org.apache.cxf.interceptor.ServiceInvokerInterceptor$1.run(ServiceInvokerInterceptor.java:61)
+	at org.apache.cxf.interceptor.ServiceInvokerInterceptor.handleMessage(ServiceInvokerInterceptor.java:99)
+	at org.apache.cxf.phase.PhaseInterceptorChain.doIntercept(PhaseInterceptorChain.java:307)
+	at org.apache.cxf.transport.ChainInitiationObserver.onMessage(ChainInitiationObserver.java:124)
+	at org.apache.cxf.transport.http.AbstractHTTPDestination.invoke(AbstractHTTPDestination.java:259)
+	at com.ibm.ws.jaxrs20.endpoint.AbstractJaxRsWebEndpoint.invoke(AbstractJaxRsWebEndpoint.java:134)
+	at com.ibm.websphere.jaxrs.server.IBMRestServlet.handleRequest(IBMRestServlet.java:149)
+	at com.ibm.websphere.jaxrs.server.IBMRestServlet.doGet(IBMRestServlet.java:115)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:687)
+	at com.ibm.websphere.jaxrs.server.IBMRestServlet.service(IBMRestServlet.java:99)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.service(ServletWrapper.java:1287)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:778)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:475)
+	at com.ibm.ws.webcontainer.filter.WebAppFilterManager.invokeFilters(WebAppFilterManager.java:1158)
+	at com.ibm.ws.webcontainer.webapp.WebApp.handleRequest(WebApp.java:4867)
+	at com.ibm.ws.webcontainer31.osgi.webapp.WebApp31.handleRequest(WebApp31.java:523)
+	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.handleRequest(DynamicVirtualHost.java:297)
+	at com.ibm.ws.webcontainer.WebContainer.handleRequest(WebContainer.java:997)
+	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.run(DynamicVirtualHost.java:262)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink$TaskWrapper.run(HttpDispatcherLink.java:955)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.ready(HttpDispatcherLink.java:341)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleDiscrimination(HttpInboundLink.java:470)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleNewRequest(HttpInboundLink.java:404)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.processRequest(HttpInboundLink.java:284)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.ready(HttpInboundLink.java:255)
+	at com.ibm.ws.tcpchannel.internal.NewConnectionInitialReadCallback.sendToDiscriminators(NewConnectionInitialReadCallback.java:174)
+	at com.ibm.ws.tcpchannel.internal.NewConnectionInitialReadCallback.complete(NewConnectionInitialReadCallback.java:83)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.requestComplete(WorkQueueManager.java:504)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.attemptIO(WorkQueueManager.java:574)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.workerRun(WorkQueueManager.java:929)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager$Worker.run(WorkQueueManager.java:1018)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+Dump of callerThis
+Object type = com.ibm.ejs.j2c.XATransactionWrapper
+  mcWrapper = class com.ibm.ejs.j2c.MCWrapper@3201d13d
+    mcwHandleList = class java.util.HashMap@44766538
+      serialVersionUID = 362498820763181265
+      DEFAULT_INITIAL_CAPACITY = 16
+      MAXIMUM_CAPACITY = 1073741824
+      DEFAULT_LOAD_FACTOR = 0.75
+      TREEIFY_THRESHOLD = 8
+      UNTREEIFY_THRESHOLD = 6
+      MIN_TREEIFY_CAPACITY = 64
+      table = null
+      entrySet = null
+      size = 0
+      modCount = 0
+      threshold = 0
+      loadFactor = 0.75
+      keySet = null
+      values = null
+    fatalErrorValue = 1
+    connectionSynchronizationProvider = false
+    _managedConnectionFactory = class com.ibm.ws.rsadapter.spi.WSManagedConnectionFactoryImpl@4562483d
+      strings[0] = "_______________________________________________________________________"
+      strings[1] = ""
+      strings[2] = "    First Failure Data Capture information for"
+      strings[3] = "          com.ibm.ws.rsadapter.spi.WSManagedConnectionFactoryImpl@4562483d"
+      strings[4] = "_______________________________________________________________________"
+      strings[5] = ""
+      strings[6] = "com.ibm.ws.rsadapter.DSConfig@59c00d1"
+      strings[7] = "[beginTranForResultSetScrollingAPIs, true, beginTranForVendorAPIs, true, commitOrRollbackOnCleanup, null, connectionSharing, 0, isolationLevel, -1, jndiName, jdbc/postgresql-cloud, queryTimeout, null, resultSetUnusableWhenNoMoreResults, false, statementCacheSize, 10, supplementalJDBCTrace, null, syncQueryTimeoutWithTransactionTimeout, false, transactional, true]"
+      strings[8] = "[com.ibm.ws.classloading.internal.AppClassLoader@5c882c81, true, ExceptionChecking, false, interface javax.sql.XADataSource]"
+      strings[9] = "{dataSourceClass=org.postgresql.xa.PGXADataSource, portNumber=10929, databaseName=offla01, serverName=aws-us-east-1-portal.5.dblayer.com}"
+      strings[10] = "Resource Adapter:"
+      strings[11] = "  null
+"
+      strings[12] = "Database Type:"
+      strings[13] = "  null
+"
+      strings[14] = "Description:"
+      strings[15] = "  null
+"
+      strings[16] = "Log Writer:"
+      strings[17] = "  null
+"
+      strings[18] = "Transaction Branches are set to be Loosely Coupled: "
+      strings[19] = "  false
+"
+      strings[20] = "Counter of fatal connection errors on ManagedConnections created by this MCF:"
+      strings[21] = "  0
+"
+      strings[22] = "Validate existing connections on cleanup after a fatal connection error is detected?"
+      strings[23] = "  true
+"
+      strings[24] = "ResetConnectionByBackendDatabase: "
+      strings[25] = "  false
+"
+      strings[26] = "Backend id checking is: "
+      strings[27] = "  true
+"
+      strings[28] = "JMSOnePhaseOptimization: "
+      strings[29] = "  false
+"
+      strings[30] = "Reauthentication: "
+      strings[31] = "  false
+"
+      strings[32] = "newDBConnectionValidationEnabled: "
+      strings[33] = "  false
+"
+      strings[34] = "connectionRetriesDuringDBFailover: "
+      strings[35] = "  100
+"
+      strings[36] = "connRetryDurationDuringDBFailover: "
+      strings[37] = "  3000
+"
+      strings[38] = "Failover count: "
+      strings[39] = "  0
+"
+      strings[40] = "OracleImplicitConnectionPooling enabled: "
+      strings[41] = "  false
+"
+      strings[42] = ""
+      strings[43] = "_______________________________________________________________________"
+      strings[44] = ""
+      strings[45] = "    First Failure Data Capture information for"
+      strings[46] = "          com.ibm.ws.rsadapter.spi.WSRdbDataSource@6954a9c"
+      strings[47] = "_______________________________________________________________________"
+      strings[48] = ""
+      strings[49] = "DataSource Implementation Class Name:"
+      strings[50] = "  org.postgresql.xa.PGXADataSource
+"
+      strings[51] = "DataSource Name:"
+      strings[52] = "  null
+"
+      strings[53] = "DataStoreHelper:"
+      strings[54] = "  com.ibm.websphere.rsadapter.GenericDataStoreHelper@67c43cbe
+"
+      strings[55] = "DataSource properties:"
+      strings[56] = "  {dataSourceClass=org.postgresql.xa.PGXADataSource, portNumber=10929, databaseName=offla01, serverName=aws-us-east-1-portal.5.dblayer.com}
+"
+      strings[57] = "TWO PHASE ENABLED
+"
+      strings[58] = "Underlying DataSource Object: org.postgresql.xa.PGXADataSource@b590db0"
+      strings[59] = "  org.postgresql.xa.PGXADataSource@b590db0
+"
+      strings[60] = "Counter of unique, modified DataSource configurations: 0
+"
+      strings[61] = "Failover servers list: "
+      strings[62] = "  [Ljava.lang.Object;@2e5c7e54
+"
+    serialVersionUID = -861999777608926414
+    mcConnectionCount = 0
+    STATE_NEW = 0
+    STATE_ACTIVE_FREE = 1
+    STATE_ACTIVE_INUSE = 2
+    STATE_TRAN_WRAPPER_INUSE = 3
+    STATE_INACTIVE = 4
+    state = 3
+    STATESTRINGS = class java.lang.String[5]
+      STATESTRINGS[0] = "STATE_NEW"
+      STATESTRINGS[1] = "STATE_ACTIVE_FREE"
+      STATESTRINGS[2] = "STATE_ACTIVE_INUSE"
+      STATESTRINGS[3] = "STATE_TRAN_WRAPPER_INUSE"
+      STATESTRINGS[4] = "STATE_INACTIVE"
+    NONE = 0
+    XATXWRAPPER = 1
+    LOCALTXWRAPPER = 2
+    NOTXWRAPPER = 3
+    RRSGLOBALTXWRAPPER = 4
+    RRSLOCALTXWRAPPER = 5
+    tranWrapperInUse = 1
+    TRANWRAPPERSTRINGS = class java.lang.String[6]
+      TRANWRAPPERSTRINGS[0] = "NONE"
+      TRANWRAPPERSTRINGS[1] = "XATXWRAPPER"
+      TRANWRAPPERSTRINGS[2] = "LOCALTXWRAPPER"
+      TRANWRAPPERSTRINGS[3] = "NOTXWRAPPER"
+      TRANWRAPPERSTRINGS[4] = "RRSGLOBALTXWRAPPER"
+      TRANWRAPPERSTRINGS[5] = "RRSLOCALTXWRAPPER"
+    mc = class com.ibm.ws.rsadapter.spi.WSRdbManagedConnectionImpl@1a14d652
+      strings[0] = "_______________________________________________________________________"
+      strings[1] = ""
+      strings[2] = "    First Failure Data Capture information for"
+      strings[3] = "          com.ibm.ws.rsadapter.spi.WSRdbManagedConnectionImpl@1a14d652"
+      strings[4] = "_______________________________________________________________________"
+      strings[5] = ""
+      strings[6] = "TWO PHASE ENABLED
+"
+      strings[7] = "Connection sharing: "
+      strings[8] = "  0
+"
+      strings[9] = "Database Type:"
+      strings[10] = "  null
+"
+      strings[11] = "Transaction State:"
+      strings[12] = "  NO_TRANSACTION_ACTIVE
+"
+      strings[13] = "Key:"
+      strings[14] = "  [B@94fbe9
+"
+      strings[15] = "Log Writer:"
+      strings[16] = "  null
+"
+      strings[17] = "Subject:"
+      strings[18] = "  null
+"
+      strings[19] = "ManagedConnection:"
+      strings[20] = "  WSRdbManagedConnectionImpl@1a14d652
+"
+      strings[21] = "Counter of fatal connection errors for the ManagedConnectionFactory as of the most recent getConnection on this ManagedConnection:"
+      strings[22] = "  0
+"
+      strings[23] = "Default AutoCommit:"
+      strings[24] = "  true
+"
+      strings[25] = "Current AutoCommit:"
+      strings[26] = "  true
+"
+      strings[27] = "Current Isolation:"
+      strings[28] = "  READ COMMITTED (2)
+"
+      strings[29] = "Isolation level has changed? :"
+      strings[30] = "  false
+"
+      strings[31] = "Support isolation level switching: "
+      strings[32] = "  false
+"
+      strings[33] = "The tc name is: 
+"
+      strings[34] = "null
+"
+      strings[35] = "The tc original user is: 
+"
+      strings[36] = "null
+"
+      strings[37] = "The tc releam  is: 
+"
+      strings[38] = "null
+"
+      strings[39] = "The tc user security token is: 
+"
+      strings[40] = "null
+"
+      strings[41] = "The connection wait Time for the mc is: "
+      strings[42] = "  0
+"
+      strings[43] = "The j2eename is: 
+"
+      strings[44] = "offlaserver01WS#offlaserver01WS.war#Appfr1Bean
+"
+      strings[45] = "The gssCredential is: 
+"
+      strings[46] = "null
+"
+      strings[47] = "The gssName is: 
+"
+      strings[48] = "null
+"
+      strings[49] = "Catalog, IsReadOnly, TypeMap, Schema, or NetworkTimeout has changed? :"
+      strings[50] = "  false
+"
+      strings[51] = "Default Holdability:"
+      strings[52] = "  CLOSE CURSORS AT COMMIT (2)
+"
+      strings[53] = "Current Holdability:"
+      strings[54] = "  CLOSE CURSORS AT COMMIT (2)
+"
+      strings[55] = "Holdability value has changed? :"
+      strings[56] = "  false
+"
+      strings[57] = "Thread ID:"
+      strings[58] = "  null
+"
+      strings[59] = "Lazily enlisted in the current transaction? :"
+      strings[60] = "  false
+"
+      strings[61] = "Underlying Connection Object: com.sun.proxy.$Proxy50@67c7571b"
+      strings[62] = "  Pooled connection wrapping physical connection org.postgresql.jdbc4.Jdbc4Connection@34a43b9f
+"
+      strings[63] = "Underlying PooledConnection Object: org.postgresql.xa.PGXAConnection@5f855308"
+      strings[64] = "  org.postgresql.xa.PGXAConnection@5f855308
+"
+      strings[65] = "SQLJ Default Context: null"
+      strings[66] = "  null
+"
+      strings[67] = "Fatal connection error was detected? :"
+      strings[68] = "  false
+"
+      strings[69] = "Currently cleaning up handles? :"
+      strings[70] = "  false
+"
+      strings[71] = "Last ConnectionEvent sent for this ManagedConnection:
+"
+      strings[72] = "  com.ibm.ws.rsadapter.spi.WSConnectionEvent@4289ce3b"
+      strings[73] = "  Connection Handle: null"
+      strings[74] = "  Event ID: UNKNOWN CONNECTION EVENT CONSTANT (0)"
+      strings[75] = "  Exception: null"
+      strings[76] = ""
+      strings[77] = "Connection Event Listeners:
+"
+      strings[78] = "  com.ibm.ejs.j2c.ConnectionEventListener@1f2b36fe"
+      strings[79] = ""
+      strings[80] = "Maximum Handle List Size: 15
+"
+      strings[81] = "Handle Count: 0
+"
+      strings[82] = "Handles:
+"
+      strings[83] = "  null"
+      strings[84] = "  null"
+      strings[85] = "  null"
+      strings[86] = "  null"
+      strings[87] = "  null"
+      strings[88] = "  null"
+      strings[89] = "  null"
+      strings[90] = "  null"
+      strings[91] = "  null"
+      strings[92] = "  null"
+      strings[93] = "  null"
+      strings[94] = "  null"
+      strings[95] = "  null"
+      strings[96] = "  null"
+      strings[97] = "  null"
+      strings[98] = ""
+      strings[99] = "State Manager:"
+      strings[100] = "  com.ibm.ws.rsadapter.spi.WSStateManager@a469e47
+"
+      strings[101] = "_______________________________________________________________________"
+      strings[102] = ""
+      strings[103] = "    First Failure Data Capture information for"
+      strings[104] = "          com.ibm.ws.rsadapter.spi.WSRdbXaResourceImpl@7f818e58"
+      strings[105] = "_______________________________________________________________________"
+      strings[106] = ""
+      strings[107] = "ManagedConnection:"
+      strings[108] = "  WSRdbManagedConnectionImpl@1a14d652
+"
+      strings[109] = "Underlying XAResource Object: org.postgresql.xa.PGXAConnection@5f855308"
+      strings[110] = "  org.postgresql.xa.PGXAConnection@5f855308
+"
+      strings[111] = "Xid: "
+      strings[112] = "  
+"
+      strings[113] = "SPI LocalTransaction :"
+      strings[114] = "  null
+"
+      strings[115] = "ManagedConnectionMetaData:"
+      strings[116] = "  null
+"
+      strings[117] = "Statement Cache:"
+      strings[118] = "  
+com.ibm.ws.rsadapter.spi.CacheMap@7f2e8114
+Number of entries:   0
+Maximum entries:     10
+Number of buckets:   13
+Maximum bucket size: 5
+Number of discards:  0
+
+BUCKET SIZE PREV NEXT
+  000  000  013  013
+  001  000  013  013
+  002  000  013  013
+  003  000  013  013
+  004  000  013  013
+  005  000  013  013
+  006  000  013  013
+  007  000  013  013
+  008  000  013  013
+  009  000  013  013
+  010  000  013  013
+  011  000  013  013
+  012  000  013  013
+  013  LRU       014
+  014  MRU  013
+
+"
+      strings[119] = "_______________________________________________________________________"
+      strings[120] = ""
+      strings[121] = "    First Failure Data Capture information for"
+      strings[122] = "          com.ibm.ws.rsadapter.spi.WSConnectionRequestInfoImpl@73da70dc"
+      strings[123] = "_______________________________________________________________________"
+      strings[124] = ""
+      extention DS properties     = ""
+      strings[126] = "  null
+"
+      extention DS properties key = ""
+      strings[128] = "  -1
+"
+      useHetrogeneous = ""
+      strings[130] = "  false
+"
+      changable CRI = ""
+      strings[132] = "  true
+"
+      optimizeForGetUseCloseUsage = ""
+      strings[134] = "  false
+"
+      propagateClientIdentityUsingTrustedContext = ""
+      strings[136] = "  false
+"
+      strings[137] = "User Name:"
+      strings[138] = "  admin
+"
+      strings[139] = "Password:"
+      strings[140] = "  ******
+"
+      strings[141] = "Isolation Level:"
+      strings[142] = "  READ COMMITTED (2)
+"
+      strings[143] = "Catalog:"
+      strings[144] = "  null
+"
+      strings[145] = "Schema:"
+      strings[146] = "  null
+"
+      strings[147] = "Is Read Only?"
+      strings[148] = "  null
+"
+      strings[149] = "Type Map:"
+      strings[150] = "  null
+"
+      strings[151] = "Cursor Holdability:"
+      strings[152] = "  DEFAULT CURSOR HOLDABILITY VALUE (0)
+"
+      strings[153] = "Config ID: 1
+"
+      strings[154] = "Hash Code:"
+      strings[155] = "  ff9898a3
+"
+      strings[156] = "Support isolation switching on connection:"
+      strings[157] = "  false
+"
+      strings[158] = "NoEnlistment: "
+      strings[159] = "  false
+"
+      strings[160] = "ShareWithCMPOnly: "
+      strings[161] = "  false
+"
+      strings[162] = "propagateClientIdentityUsingTrustedContext: "
+      strings[163] = "  false
+"
+      strings[164] = "TrustedContext_name: 
+"
+      strings[165] = "null
+"
+      strings[166] = "TrustedContext_realm: 
+"
+      strings[167] = "null
+"
+      strings[168] = "TrustedContext_userSecToken: 
+"
+      strings[169] = "
+"
+      strings[170] = "TrustedContext_originalUser: 
+"
+      strings[171] = "null
+"
+      gssName = "
+"
+      strings[173] = "null
+"
+      gssCredential = "
+"
+      strings[175] = "null
+"
+      J2EEName = "
+"
+      strings[177] = "offlaserver01WS#offlaserver01WS.war#Appfr1Bean
+"
+      oracle properties = "
+"
+      strings[179] = "null
+"
+      strings[180] = "_______________________________________________________________________"
+      strings[181] = ""
+      strings[182] = "    First Failure Data Capture information for"
+      strings[183] = "          com.ibm.ws.rsadapter.spi.WSManagedConnectionFactoryImpl@4562483d"
+      strings[184] = "_______________________________________________________________________"
+      strings[185] = ""
+      strings[186] = "com.ibm.ws.rsadapter.DSConfig@59c00d1"
+      strings[187] = "[beginTranForResultSetScrollingAPIs, true, beginTranForVendorAPIs, true, commitOrRollbackOnCleanup, null, connectionSharing, 0, isolationLevel, -1, jndiName, jdbc/postgresql-cloud, queryTimeout, null, resultSetUnusableWhenNoMoreResults, false, statementCacheSize, 10, supplementalJDBCTrace, null, syncQueryTimeoutWithTransactionTimeout, false, transactional, true]"
+      strings[188] = "[com.ibm.ws.classloading.internal.AppClassLoader@5c882c81, true, ExceptionChecking, false, interface javax.sql.XADataSource]"
+      strings[189] = "{dataSourceClass=org.postgresql.xa.PGXADataSource, portNumber=10929, databaseName=offla01, serverName=aws-us-east-1-portal.5.dblayer.com}"
+      strings[190] = "Resource Adapter:"
+      strings[191] = "  null
+"
+      strings[192] = "Database Type:"
+      strings[193] = "  null
+"
+      strings[194] = "Description:"
+      strings[195] = "  null
+"
+      strings[196] = "Log Writer:"
+      strings[197] = "  null
+"
+      strings[198] = "Transaction Branches are set to be Loosely Coupled: "
+      strings[199] = "  false
+"
+      strings[200] = "Counter of fatal connection errors on ManagedConnections created by this MCF:"
+      strings[201] = "  0
+"
+      strings[202] = "Validate existing connections on cleanup after a fatal connection error is detected?"
+      strings[203] = "  true
+"
+      strings[204] = "ResetConnectionByBackendDatabase: "
+      strings[205] = "  false
+"
+      strings[206] = "Backend id checking is: "
+      strings[207] = "  true
+"
+      strings[208] = "JMSOnePhaseOptimization: "
+      strings[209] = "  false
+"
+      strings[210] = "Reauthentication: "
+      strings[211] = "  false
+"
+      strings[212] = "newDBConnectionValidationEnabled: "
+      strings[213] = "  false
+"
+      strings[214] = "connectionRetriesDuringDBFailover: "
+      strings[215] = "  100
+"
+      strings[216] = "connRetryDurationDuringDBFailover: "
+      strings[217] = "  3000
+"
+      strings[218] = "Failover count: "
+      strings[219] = "  0
+"
+      strings[220] = "OracleImplicitConnectionPooling enabled: "
+      strings[221] = "  false
+"
+      strings[222] = ""
+      strings[223] = "_______________________________________________________________________"
+      strings[224] = ""
+      strings[225] = "    First Failure Data Capture information for"
+      strings[226] = "          com.ibm.ws.rsadapter.spi.WSRdbDataSource@6954a9c"
+      strings[227] = "_______________________________________________________________________"
+      strings[228] = ""
+      strings[229] = "DataSource Implementation Class Name:"
+      strings[230] = "  org.postgresql.xa.PGXADataSource
+"
+      strings[231] = "DataSource Name:"
+      strings[232] = "  null
+"
+      strings[233] = "DataStoreHelper:"
+      strings[234] = "  com.ibm.websphere.rsadapter.GenericDataStoreHelper@67c43cbe
+"
+      strings[235] = "DataSource properties:"
+      strings[236] = "  {dataSourceClass=org.postgresql.xa.PGXADataSource, portNumber=10929, databaseName=offla01, serverName=aws-us-east-1-portal.5.dblayer.com}
+"
+      strings[237] = "TWO PHASE ENABLED
+"
+      strings[238] = "Underlying DataSource Object: org.postgresql.xa.PGXADataSource@b590db0"
+      strings[239] = "  org.postgresql.xa.PGXADataSource@b590db0
+"
+      strings[240] = "Counter of unique, modified DataSource configurations: 0
+"
+      strings[241] = "Failover servers list: "
+      strings[242] = "  [Ljava.lang.Object;@2e5c7e54
+"
+    eventListener = class com.ibm.ejs.j2c.ConnectionEventListener@1f2b36fe
+      mcWrapper = class com.ibm.ejs.j2c.MCWrapper@3201d13d
+      tc = class com.ibm.websphere.ras.TraceComponent@1ba23535
+    xaTranWrapper = class com.ibm.ejs.j2c.XATransactionWrapper@58322ca9
+    localTranWrapper = null
+    noTranWrapper = null
+    rrsGlobalTranWrapper = null
+    rrsLocalTranWrapper = null
+    uowCoord = class com.ibm.tx.jta.embeddable.impl.EmbeddableTransactionImpl@4bba2e65
+      tc = class com.ibm.ejs.ras.TraceComponent@3f410817
+      _inactivityTimeout = 60
+      _inactivityTimer = null
+      _inactivityTimerActive = false
+      _mostRecentThread = class java.util.Stack@7a24e978
+      TRANSACTION_LOG_NAME = "tranlog"
+      PARTNER_LOG_NAME = "partnerlog"
+      TRAN_STATE_SECTION = 0
+      CORBA_RESOURCE_SECTION = 1
+      XARESOURCE_SECTION = 2
+      GLOBALID_SECTION = 3
+      RECOVERYCOORD_SECTION = 4
+      RESOURCE_WSC_SECTION = 5
+      RECCOORD_WSC_SECTION = 6
+      RESOURCE_ADAPTER_SECTION = 7
+      HEURISTIC_OUTCOME_SECTION = 8
+      RECCOORD_WSAT_SECTION = 9
+      WSAT_ASYNC_RESOURCE_SECTION = 10
+      NEXT_ID_SECTION = 30
+      LOW_WATERMARK_SECTION = 31
+      SERVER_STATE_SECTION = 32
+      CLASSPATH_SECTION = 33
+      XARESOURCEDATA_SECTION = 34
+      WSCOORDINATOR_SECTION = 35
+      JCAPROVIDER_SECTION = 36
+      RESOURCE_PRIORITY_SECTION = 37
+      APPLID_DATA_SECTION = 253
+      EPOCH_DATA_SECTION = 254
+      SERVER_DATA_SECTION = 255
+      _status = class com.ibm.tx.jta.impl.TransactionState@6763027f
+      _timeout = 120
+      _subordinate = false
+      _rollbackOnly = true
+      _originalException = null
+      _timedOut = true
+      _subRollback = false
+      _resources = class com.ibm.tx.jta.embeddable.impl.EmbeddableRegisteredResources@3ad158c2
+      _retryAlarm = null
+      _syncs = class com.ibm.tx.jta.impl.RegisteredSyncs@28f2742d
+      _destroyCallbacks = null
+      _finishCount = 0
+      _logUnit = null
+      _tranLog = null
+      _systemExceptionOccured = false
+      _heuristicOnPrepare = null
+      _retryAttempts = 0
+      defaultRetryTime = 60
+      DISABLE_2PC_DEFAULT_PROPERTY = "com.ibm.tx.jta.disable2PC"
+      _expirationTime = 1449566193768
+      _xid = class com.ibm.tx.jta.impl.XidImpl@532c469b
+      _localTID = 58445476
+      _tranName = null
+      _JCARecoveryData = null
+      _JCAXid = null
+      _disable2PCDefault = false
+      _disableTwoPhase = false
+      _needsManualCompletion = false
+      _failureScopeController = class com.ibm.tx.jta.impl.FailureScopeController@2ca3d67b
+      _inRecovery = false
+      _doNotRetryRecovery = false
+      _synchronizationRegistryResources = class java.util.HashMap@1c048c65
+      GLOBAL_TRANSACTION_LOCAL_ID_MODIFIER = 6917529027641081856
+      _mostRecentThread = class java.lang.Thread@1f956577
+      _isZos = false
+      _configProvider = class com.ibm.ws.transaction.services.JTMConfigurationProvider@27ecd0d4
+      auditRecovery = false
+      _completedLTCBoundary = null
+      _taskId = null
+      _timeoutInfo = class com.ibm.tx.jta.impl.TimeoutManager$TimeoutInfo@1645522c
+      _txType = 1
+      tc = class com.ibm.ws.tx.util.logging.WASTraceComponent@24675e91
+      tcSummary = class com.ibm.ws.tx.util.logging.WASTraceComponent@1cb889dc
+    pm = class com.ibm.ejs.j2c.PoolManager@2bb7d968
+      tc = class com.ibm.websphere.ras.TraceComponent@34124d77
+      alertResourceBundleName = "com.ibm.ws.j2c.resources.J2CAMessages"
+      alertLogger = null
+      ERROR_CONNECTION_POOL_IS_PAUSED = 2147117569
+      nl = "
+"
+      alertAgent = null
+      connectorSvc = class com.ibm.ejs.j2c.ConnectorServiceImpl@47286ff0
+      gConfigProps = class com.ibm.ejs.j2c.J2CGlobalConfigProperties@51b4cb33
+      _surgeTaskTimer = null
+      _stuckTaskTimer = null
+      reaperThreadStarted = false
+      taskTimerLockObject = {} /* array length = 0*/
+      _testConnectionTaskTimer = null
+      waitSkip = 0
+      displayInfiniteWaitMessage = false
+      isAlternateResourceEnabled = false
+      isAlternateResourceConfigured = false
+      alternateResourceJNDIName = null
+      failureNotificationActionCode = 0
+      isFailureNotificationEnabled = false
+      failureThreshold = 5
+      alternateConnectionFactory = null
+      alternateresourcelock = {} /* array length = 0*/
+      isPartialResourceAdapterFailoverSupportEnabled = false
+      resourceAvailabilityTestRetryInterval = 10
+      tlsArrayLists = class java.util.concurrent.ConcurrentHashMap@5766ff5d
+      sharedPool = class com.ibm.ejs.j2c.SharedPool[200]
+      freePool = class [Lcom.ibm.ejs.j2c.FreePool;[100]
+      mcWrapperPool = class com.ibm.ejs.j2c.MCWrapperPool@70d4523c
+      mcWrapperWaiterList = class com.ibm.ejs.j2c.MCWrapperList@1028d76c
+      mcToMCWMap = class java.util.HashMap@1e7ac626
+      rwl = class java.util.concurrent.locks.ReentrantReadWriteLock@6ea12a98
+      mcToMCWMapRead = class java.util.concurrent.locks.ReentrantReadWriteLock$ReadLock@3c36d0c2
+      mcToMCWMapWrite = class java.util.concurrent.locks.ReentrantReadWriteLock$WriteLock@6af3e39f
+      _bucketNumber = 0
+      maxBucketNumber = 1073741823
+      perfEnhancementEnabledNotSet = true
+      perfEnhancementEnabled = false
+      pmCounterLock = {} /* array length = 0*/
+      destroyMCWrapperListLock = {} /* array length = 0*/
+      totalConnectionCount = class java.util.concurrent.atomic.AtomicInteger@22f04311
+      poolManagerBalancePoolLock = {} /* array length = 0*/
+      waiterFreePoolLock = {} /* array length = 0*/
+      waiterCount = 0
+      allowConnectionRequests = true
+      connectionPoolShutDown = false
+      poolManagerTestConnectionLock = {} /* array length = 0*/
+      _managedConnectionFactory = class com.ibm.ws.rsadapter.spi.WSManagedConnectionFactoryImpl@4562483d
+      stuckConnections = false
+      collectorCount = 0
+      collectorSurgeCount = 0
+      mcWrappersToDestroy = class java.util.ArrayList@4fd82093
+      mcWrapperDoesExistInFreePool = true
+      synchronizedAllReady = false
+      dontNotifyWaiter = true
+      dontDecrementTotalCounter = false
+      unusedTimeoutEnabled = false
+      connectionTimeout = 30
+      maxConnections = 50
+      minConnections = 10
+      purgePolicy = class com.ibm.ws.jca.adapter.PurgePolicy@3a42cdec
+      reapTime = 180
+      unusedTimeout = 1800
+      agedTimeout = 0
+      agedTimeoutMillis = 0
+      surgeTime = 0
+      surgeConnections = -1
+      surgeCounter = 0
+      surgeEnabled = false
+      stuckTimerTime = 0
+      stuckTime = 0
+      stuckThreshold = 0
+      stopPoolRequests = false
+      holdTimeLimit = 10
+      maxFreePoolBuckets = 1
+      maxSharedBuckets = 200
+      maxFreePoolHashSize = 100
+      testConnection = false
+      testConnectionInterval = 0
+      testConnectionTimes = 0
+      maxNumberOfMCsAllowableInThread = 0
+      throwExceptionOnMCThreadCheck = false
+      waitersStartedTime = 0
+      waitersEndedTime = 0
+      parkedMCWrapper = null
+      createParkedConnection = false
+      parkedConnectionLockObject = {} /* array length = 0*/
+      nonOptimisticGetFreeConnection = 0
+      optimisticGetFreeConnection = 0
+      stuckConnectionSupport = false
+      alertIsforEnteringStuck = true
+      totalPoolConnectionRequests = 0
+      am = null
+      amLockObject = {} /* array length = 0*/
+      pmQuiesced = false
+      activeRequest = class java.util.concurrent.atomic.AtomicInteger@1a8af97e
+      updateToPoolInProgressLockObject = {} /* array length = 0*/
+      updateToPoolInProgress = false
+      updateToPoolInProgressSleepTime = 250
+      activeTLSRequest = class java.util.concurrent.atomic.AtomicInteger@4d7e69b2
+      updateToTLSPoolInProgressLockObject = {} /* array length = 0*/
+      updateToTLSPoolInProgress = class java.util.concurrent.atomic.AtomicBoolean@43ac0436
+      updateToTLSPoolInProgressSleepTime = 250
+      getConnectionActiveRequestAlternate = class java.util.concurrent.atomic.AtomicInteger@6f2d8c02
+      getConnectionInProgressLockObject = {} /* array length = 0*/
+      switchPoolsInProgress = false
+      getConnectionInProgressSleepTime = 250
+      writer = class com.ibm.ejs.cm.logger.TraceWriter@40803075
+      traceWriter = class com.ibm.ejs.cm.logger.TraceWriter@40803075
+      printWriter = class java.io.PrintWriter@1e1c734f
+      tscdList = class java.util.Vector@22a1d990
+      logSerialReuseMessage = true
+      _quiesce = false
+      _quiesceTime = null
+      nonDeferredReaperAlarm = false
+      efficiencyStatsEnabled = false
+      poolPercentEffRateWindowMinutes = 5
+      poolPercentEffRateHistorySize = 10
+      poolLowEffAlertEnabled = false
+      poolLowEffAlertWindowMinutes = 5
+      poolLowEffAlertThreshold = 50
+      connLowEffAlertEnabled = false
+      connLowEfficiencyThreshold = 50
+      connLowEffAlertCSCEnabled = false
+      poolRequestStatsEnabled = false
+      poolRequestStatsWindowMinutes = 5
+      poolRequestStatsHistorySize = 10
+      claimVictimRateAlertEnabled = false
+      claimVictimRateAlertWindowMinutes = 5
+      claimVictimRateAlertThreshold = 10
+      connWaitTOAlertEnabled = false
+      connWaitTOAlertWindowMinutes = 5
+      connWaitTOAlertThreshold = 10
+      connErrorAlertEnabled = false
+      connErrorAlertWindowMinutes = 5
+      connErrorAlertMaxThreshold = 2
+      LTCStatsEnabled = false
+      LTCCallStackCaptureEnabled = false
+      LTCNestingAlertEnabled = false
+      LTCNestingDepthThreshold = 3
+      LTCConnPerThreadLimitAlertEnabled = false
+      LTCThreadMaxConnLimitThreshold = 2
+      LTCSerialReuseViolationAlertEnabled = false
+      poolLoadStatsEnabled = false
+      poolLoadRateWindowMinutes = 5
+      poolAveLoadRateHistorySize = 10
+      poolLoadRateAlertEnabled = false
+      poolLoadRateAlertWindowMinutes = 5
+      poolMaxLoadRateThreshold = 10
+      orphanConnMonitorAlertEnabled = false
+      orphanConnHoldTimeLimitSeconds = 10
+      surgeModeAlertEnabled = false
+      hungConnModeAlertEnabled = false
+      pretestBlockModeAlertEnabled = false
+      callStackCaptureEnabled = false
+      efficiencyGroupLock = {} /* array length = 0*/
+      efficiencyGroupEnabled = false
+      poolTotalUseTime = 0
+      poolTotalHoldTime = 0
+      poolPercentEffRateWindowMillis = 300000
+      poolPercentEffWindowStartTime = 0
+      poolLowEffAlertWindowMillis = 0
+      poolLowEffAlertTotalUseTime = 0
+      poolLowEffAlertTotalHoldTime = 0
+      poolLowEffAlertWindowStartTime = 0
+      requestGroupLock = {} /* array length = 0*/
+      requestGroupEnabled = false
+      poolRequestStatsWindowMillis = 300000
+      poolRequestStatsWindowStartTime = 0
+      poolRequestStatsMap = null
+      pool_sop_gets = 0
+      pool_snop_gets = 0
+      pool_sop_gets_notfound = 0
+      pool_snop_gets_notfound = 0
+      pool_fop_gets = 0
+      pool_fnop_gets = 0
+      pool_fop_get_notfound = 0
+      pool_fnop_get_notfound = 0
+      pool_freePoolQueuedRequests = 0
+      pool_freePoolCreateManagedConnection = 0
+      pool_numberOfClaimedVictims = 0
+      pool_numberOfClaimedVictims_CRIMM = 0
+      pool_numberOfClaimedVictims_SubjectMM = 0
+      pool_numberOfClaimedVictims_CRISubjectMM = 0
+      pool_numberOfClaimedVictims_MatchOnlyMM = 0
+      pool_waitSkip = 0
+      totalConnectionRequests = 0
+      STAT_SOP_GETS = 1
+      STAT_SNOP_GETS = 2
+      STAT_SOP_GETS_NOTFOUND = 3
+      STAT_SNOP_GETS_NOTFOUND = 4
+      STAT_FOP_GETS = 5
+      STAT_FNOP_GETS = 6
+      STAT_FOP_GET_NOTFOUND = 7
+      STAT_FNOP_GET_NOTFOUND = 8
+      STAT_FREE_POOL_QUEUED_REQUESTS = 9
+      STAT_FREE_POOL_CREATE_MANAGED_CONNECTION = 10
+      STAT_NUMBER_OF_CLAIMED_VICTIMS_CRI_MM = 11
+      STAT_NUMBER_OF_CLAIMED_VICTIMS_SUBJECT_MM = 12
+      STAT_NUMBER_OF_CLAIMED_VICTIMS_CRI_SUBJECT_MM = 13
+      STAT_NUMBER_OF_CLAIMED_VICTIMS_MM_MM = 14
+      STAT_CONN_REQUEST = 15
+      STAT_WAIT_SKIP = 16
+      STAT_CONNECTION_CREATES = 17
+      STAT_OPT_GET_FREE_CON = 18
+      STAT_NONOPT_GET_FREE_CON = 19
+      claimVictimRateAlertWindowMillis = 0
+      claimVictimRateAlertWindowStartTime = 0
+      claimedVictimPercent = 0.0
+      alert_numberOfClaimedVictims = 0
+      alert_numberOfClaimedVictims_CRIMM = 0
+      alert_numberOfClaimedVictims_SubjectMM = 0
+      alert_numberOfClaimedVictims_CRISubjectMM = 0
+      alert_totalConnectionRequests = 0
+      connWaitTOAlertLock = {} /* array length = 0*/
+      connWaitTOAlertWindowMillis = 0
+      connWaitTOAlertWindowStartTime = 0
+      connWaitTOCount = 0
+      connErrorAlertLock = {} /* array length = 0*/
+      connErrorAlertWindowMillis = 0
+      connErrorAlertWindowStartTime = 0
+      connErrorCount = 0
+      LTCGroupLock = {} /* array length = 0*/
+      LTCGrooupEnabled = false
+      threadToLTCStatsMap = null
+      currentLTC = null
+      loadGroupLock = {} /* array length = 0*/
+      loadGroupEnabled = false
+      poolLoadLastEventTime = 0
+      poolLoadRateWindowMillis = 300000
+      poolLoadStatsMap = null
+      poolLoadWindowStartTime = 0
+      poolLoadWeightedSum = 0
+      poolLoadRateAlertWindowMillis = 0
+      poolLoadRateAlertWindowStartTime = 0
+      poolLoadRateAlertWeightedSum = 0
+      poolAlertAveLoad = 0.0
+      ltcStatElement = null
+      threadToLTCElement = null
+      orphanConnGroupLock = {} /* array length = 0*/
+      enableInuseConnectionDestroy = true
+      localConnection_ = null
+      maxCapacity = 0
+      isThreadLocalConnectionEnabled = false
+      resourceFailBackEnabled = true
+      resourceFailOverHold = false
+      disableResourceFailBack = false
+      disableResourceFailOver = false
+      prepopulate = true
+      prePopulateAlarmTimer = null
+      prePopulateAlarmThreadLockObject = {} /* array length = 0*/
+      prePopulateAlarmTimerListener = null
+      cmStartPrepopulate = true
+      populateAlternateResource = false
+      populateAlternateResourceRunning = false
+      startFailBack = false
+      disableDatasourceFailoverAlarm = false
+      isAlteranteResourcePoolManager = false
+      getConnectionMap = class java.util.concurrent.ConcurrentHashMap@3f823d88
+      alarmThreadCounter = class java.util.concurrent.atomic.AtomicInteger@3c4cfbe6
+      dscfFailoveramLockObject = {} /* array length = 0*/
+      dscfFailoveralarmThreadStarted = false
+      normalMode = 100
+      currentMode = 100
+      modeLockObject = {} /* array length = 0*/
+      primaryAlive = 1
+      failOverMode = 102
+      failBackMode = 103
+      alternateAlive = 2
+      nothingAlive = 3
+      restoreNormalMode = 4
+      resourceExceptionCounterLockObject = {} /* array length = 0*/
+      connErrorResourceExceptionCounter = 0
+      getConnectionResourceExceptionCounter = 0
+      dscfFailoveram = null
+      dscfFailoveramListener = null
+      dscfFailoveramListenerLockObject = {} /* array length = 0*/
+      alternatePM = null
+      prepopulateTimerTime = 60000
+    _supportsReAuth = false
+    usedBucket = 0
+    freePoolBucket = 0
+    hashMapBucket = 34
+    sharedPoolCoordinator = class com.ibm.tx.jta.embeddable.impl.EmbeddableTransactionImpl@4bba2e65
+    mcWrapperList = class com.ibm.ejs.j2c.MCWrapperList@8dfa817
+      serialVersionUID = -4093886924342827512
+      serialVersionUID = 8683452581122892189
+      DEFAULT_CAPACITY = 10
+      EMPTY_ELEMENTDATA = class java.lang.Object[0]
+      DEFAULTCAPACITY_EMPTY_ELEMENTDATA = class java.lang.Object[0]
+      elementData = class java.lang.Object[50]
+      size = 0
+      MAX_ARRAY_SIZE = 2147483639
+      modCount = 0
+      MAX_ARRAY_SIZE = 2147483639
+    currentSharedPool = class com.ibm.ejs.j2c.SharedPool@1949493e
+      tc = class com.ibm.websphere.ras.TraceComponent@33a86d0d
+      perfEnhancementEnabledNotSet = true
+      perfEnhancementEnabled = false
+      sharedLockObject = {} /* array length = 0*/
+      mcWrapperList = interface com.ibm.ws.j2c.MCWrapper[50]
+      mcWrapperListTemp = null
+      mcWrapperListSize = 1
+      _pm = class com.ibm.ejs.j2c.PoolManager@2bb7d968
+      objectArraySize = 50
+      sop_removes = 0
+      snop_removes = 0
+      sop_gets = 0
+      snop_gets = 0
+      sop_gets_notfound = 0
+      snop_gets_notfound = 0
+    isParkedWrapper = false
+    _hashMapBucketReAuth = 0
+    _subject = null
+    _cri = class com.ibm.ws.rsadapter.spi.WSConnectionRequestInfoImpl@73da70dc
+      strings[0] = "_______________________________________________________________________"
+      strings[1] = ""
+      strings[2] = "    First Failure Data Capture information for"
+      strings[3] = "          com.ibm.ws.rsadapter.spi.WSConnectionRequestInfoImpl@73da70dc"
+      strings[4] = "_______________________________________________________________________"
+      strings[5] = ""
+      extention DS properties     = ""
+      strings[7] = "  null
+"
+      extention DS properties key = ""
+      strings[9] = "  -1
+"
+      useHetrogeneous = ""
+      strings[11] = "  false
+"
+      changable CRI = ""
+      strings[13] = "  true
+"
+      optimizeForGetUseCloseUsage = ""
+      strings[15] = "  false
+"
+      propagateClientIdentityUsingTrustedContext = ""
+      strings[17] = "  false
+"
+      strings[18] = "User Name:"
+      strings[19] = "  admin
+"
+      strings[20] = "Password:"
+      strings[21] = "  ******
+"
+      strings[22] = "Isolation Level:"
+      strings[23] = "  READ COMMITTED (2)
+"
+      strings[24] = "Catalog:"
+      strings[25] = "  null
+"
+      strings[26] = "Schema:"
+      strings[27] = "  null
+"
+      strings[28] = "Is Read Only?"
+      strings[29] = "  null
+"
+      strings[30] = "Type Map:"
+      strings[31] = "  null
+"
+      strings[32] = "Cursor Holdability:"
+      strings[33] = "  DEFAULT CURSOR HOLDABILITY VALUE (0)
+"
+      strings[34] = "Config ID: 1
+"
+      strings[35] = "Hash Code:"
+      strings[36] = "  ff9898a3
+"
+      strings[37] = "Support isolation switching on connection:"
+      strings[38] = "  false
+"
+      strings[39] = "NoEnlistment: "
+      strings[40] = "  false
+"
+      strings[41] = "ShareWithCMPOnly: "
+      strings[42] = "  false
+"
+      strings[43] = "propagateClientIdentityUsingTrustedContext: "
+      strings[44] = "  false
+"
+      strings[45] = "TrustedContext_name: 
+"
+      strings[46] = "null
+"
+      strings[47] = "TrustedContext_realm: 
+"
+      strings[48] = "null
+"
+      strings[49] = "TrustedContext_userSecToken: 
+"
+      strings[50] = "
+"
+      strings[51] = "TrustedContext_originalUser: 
+"
+      strings[52] = "null
+"
+      gssName = "
+"
+      strings[54] = "null
+"
+      gssCredential = "
+"
+      strings[56] = "null
+"
+      J2EEName = "
+"
+      strings[58] = "offlaserver01WS#offlaserver01WS.war#Appfr1Bean
+"
+      oracle properties = "
+"
+      strings[60] = "null
+"
+    cm = class com.ibm.ejs.j2c.ConnectionManager@7f775391
+      serialVersionUID = -3078170792213348926
+      tc = class com.ibm.websphere.ras.TraceComponent@450777e9
+      cmiHashMap = class java.util.concurrent.ConcurrentHashMap@213a4b0f
+      connectionFactorySvc = class com.ibm.ws.jdbc.DataSourceService@583aa816
+      numberOfCMinstancesEverCreated = class java.util.concurrent.atomic.AtomicLong@64946f62
+      cfDetailsKey = "dataSource[jdbc/postgresql-cloud]00100-1"
+      cmConfig = class com.ibm.ejs.j2c.CMConfigDataImpl@51995e49
+      shareable = true
+      primaryRecoveryToken = 1
+      securityHelper = class com.ibm.ejs.j2c.DefaultSecurityHelper@26cf01b3
+      websphereMCF = true
+      commitPriority = 0
+      localTranSupportSet = false
+      _getADP = null
+      containerManagedAuth = false
+      handleToThreadMap = null
+      handleToCMDMap = null
+      started = true
+      connThreadInfoEnabled = false
+      alternateCM = null
+      alternatePM = null
+      alternateMCF = null
+      alternateRecoveryToken = 0
+      primaryPM = class com.ibm.ejs.j2c.PoolManager@2bb7d968
+      primaryMCF = class com.ibm.ws.rsadapter.spi.WSManagedConnectionFactoryImpl@4562483d
+      primaryGConfigProps = class com.ibm.ejs.j2c.J2CGlobalConfigProperties@51b4cb33
+      errorOnGetConnection = 1
+      errorOnInUseConnection = 2
+    createdTimeStamp = 1449566195086
+    unusedTimeStamp = 1449566195086
+    subjectCRIHashCode = 3388334
+    poolState = class java.util.concurrent.atomic.AtomicInteger@67c4aba8
+      serialVersionUID = 6214790243416807050
+      unsafe = class sun.misc.Unsafe@7255cfd5
+      valueOffset = 12
+      value = 2
+      serialVersionUID = -8742448824652078965
+    alreadyBeingReleased = class java.util.concurrent.atomic.AtomicBoolean@5450ce82
+      serialVersionUID = 4654671469794556979
+      unsafe = class sun.misc.Unsafe@7255cfd5
+      valueOffset = 12
+      value = 0
+    destroyState = false
+    purgeState = false
+    stale = false
+    do_not_reuse_mcw = false
+    dbrequestMonitorPoolBitSet = null
+    inSharedPool = true
+    recoveryToken = 1
+    mcWrapperObject_hexString = "3201d13d"
+    tc = class com.ibm.websphere.ras.TraceComponent@43e9f6a6
+      strings[0] = "TraceComponent[com.ibm.ejs.j2c.MCWrapper,class com.ibm.ejs.j2c.MCWrapper,[WAS.j2c],com.ibm.ws.j2c.resources.J2CAMessages,null]"
+    nl = "
+"
+    initialRequestStackTrace = null
+    threadId = null
+    lastAllocationTime = 0
+    threadName = null
+    logWriterSet = false
+    recoverableXAResource = false
+    _transactionErrorOccurred = false
+    holdTimeStart = 1449566195093
+    stuckTimeStart = 1449566195093
+    amountOfStuckTime = 0
+    gConfigProps = class com.ibm.ejs.j2c.J2CGlobalConfigProperties@51b4cb33
+      tc = class com.ibm.websphere.ras.TraceComponent@6efb0c63
+      serialVersionUID = 3666445884103132373
+      jndiName = "jdbc/postgresql-cloud"
+      XpathId = "dataSource[jdbc/postgresql-cloud]/connectionManager"
+      cfName = "jdbc/postgresql-cloud"
+      manageCachedHandles = false
+      rrsTransactional = false
+      threadSecurity = false
+      THREADIDENTITY_NOTALLOWED = "NOTALLOWED"
+      THREADIDENTITY_REQUIRED = "REQUIRED"
+      THREADIDENTITY_ALLOWED = "ALLOWED"
+      threadIdentitySupport = "NOTALLOWED"
+      logMissingTranContext = false
+      selfXARecoverable = false
+      validatingMCFSupported = true
+      sendClaimedVictomToGetConnection = false
+      loadBalancing = false
+      raSupportsReauthentication = false
+      pmiReqMetric_isReadyToEnable = false
+      transactionResourceRegistration = null
+      checkManagedConnectionInstanceof = false
+      checkManagedConnectionInstanceofLock = {} /* array length = 0*/
+      checkManagedConnectionInstanceofInitialized = true
+      embeddedRa = false
+      embeddedRaInitialized = false
+      connectionSynchronizationProvider = false
+      connectionSynchronizationProviderInitialized = false
+      connectionPoolingEnabled = true
+      connectionPoolingEnabledInitialized = false
+      instanceOfDissociatableManagedConnection = true
+      instanceOfDissociatableManagedConnectionInitialized = true
+      interactionMetricsEnabled = false
+      interactionMetricsEnabledInitialized = false
+      commitPriority = 0
+      transactionSupport = class javax.resource.spi.TransactionSupport$TransactionSupportLevel@256f5b93
+      dynamicEnlistmentSupported = true
+      smartHandleSupport = true
+      cciLocalTranSupported = true
+      started = false
+      connectionTimeout = 30
+      maxConnections = 50
+      minConnections = 10
+      purgePolicy = class com.ibm.ws.jca.adapter.PurgePolicy@3a42cdec
+      reapTime = 180
+      unusedTimeout = 1800
+      agedTimeout = 0
+      agedTimeoutMillis = 0
+      surgeTime = 0
+      surgeConnections = -1
+      surgeCounter = 0
+      surgeEnabled = false
+      stuckTimerTime = 0
+      stuckTime = 0
+      stuckThreshold = 0
+      stopPoolRequests = false
+      maxFreePoolBuckets = 1
+      maxSharedBuckets = 200
+      maxFreePoolHashSize = 100
+      testConnection = false
+      testConnectionInterval = 0
+      holdTimeLimit = 10
+      numConnectionsPerThreadLocal = 0
+      populateAlternateResource = false
+      disableResourceFailOver = false
+      disableResourceFailBack = false
+      xComponentUseViolationDetectionEnabled = false
+      xComponentUseViolationCount = 0
+      multiThreadUseViolationDetectionEnabled = false
+      multiThreadUseViolationCount = 0
+      efficiencyStatsEnabled = false
+      poolPercentEffRateWindowMinutes = 5
+      poolPercentEffRateHistorySize = 10
+      poolLowEffAlertEnabled = false
+      poolLowEffAlertWindowMinutes = 5
+      poolLowEffAlertThreshold = 50
+      connLowEffAlertEnabled = false
+      connLowEfficiencyThreshold = 50
+      connLowEffAlertCSCEnabled = false
+      poolRequestStatsEnabled = false
+      poolRequestStatsWindowMinutes = 5
+      poolRequestStatsHistorySize = 10
+      claimVictimRateAlertEnabled = false
+      claimVictimRateAlertWindowMinutes = 5
+      poolClaimVictimRateThreshold = 10
+      connWaitTOAlertEnabled = false
+      connWaitTOAlertWindowMinutes = 5
+      poolConnWaitTOThreshold = 20
+      connErrorAlertEnabled = false
+      connErrorAlertWindowMinutes = 5
+      connErrorAlertMaxThreshold = 2
+      LTCStatsEnabled = false
+      LTCCallStackCaptureEnabled = false
+      LTCSerialReuseViolationAlertEnabled = false
+      LTCConnPerThreadLimitAlertEnabled = false
+      LTCThreadMaxConnLimitThreshold = 2
+      LTCNestingAlertEnabled = false
+      LTCNestingDepthThreshold = 3
+      poolLoadStatsEnabled = false
+      poolLoadRateWindowMinutes = 5
+      poolAveLoadRateHistorySize = 10
+      poolLoadRateAlertEnabled = false
+      poolLoadRateAlertWindowMinutes = 5
+      poolLoadRateAlertMaxThreshold = 10
+      orphanConnMonitorAlertEnabled = false
+      orphanConnHoldTimeLimitSeconds = 10
+      surgeModeAlertEnabled = false
+      hungConnModeAlertEnabled = false
+      pretestBlockModeAlertEnabled = false
+      callStackCaptureEnabled = false
+      connThreadInfoEnabled = false
+      changeSupport = class java.beans.PropertyChangeSupport@6219a672
+      vChangeSupport = class java.beans.VetoableChangeSupport@7561e3ea
+      diagnosticAlertHelper = null
+      reqMetricID = 0
+      raMetaDataProps = null
+      dsMetaDataProps = null
+      _pm = null
+      callResourceAdapterStatMethods = false
+      numberOfInuseConnections = 0
+      numberOfInuseConnectionsLockObject = {} /* array length = 0*/
+      numberOfFreeConnections = 0
+      numberOfFreeConnectionsLockObject = {} /* array length = 0*/
+      maxNumberOfMCsAllowableInThread = 0
+      throwExceptionOnMCThreadCheck = false
+      appName = null
+      modName = null
+      compName = null
+      threadToViolatingHandleMap = class java.util.HashMap@5b41ef77
+    currentUseStartTime = 0
+    useStartTimeSet = false
+    holdStartTimeSet = true
+    totalUseTime = 0
+    totalHoldTime = 0
+    percentEfficiency = 0.0
+    pretestThisConnection = false
+    aborted = false
+  xaResource = class com.ibm.ws.rsadapter.spi.WSRdbXaResourceImpl@7f818e58
+    strings[0] = "_______________________________________________________________________"
+    strings[1] = ""
+    strings[2] = "    First Failure Data Capture information for"
+    strings[3] = "          com.ibm.ws.rsadapter.spi.WSRdbManagedConnectionImpl@1a14d652"
+    strings[4] = "_______________________________________________________________________"
+    strings[5] = ""
+    strings[6] = "TWO PHASE ENABLED
+"
+    strings[7] = "Connection sharing: "
+    strings[8] = "  0
+"
+    strings[9] = "Database Type:"
+    strings[10] = "  null
+"
+    strings[11] = "Transaction State:"
+    strings[12] = "  NO_TRANSACTION_ACTIVE
+"
+    strings[13] = "Key:"
+    strings[14] = "  [B@94fbe9
+"
+    strings[15] = "Log Writer:"
+    strings[16] = "  null
+"
+    strings[17] = "Subject:"
+    strings[18] = "  null
+"
+    strings[19] = "ManagedConnection:"
+    strings[20] = "  WSRdbManagedConnectionImpl@1a14d652
+"
+    strings[21] = "Counter of fatal connection errors for the ManagedConnectionFactory as of the most recent getConnection on this ManagedConnection:"
+    strings[22] = "  0
+"
+    strings[23] = "Default AutoCommit:"
+    strings[24] = "  true
+"
+    strings[25] = "Current AutoCommit:"
+    strings[26] = "  true
+"
+    strings[27] = "Current Isolation:"
+    strings[28] = "  READ COMMITTED (2)
+"
+    strings[29] = "Isolation level has changed? :"
+    strings[30] = "  false
+"
+    strings[31] = "Support isolation level switching: "
+    strings[32] = "  false
+"
+    strings[33] = "The tc name is: 
+"
+    strings[34] = "null
+"
+    strings[35] = "The tc original user is: 
+"
+    strings[36] = "null
+"
+    strings[37] = "The tc releam  is: 
+"
+    strings[38] = "null
+"
+    strings[39] = "The tc user security token is: 
+"
+    strings[40] = "null
+"
+    strings[41] = "The connection wait Time for the mc is: "
+    strings[42] = "  0
+"
+    strings[43] = "The j2eename is: 
+"
+    strings[44] = "offlaserver01WS#offlaserver01WS.war#Appfr1Bean
+"
+    strings[45] = "The gssCredential is: 
+"
+    strings[46] = "null
+"
+    strings[47] = "The gssName is: 
+"
+    strings[48] = "null
+"
+    strings[49] = "Catalog, IsReadOnly, TypeMap, Schema, or NetworkTimeout has changed? :"
+    strings[50] = "  false
+"
+    strings[51] = "Default Holdability:"
+    strings[52] = "  CLOSE CURSORS AT COMMIT (2)
+"
+    strings[53] = "Current Holdability:"
+    strings[54] = "  CLOSE CURSORS AT COMMIT (2)
+"
+    strings[55] = "Holdability value has changed? :"
+    strings[56] = "  false
+"
+    strings[57] = "Thread ID:"
+    strings[58] = "  null
+"
+    strings[59] = "Lazily enlisted in the current transaction? :"
+    strings[60] = "  false
+"
+    strings[61] = "Underlying Connection Object: com.sun.proxy.$Proxy50@67c7571b"
+    strings[62] = "  Pooled connection wrapping physical connection org.postgresql.jdbc4.Jdbc4Connection@34a43b9f
+"
+    strings[63] = "Underlying PooledConnection Object: org.postgresql.xa.PGXAConnection@5f855308"
+    strings[64] = "  org.postgresql.xa.PGXAConnection@5f855308
+"
+    strings[65] = "SQLJ Default Context: null"
+    strings[66] = "  null
+"
+    strings[67] = "Fatal connection error was detected? :"
+    strings[68] = "  false
+"
+    strings[69] = "Currently cleaning up handles? :"
+    strings[70] = "  false
+"
+    strings[71] = "Last ConnectionEvent sent for this ManagedConnection:
+"
+    strings[72] = "  com.ibm.ws.rsadapter.spi.WSConnectionEvent@4289ce3b"
+    strings[73] = "  Connection Handle: null"
+    strings[74] = "  Event ID: UNKNOWN CONNECTION EVENT CONSTANT (0)"
+    strings[75] = "  Exception: null"
+    strings[76] = ""
+    strings[77] = "Connection Event Listeners:
+"
+    strings[78] = "  com.ibm.ejs.j2c.ConnectionEventListener@1f2b36fe"
+    strings[79] = ""
+    strings[80] = "Maximum Handle List Size: 15
+"
+    strings[81] = "Handle Count: 0
+"
+    strings[82] = "Handles:
+"
+    strings[83] = "  null"
+    strings[84] = "  null"
+    strings[85] = "  null"
+    strings[86] = "  null"
+    strings[87] = "  null"
+    strings[88] = "  null"
+    strings[89] = "  null"
+    strings[90] = "  null"
+    strings[91] = "  null"
+    strings[92] = "  null"
+    strings[93] = "  null"
+    strings[94] = "  null"
+    strings[95] = "  null"
+    strings[96] = "  null"
+    strings[97] = "  null"
+    strings[98] = ""
+    strings[99] = "State Manager:"
+    strings[100] = "  com.ibm.ws.rsadapter.spi.WSStateManager@a469e47
+"
+    strings[101] = "_______________________________________________________________________"
+    strings[102] = ""
+    strings[103] = "    First Failure Data Capture information for"
+    strings[104] = "          com.ibm.ws.rsadapter.spi.WSRdbXaResourceImpl@7f818e58"
+    strings[105] = "_______________________________________________________________________"
+    strings[106] = ""
+    strings[107] = "ManagedConnection:"
+    strings[108] = "  WSRdbManagedConnectionImpl@1a14d652
+"
+    strings[109] = "Underlying XAResource Object: org.postgresql.xa.PGXAConnection@5f855308"
+    strings[110] = "  org.postgresql.xa.PGXAConnection@5f855308
+"
+    strings[111] = "Xid: "
+    strings[112] = "  
+"
+    strings[113] = "SPI LocalTransaction :"
+    strings[114] = "  null
+"
+    strings[115] = "ManagedConnectionMetaData:"
+    strings[116] = "  null
+"
+    strings[117] = "Statement Cache:"
+    strings[118] = "  
+com.ibm.ws.rsadapter.spi.CacheMap@7f2e8114
+Number of entries:   0
+Maximum entries:     10
+Number of buckets:   13
+Maximum bucket size: 5
+Number of discards:  0
+
+BUCKET SIZE PREV NEXT
+  000  000  013  013
+  001  000  013  013
+  002  000  013  013
+  003  000  013  013
+  004  000  013  013
+  005  000  013  013
+  006  000  013  013
+  007  000  013  013
+  008  000  013  013
+  009  000  013  013
+  010  000  013  013
+  011  000  013  013
+  012  000  013  013
+  013  LRU       014
+  014  MRU  013
+
+"
+    strings[119] = "_______________________________________________________________________"
+    strings[120] = ""
+    strings[121] = "    First Failure Data Capture information for"
+    strings[122] = "          com.ibm.ws.rsadapter.spi.WSConnectionRequestInfoImpl@73da70dc"
+    strings[123] = "_______________________________________________________________________"
+    strings[124] = ""
+    extention DS properties     = ""
+    strings[126] = "  null
+"
+    extention DS properties key = ""
+    strings[128] = "  -1
+"
+    useHetrogeneous = ""
+    strings[130] = "  false
+"
+    changable CRI = ""
+    strings[132] = "  true
+"
+    optimizeForGetUseCloseUsage = ""
+    strings[134] = "  false
+"
+    propagateClientIdentityUsingTrustedContext = ""
+    strings[136] = "  false
+"
+    strings[137] = "User Name:"
+    strings[138] = "  admin
+"
+    strings[139] = "Password:"
+    strings[140] = "  ******
+"
+    strings[141] = "Isolation Level:"
+    strings[142] = "  READ COMMITTED (2)
+"
+    strings[143] = "Catalog:"
+    strings[144] = "  null
+"
+    strings[145] = "Schema:"
+    strings[146] = "  null
+"
+    strings[147] = "Is Read Only?"
+    strings[148] = "  null
+"
+    strings[149] = "Type Map:"
+    strings[150] = "  null
+"
+    strings[151] = "Cursor Holdability:"
+    strings[152] = "  DEFAULT CURSOR HOLDABILITY VALUE (0)
+"
+    strings[153] = "Config ID: 1
+"
+    strings[154] = "Hash Code:"
+    strings[155] = "  ff9898a3
+"
+    strings[156] = "Support isolation switching on connection:"
+    strings[157] = "  false
+"
+    strings[158] = "NoEnlistment: "
+    strings[159] = "  false
+"
+    strings[160] = "ShareWithCMPOnly: "
+    strings[161] = "  false
+"
+    strings[162] = "propagateClientIdentityUsingTrustedContext: "
+    strings[163] = "  false
+"
+    strings[164] = "TrustedContext_name: 
+"
+    strings[165] = "null
+"
+    strings[166] = "TrustedContext_realm: 
+"
+    strings[167] = "null
+"
+    strings[168] = "TrustedContext_userSecToken: 
+"
+    strings[169] = "
+"
+    strings[170] = "TrustedContext_originalUser: 
+"
+    strings[171] = "null
+"
+    gssName = "
+"
+    strings[173] = "null
+"
+    gssCredential = "
+"
+    strings[175] = "null
+"
+    J2EEName = "
+"
+    strings[177] = "offlaserver01WS#offlaserver01WS.war#Appfr1Bean
+"
+    oracle properties = "
+"
+    strings[179] = "null
+"
+    strings[180] = "_______________________________________________________________________"
+    strings[181] = ""
+    strings[182] = "    First Failure Data Capture information for"
+    strings[183] = "          com.ibm.ws.rsadapter.spi.WSManagedConnectionFactoryImpl@4562483d"
+    strings[184] = "_______________________________________________________________________"
+    strings[185] = ""
+    strings[186] = "com.ibm.ws.rsadapter.DSConfig@59c00d1"
+    strings[187] = "[beginTranForResultSetScrollingAPIs, true, beginTranForVendorAPIs, true, commitOrRollbackOnCleanup, null, connectionSharing, 0, isolationLevel, -1, jndiName, jdbc/postgresql-cloud, queryTimeout, null, resultSetUnusableWhenNoMoreResults, false, statementCacheSize, 10, supplementalJDBCTrace, null, syncQueryTimeoutWithTransactionTimeout, false, transactional, true]"
+    strings[188] = "[com.ibm.ws.classloading.internal.AppClassLoader@5c882c81, true, ExceptionChecking, false, interface javax.sql.XADataSource]"
+    strings[189] = "{dataSourceClass=org.postgresql.xa.PGXADataSource, portNumber=10929, databaseName=offla01, serverName=aws-us-east-1-portal.5.dblayer.com}"
+    strings[190] = "Resource Adapter:"
+    strings[191] = "  null
+"
+    strings[192] = "Database Type:"
+    strings[193] = "  null
+"
+    strings[194] = "Description:"
+    strings[195] = "  null
+"
+    strings[196] = "Log Writer:"
+    strings[197] = "  null
+"
+    strings[198] = "Transaction Branches are set to be Loosely Coupled: "
+    strings[199] = "  false
+"
+    strings[200] = "Counter of fatal connection errors on ManagedConnections created by this MCF:"
+    strings[201] = "  0
+"
+    strings[202] = "Validate existing connections on cleanup after a fatal connection error is detected?"
+    strings[203] = "  true
+"
+    strings[204] = "ResetConnectionByBackendDatabase: "
+    strings[205] = "  false
+"
+    strings[206] = "Backend id checking is: "
+    strings[207] = "  true
+"
+    strings[208] = "JMSOnePhaseOptimization: "
+    strings[209] = "  false
+"
+    strings[210] = "Reauthentication: "
+    strings[211] = "  false
+"
+    strings[212] = "newDBConnectionValidationEnabled: "
+    strings[213] = "  false
+"
+    strings[214] = "connectionRetriesDuringDBFailover: "
+    strings[215] = "  100
+"
+    strings[216] = "connRetryDurationDuringDBFailover: "
+    strings[217] = "  3000
+"
+    strings[218] = "Failover count: "
+    strings[219] = "  0
+"
+    strings[220] = "OracleImplicitConnectionPooling enabled: "
+    strings[221] = "  false
+"
+    strings[222] = ""
+    strings[223] = "_______________________________________________________________________"
+    strings[224] = ""
+    strings[225] = "    First Failure Data Capture information for"
+    strings[226] = "          com.ibm.ws.rsadapter.spi.WSRdbDataSource@6954a9c"
+    strings[227] = "_______________________________________________________________________"
+    strings[228] = ""
+    strings[229] = "DataSource Implementation Class Name:"
+    strings[230] = "  org.postgresql.xa.PGXADataSource
+"
+    strings[231] = "DataSource Name:"
+    strings[232] = "  null
+"
+    strings[233] = "DataStoreHelper:"
+    strings[234] = "  com.ibm.websphere.rsadapter.GenericDataStoreHelper@67c43cbe
+"
+    strings[235] = "DataSource properties:"
+    strings[236] = "  {dataSourceClass=org.postgresql.xa.PGXADataSource, portNumber=10929, databaseName=offla01, serverName=aws-us-east-1-portal.5.dblayer.com}
+"
+    strings[237] = "TWO PHASE ENABLED
+"
+    strings[238] = "Underlying DataSource Object: org.postgresql.xa.PGXADataSource@b590db0"
+    strings[239] = "  org.postgresql.xa.PGXADataSource@b590db0
+"
+    strings[240] = "Counter of unique, modified DataSource configurations: 0
+"
+    strings[241] = "Failover servers list: "
+    strings[242] = "  [Ljava.lang.Object;@2e5c7e54
+"
+  enlisted = false
+  hasRollbackOccured = false
+  tc = class com.ibm.websphere.ras.TraceComponent@247c191a
+    strings[0] = "TraceComponent[com.ibm.ejs.j2c.XATransactionWrapper,class com.ibm.ejs.j2c.XATransactionWrapper,[WAS.j2c],com.ibm.ws.j2c.resources.J2CAMessages,null]"
+

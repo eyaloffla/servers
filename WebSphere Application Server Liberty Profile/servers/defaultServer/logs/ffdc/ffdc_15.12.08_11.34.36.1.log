@@ -1,0 +1,470 @@
+------Start of DE processing------ = [12/8/15 11:34:36:248 IST]
+Exception = java.lang.reflect.InvocationTargetException
+Source = com.ibm.ws.jaxrs20.ejb.JaxRsFactoryBeanEJBCustomizer
+probeid = 350
+Stack Dump = java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at com.ibm.ws.jaxrs20.ejb.JaxRsFactoryBeanEJBCustomizer.serviceInvoke(JaxRsFactoryBeanEJBCustomizer.java:349)
+	at com.ibm.ws.jaxrs20.server.LibertyJaxRsServerFactoryBean.performInvocation(LibertyJaxRsServerFactoryBean.java:593)
+	at com.ibm.ws.jaxrs20.server.LibertyJaxRsInvoker.performInvocation(LibertyJaxRsInvoker.java:114)
+	at org.apache.cxf.service.invoker.AbstractInvoker.invoke(AbstractInvoker.java:97)
+	at com.ibm.ws.jaxrs20.server.LibertyJaxRsInvoker.invoke(LibertyJaxRsInvoker.java:195)
+	at org.apache.cxf.jaxrs.JAXRSInvoker.invoke(JAXRSInvoker.java:200)
+	at com.ibm.ws.jaxrs20.server.LibertyJaxRsInvoker.invoke(LibertyJaxRsInvoker.java:366)
+	at org.apache.cxf.jaxrs.JAXRSInvoker.invoke(JAXRSInvoker.java:99)
+	at org.apache.cxf.interceptor.ServiceInvokerInterceptor$1.run(ServiceInvokerInterceptor.java:61)
+	at org.apache.cxf.interceptor.ServiceInvokerInterceptor.handleMessage(ServiceInvokerInterceptor.java:99)
+	at org.apache.cxf.phase.PhaseInterceptorChain.doIntercept(PhaseInterceptorChain.java:307)
+	at org.apache.cxf.transport.ChainInitiationObserver.onMessage(ChainInitiationObserver.java:124)
+	at org.apache.cxf.transport.http.AbstractHTTPDestination.invoke(AbstractHTTPDestination.java:259)
+	at com.ibm.ws.jaxrs20.endpoint.AbstractJaxRsWebEndpoint.invoke(AbstractJaxRsWebEndpoint.java:134)
+	at com.ibm.websphere.jaxrs.server.IBMRestServlet.handleRequest(IBMRestServlet.java:149)
+	at com.ibm.websphere.jaxrs.server.IBMRestServlet.doGet(IBMRestServlet.java:115)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:687)
+	at com.ibm.websphere.jaxrs.server.IBMRestServlet.service(IBMRestServlet.java:99)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.service(ServletWrapper.java:1287)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:778)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:475)
+	at com.ibm.ws.webcontainer.filter.WebAppFilterManager.invokeFilters(WebAppFilterManager.java:1158)
+	at com.ibm.ws.webcontainer.webapp.WebApp.handleRequest(WebApp.java:4867)
+	at com.ibm.ws.webcontainer31.osgi.webapp.WebApp31.handleRequest(WebApp31.java:523)
+	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.handleRequest(DynamicVirtualHost.java:297)
+	at com.ibm.ws.webcontainer.WebContainer.handleRequest(WebContainer.java:997)
+	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.run(DynamicVirtualHost.java:262)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink$TaskWrapper.run(HttpDispatcherLink.java:955)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.ready(HttpDispatcherLink.java:341)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleDiscrimination(HttpInboundLink.java:470)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleNewRequest(HttpInboundLink.java:404)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.processRequest(HttpInboundLink.java:284)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.ready(HttpInboundLink.java:255)
+	at com.ibm.ws.tcpchannel.internal.NewConnectionInitialReadCallback.sendToDiscriminators(NewConnectionInitialReadCallback.java:174)
+	at com.ibm.ws.tcpchannel.internal.NewConnectionInitialReadCallback.complete(NewConnectionInitialReadCallback.java:83)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.requestComplete(WorkQueueManager.java:504)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.attemptIO(WorkQueueManager.java:574)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.workerRun(WorkQueueManager.java:929)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager$Worker.run(WorkQueueManager.java:1018)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: javax.ejb.EJBException: See nested exception; nested exception is: java.lang.NumberFormatException: For input string: "3186855333"
+	at com.ibm.ejs.container.util.ExceptionUtil.EJBException(ExceptionUtil.java:461)
+	at com.ibm.ejs.container.util.ExceptionUtil.EJBException(ExceptionUtil.java:337)
+	at com.ibm.ejs.container.BusinessExceptionMappingStrategy.mapException(BusinessExceptionMappingStrategy.java:348)
+	at com.ibm.ejs.container.BusinessExceptionMappingStrategy.setUncheckedException(BusinessExceptionMappingStrategy.java:520)
+	at com.ibm.ejs.container.EJSDeployedSupport.setUncheckedLocalException(EJSDeployedSupport.java:468)
+	at com.offla.ws.EJSLocalNSLIsPersonOnDB_1c315ab8.isPersonOnDataBase(EJSLocalNSLIsPersonOnDB_1c315ab8.java)
+	... 46 more
+Caused by: java.lang.NumberFormatException: For input string: "3186855333"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Integer.parseInt(Integer.java:583)
+	at java.lang.Integer.valueOf(Integer.java:766)
+	at com.offla.utils.Util.stringToInt(Util.java:18)
+	at com.offla.ws.IsPersonOnDB.isPersonOnDataBase(IsPersonOnDB.java:35)
+	... 47 more
+
+Dump of callerThis
+Object type = com.ibm.ws.jaxrs20.ejb.JaxRsFactoryBeanEJBCustomizer
+  tc = class com.ibm.websphere.ras.TraceComponent@1843ea3f
+    strings[0] = "TraceComponent[com.ibm.ws.jaxrs20.ejb.JaxRsFactoryBeanEJBCustomizer,class com.ibm.ws.jaxrs20.ejb.JaxRsFactoryBeanEJBCustomizer,[JaxRs20EJB],com.ibm.ws.jaxrs20.ejb.internal.resources.JaxRsEJBMessages,null]"
+  cxfPRHolder = class com.ibm.ws.jaxrs20.metadata.CXFJaxRsProviderResourceHolder@27a8c15f
+    resourceClasses = class java.util.ArrayList@145f976a
+      serialVersionUID = 8683452581122892189
+      DEFAULT_CAPACITY = 10
+      EMPTY_ELEMENTDATA = class java.lang.Object[0]
+      DEFAULTCAPACITY_EMPTY_ELEMENTDATA = class java.lang.Object[0]
+      elementData = class java.lang.Object[10]
+      size = 4
+      MAX_ARRAY_SIZE = 2147483639
+      modCount = 4
+      MAX_ARRAY_SIZE = 2147483639
+    providers = class java.util.ArrayList@638c5eee
+      serialVersionUID = 8683452581122892189
+      DEFAULT_CAPACITY = 10
+      EMPTY_ELEMENTDATA = class java.lang.Object[0]
+      DEFAULTCAPACITY_EMPTY_ELEMENTDATA = class java.lang.Object[0]
+      elementData = class java.lang.Object[10]
+      size = 4
+      MAX_ARRAY_SIZE = 2147483639
+      modCount = 4
+      MAX_ARRAY_SIZE = 2147483639
+    resouceProviderMap = class java.util.HashMap@b2da5e7
+      serialVersionUID = 362498820763181265
+      DEFAULT_INITIAL_CAPACITY = 16
+      MAXIMUM_CAPACITY = 1073741824
+      DEFAULT_LOAD_FACTOR = 0.75
+      TREEIFY_THRESHOLD = 8
+      UNTREEIFY_THRESHOLD = 6
+      MIN_TREEIFY_CAPACITY = 64
+      table = class java.util.HashMap$Node[16]
+      entrySet = class java.util.HashMap$EntrySet@5a0fa8e7
+      size = 4
+      modCount = 4
+      threshold = 12
+      loadFactor = 0.75
+      keySet = null
+      values = null
+    abstractResourceMap = class java.util.HashMap@1e31c7c7
+      serialVersionUID = 362498820763181265
+      DEFAULT_INITIAL_CAPACITY = 16
+      MAXIMUM_CAPACITY = 1073741824
+      DEFAULT_LOAD_FACTOR = 0.75
+      TREEIFY_THRESHOLD = 8
+      UNTREEIFY_THRESHOLD = 6
+      MIN_TREEIFY_CAPACITY = 64
+      table = null
+      entrySet = null
+      size = 0
+      modCount = 0
+      threshold = 0
+      loadFactor = 0.75
+      keySet = null
+      values = null
+    serialVersionUID = 2714569335892004126
+    $$$tc$$$ = class com.ibm.websphere.ras.TraceComponent@7d2ee372
+      strings[0] = "TraceComponent[com.ibm.ws.jaxrs20.metadata.CXFJaxRsProviderResourceHolder,class com.ibm.ws.jaxrs20.metadata.CXFJaxRsProviderResourceHolder,[],null,null]"
+  exceptionMappers = class java.util.HashSet@cdf6f60
+    serialVersionUID = -5024744406713321676
+    map = class java.util.HashMap@7747acab
+      serialVersionUID = 362498820763181265
+      DEFAULT_INITIAL_CAPACITY = 16
+      MAXIMUM_CAPACITY = 1073741824
+      DEFAULT_LOAD_FACTOR = 0.75
+      TREEIFY_THRESHOLD = 8
+      UNTREEIFY_THRESHOLD = 6
+      MIN_TREEIFY_CAPACITY = 64
+      table = null
+      entrySet = null
+      size = 0
+      modCount = 0
+      threshold = 0
+      loadFactor = 0.75
+      keySet = null
+      values = null
+    PRESENT = class java.lang.Object@5fddc638
+    MAX_ARRAY_SIZE = 2147483639
+  SERVER_PROVIDER_CLASS_NAMES = class java.util.HashSet@143f8ec6
+    serialVersionUID = -5024744406713321676
+    map = class java.util.HashMap@763de7ac
+      serialVersionUID = 362498820763181265
+      DEFAULT_INITIAL_CAPACITY = 16
+      MAXIMUM_CAPACITY = 1073741824
+      DEFAULT_LOAD_FACTOR = 0.75
+      TREEIFY_THRESHOLD = 8
+      UNTREEIFY_THRESHOLD = 6
+      MIN_TREEIFY_CAPACITY = 64
+      table = class java.util.HashMap$Node[16]
+      entrySet = null
+      size = 11
+      modCount = 11
+      threshold = 12
+      loadFactor = 0.75
+      keySet = null
+      values = null
+    PRESENT = class java.lang.Object@5fddc638
+    MAX_ARRAY_SIZE = 2147483639
+  serialVersionUID = 6716183167089884617
+  $$$tc$$$ = class com.ibm.websphere.ras.TraceComponent@7e110b75
+    strings[0] = "TraceComponent[com.ibm.ws.jaxrs20.ejb.JaxRsFactoryBeanEJBCustomizer,class com.ibm.ws.jaxrs20.ejb.JaxRsFactoryBeanEJBCustomizer,[JaxRs20EJB],com.ibm.ws.jaxrs20.ejb.internal.resources.JaxRsEJBMessages,null]"
+
+Dump of objectArray[0]
+Object type = com.offla.ws.IsPersonOnDB
+  service = null
+
+Dump of objectArray[1]
+Object type = java.lang.reflect.Method
+  clazz = class java.lang.Class@1f86a295
+    ANNOTATION = 8192
+    ENUM = 16384
+    SYNTHETIC = 4096
+    cachedConstructor = null
+    newInstanceCallerCache = null
+    name = "com.offla.ws.IsPersonOnDB"
+    allPermDomain = class java.security.ProtectionDomain@3eb81e56
+    useCaches = true
+    reflectionData = class java.lang.ref.SoftReference@573113f7
+      clock = 6247604
+      timestamp = 6247604
+      referent = class java.lang.Class$ReflectionData@dbd7478
+      queue = class java.lang.ref.ReferenceQueue$Null@464bb908
+      next = null
+      discovered = null
+      lock = class java.lang.ref.Reference$Lock@3d2d32c9
+      pending = null
+    classRedefinedCount = 0
+    genericInfo = null
+    serialVersionUID = 3206093459760846163
+    serialPersistentFields = class java.io.ObjectStreamField[0]
+    reflectionFactory = class sun.reflect.ReflectionFactory@211f07cc
+    initted = true
+    enumConstants = null
+    enumConstantDirectory = null
+    annotationData = class java.lang.Class$AnnotationData@710c9ab4
+      annotations = class java.util.LinkedHashMap@1fc6ce61
+      declaredAnnotations = class java.util.LinkedHashMap@1fc6ce61
+      redefinedCount = 0
+    annotationType = null
+    classValueMap = null
+  slot = 0
+  name = "isPersonOnDataBase"
+  returnType = class java.lang.Class@720ef97f
+    ANNOTATION = 8192
+    ENUM = 16384
+    SYNTHETIC = 4096
+    cachedConstructor = null
+    newInstanceCallerCache = null
+    name = "java.lang.String"
+    allPermDomain = class java.security.ProtectionDomain@3eb81e56
+      codesource = null
+      classloader = null
+      principals = interface java.security.Principal[0]
+      permissions = class java.security.Permissions@16fe8cb1
+      hasAllPerm = true
+      staticPermissions = true
+      key = class java.security.ProtectionDomain$Key@25f12b55
+      debug = null
+    useCaches = true
+    reflectionData = class java.lang.ref.SoftReference@4de065f6
+      clock = 6247604
+      timestamp = 6247604
+      referent = class java.lang.Class$ReflectionData@35ccb65f
+      queue = class java.lang.ref.ReferenceQueue$Null@464bb908
+      next = null
+      discovered = null
+      lock = class java.lang.ref.Reference$Lock@3d2d32c9
+      pending = null
+    classRedefinedCount = 0
+    genericInfo = null
+    serialVersionUID = 3206093459760846163
+    serialPersistentFields = class java.io.ObjectStreamField[0]
+    reflectionFactory = class sun.reflect.ReflectionFactory@211f07cc
+    initted = true
+    enumConstants = null
+    enumConstantDirectory = null
+    annotationData = class java.lang.Class$AnnotationData@3e694ab
+      annotations = class java.util.Collections$EmptyMap@42915550
+      declaredAnnotations = class java.util.Collections$EmptyMap@42915550
+      redefinedCount = 0
+    annotationType = null
+    classValueMap = null
+  parameterTypes = class java.lang.Class[3]
+    parameterTypes[0] = class java.lang.Class@720ef97f
+    parameterTypes[1] = class java.lang.Class@720ef97f
+    parameterTypes[2] = class java.lang.Class@720ef97f
+  exceptionTypes = class java.lang.Class[0]
+  modifiers = 1
+  signature = null
+  genericInfo = null
+  annotations = {0,3,0,20,0,0,0,21,0,1,0,22,115,0,23,0,24,0,1,0,22,91,0,1,115,0,25} /* array length = 27*/
+  parameterAnnotations = {3,0,1,0,27,0,1,0,22,115,0,28,0,1,0,27,0,1,0,22,115,0,29,0,1,0,27,0,1,0,22,115,0,30} /* array length = 34*/
+  annotationDefault = null
+  methodAccessor = class sun.reflect.DelegatingMethodAccessorImpl@4550283c
+    delegate = class sun.reflect.NativeMethodAccessorImpl@3a0ad897
+      method = class java.lang.reflect.Method@7d999148
+      parent = class sun.reflect.DelegatingMethodAccessorImpl@4550283c
+      numInvocations = 2
+  root = class java.lang.reflect.Method@1b0aa841
+    clazz = class java.lang.Class@1f86a295
+    slot = 0
+    name = "isPersonOnDataBase"
+    returnType = class java.lang.Class@720ef97f
+    parameterTypes = class java.lang.Class[3]
+    exceptionTypes = class java.lang.Class[0]
+    modifiers = 1
+    signature = null
+    genericInfo = null
+    annotations = {0,3,0,20,0,0,0,21,0,1,0,22,115,0,23,0,24,0,1,0,22,91,0,1,115,0,25} /* array length = 27*/
+    parameterAnnotations = {3,0,1,0,27,0,1,0,22,115,0,28,0,1,0,27,0,1,0,22,115,0,29,0,1,0,27,0,1,0,22,115,0,30} /* array length = 34*/
+    annotationDefault = null
+    methodAccessor = class sun.reflect.DelegatingMethodAccessorImpl@4550283c
+    root = null
+    hasRealParameterData = false
+    parameters = null
+    declaredAnnotations = class java.util.LinkedHashMap@2a2869b9
+    ACCESS_PERMISSION = class java.lang.reflect.ReflectPermission@9b5ad34
+    override = false
+    reflectionFactory = class sun.reflect.ReflectionFactory@211f07cc
+    securityCheckCache = null
+  hasRealParameterData = false
+  parameters = null
+  declaredAnnotations = class java.util.LinkedHashMap@2a2869b9
+    serialVersionUID = 3801124242820219131
+    head = class java.util.LinkedHashMap$Entry@4e128cab
+      before = null
+      after = class java.util.LinkedHashMap$Entry@3f7189a2
+      hash = 1834499015
+      key = class java.lang.Class@6d58569f
+      value = class com.sun.proxy.$Proxy36@64a4557e
+      next = null
+    tail = class java.util.LinkedHashMap$Entry@138f4a
+      before = class java.util.LinkedHashMap$Entry@3f7189a2
+      after = null
+      hash = 422475103
+      key = class java.lang.Class@192e6c71
+      value = class com.sun.proxy.$Proxy33@4d382a4d
+      next = null
+    accessOrder = false
+    serialVersionUID = 362498820763181265
+    DEFAULT_INITIAL_CAPACITY = 16
+    MAXIMUM_CAPACITY = 1073741824
+    DEFAULT_LOAD_FACTOR = 0.75
+    TREEIFY_THRESHOLD = 8
+    UNTREEIFY_THRESHOLD = 6
+    MIN_TREEIFY_CAPACITY = 64
+    table = class java.util.HashMap$Node[16]
+      table[0] = null
+      table[1] = null
+      table[2] = null
+      table[3] = null
+      table[4] = null
+      table[5] = null
+      table[6] = null
+      table[7] = class java.util.LinkedHashMap$Entry@4e128cab
+      table[8] = null
+      table[9] = null
+      table[10] = null
+      table[11] = null
+      table[12] = null
+      table[13] = class java.util.LinkedHashMap$Entry@3f7189a2
+      table[14] = null
+      table[15] = class java.util.LinkedHashMap$Entry@138f4a
+    entrySet = null
+    size = 3
+    modCount = 3
+    threshold = 12
+    loadFactor = 0.75
+    keySet = null
+    values = class java.util.LinkedHashMap$LinkedValues@fb3c224
+      this$0 = class java.util.LinkedHashMap@2a2869b9
+      MAX_ARRAY_SIZE = 2147483639
+  ACCESS_PERMISSION = class java.lang.reflect.ReflectPermission@9b5ad34
+    serialVersionUID = 7412737110241507485
+    serialVersionUID = 6279438298436773498
+    wildcard = false
+    path = "suppressAccessChecks"
+    exitVM = false
+    serialVersionUID = -5636570222231596674
+    name = "suppressAccessChecks"
+  override = false
+  reflectionFactory = class sun.reflect.ReflectionFactory@211f07cc
+    initted = true
+    reflectionFactoryAccessPerm = class java.lang.RuntimePermission@329d8d7a
+      serialVersionUID = 7399184964622342223
+      serialVersionUID = 6279438298436773498
+      wildcard = false
+      path = "reflectionFactoryAccess"
+      exitVM = false
+      serialVersionUID = -5636570222231596674
+      name = "reflectionFactoryAccess"
+    soleInstance = class sun.reflect.ReflectionFactory@211f07cc
+    langReflectAccess = class java.lang.reflect.ReflectAccess@6d6c9e75
+    noInflation = false
+    inflationThreshold = 15
+  securityCheckCache = null
+
+Dump of objectArray[2]
+Object type = [Ljava.lang.Object;
+  Object type[0] = "0"
+  Object type[1] = "0"
+  Object type[2] = "3186855333"
+
+Dump of objectArray[3]
+Object type = java.lang.Boolean
+  TRUE = true
+  FALSE = false
+  TYPE = class java.lang.Class@6267c3bb
+    ANNOTATION = 8192
+    ENUM = 16384
+    SYNTHETIC = 4096
+    cachedConstructor = null
+    newInstanceCallerCache = null
+    name = "boolean"
+    allPermDomain = class java.security.ProtectionDomain@3eb81e56
+      codesource = null
+      classloader = null
+      principals = interface java.security.Principal[0]
+      permissions = class java.security.Permissions@16fe8cb1
+      hasAllPerm = true
+      staticPermissions = true
+      key = class java.security.ProtectionDomain$Key@25f12b55
+      debug = null
+    useCaches = true
+    reflectionData = null
+    classRedefinedCount = 0
+    genericInfo = null
+    serialVersionUID = 3206093459760846163
+    serialPersistentFields = class java.io.ObjectStreamField[0]
+    reflectionFactory = class sun.reflect.ReflectionFactory@211f07cc
+      initted = true
+      reflectionFactoryAccessPerm = class java.lang.RuntimePermission@329d8d7a
+      soleInstance = class sun.reflect.ReflectionFactory@211f07cc
+      langReflectAccess = class java.lang.reflect.ReflectAccess@6d6c9e75
+      noInflation = false
+      inflationThreshold = 15
+    initted = true
+    enumConstants = null
+    enumConstantDirectory = null
+    annotationData = null
+    annotationType = null
+    classValueMap = null
+  value = false
+  serialVersionUID = -3665804199014368530
+
+Dump of objectArray[4]
+Object type = java.util.HashMap
+  serialVersionUID = 362498820763181265
+  DEFAULT_INITIAL_CAPACITY = 16
+  MAXIMUM_CAPACITY = 1073741824
+  DEFAULT_LOAD_FACTOR = 0.75
+  TREEIFY_THRESHOLD = 8
+  UNTREEIFY_THRESHOLD = 6
+  MIN_TREEIFY_CAPACITY = 64
+  table = class java.util.HashMap$Node[16]
+    table[0] = null
+    table[1] = null
+    table[2] = class java.util.HashMap$Node@252e70de
+      hash = -927863838
+      key = "com.offla.ws.HolaWS"
+      value = class com.ibm.ws.jaxrs20.ejb.EJBInfo@6b9a47af
+      next = null
+    table[3] = null
+    table[4] = null
+    table[5] = class java.util.HashMap$Node@6c0e9a47
+      hash = 274784133
+      key = "com.offla.ws.NotificationSenderWSTestReceptor"
+      value = class com.ibm.ws.jaxrs20.ejb.EJBInfo@15d1fe1a
+      next = class java.util.HashMap$Node@308ad128
+    table[6] = null
+    table[7] = null
+    table[8] = null
+    table[9] = class java.util.HashMap$Node@277b39c7
+      hash = 425987529
+      key = "com.offla.services.Appfr1Bean"
+      value = class com.ibm.ws.jaxrs20.ejb.EJBInfo@11ca9fa0
+      next = null
+    table[10] = null
+    table[11] = null
+    table[12] = null
+    table[13] = class java.util.HashMap$Node@25a01bcb
+      hash = -527998067
+      key = "com.offla.ws.GoogleTokensWS"
+      value = class com.ibm.ws.jaxrs20.ejb.EJBInfo@32ef1f27
+      next = class java.util.HashMap$Node@bf181ea
+    table[14] = class java.util.HashMap$Node@735e3721
+      hash = -1213113714
+      key = "com.offla.services.CellarixTxnBean"
+      value = class com.ibm.ws.jaxrs20.ejb.EJBInfo@772f1f20
+      next = null
+    table[15] = null
+  entrySet = class java.util.HashMap$EntrySet@a211f1c
+    this$0 = class java.util.HashMap@6b945fbb
+    MAX_ARRAY_SIZE = 2147483639
+  size = 8
+  modCount = 8
+  threshold = 12
+  loadFactor = 0.75
+  keySet = null
+  values = null
+

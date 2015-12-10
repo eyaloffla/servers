@@ -1,0 +1,20 @@
+<server description="new server">
+
+    <!-- Enable features -->
+    <featureManager>
+		<feature>jaxrs-1.1</feature>
+		<feature>servlet-3.1</feature>
+		<feature>localConnector-1.0</feature>
+		<feature>javaMail-1.5</feature>
+	</featureManager>
+
+    <!-- To access this server from a remote client add a host attribute to the following element, e.g. host="*" -->
+    <httpEndpoint httpPort="9081" httpsPort="9443" id="defaultHttpEndpoint"/>
+
+
+    <applicationMonitor updateTrigger="mbean"/>
+    
+    <webApplication id="NotificationClient" location="NotificationClient.war" name="NotificationClient">
+    <classloader apiTypeVisibility="spec, ibm-api, third-party"/>
+    </webApplication>
+</server>

@@ -1,0 +1,158 @@
+********************************************************************************
+product = WebSphere Application Server 8.5.5.7 (wlp-1.0.10.cl50720150827-0437)
+wlp.install.dir = /home/eyal/Programs/wlp/
+java.home = /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.60-14.b27.fc23.x86_64/jre
+java.version = 1.8.0_60
+java.runtime = OpenJDK Runtime Environment (1.8.0_60-b27)
+os = Linux (4.2.3-300.fc23.x86_64; amd64) (en_US)
+process = 2821@localhost.localdomain
+********************************************************************************
+[12/9/15 15:42:31:284 IST] 00000001 com.ibm.ws.kernel.launch.internal.FrameworkManager           A CWWKE0001I: The server Notification03 has been launched.
+[12/9/15 15:42:31:300 IST] 00000001 com.ibm.ws.kernel.launch.internal.FrameworkManager           A CWWKE0100I: This product is licensed for development, and limited production use. The full license terms can be viewed here: https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/license/base_ilan/ilan/8.5.5.7/lafiles/en.html
+[12/9/15 15:42:32:252 IST] 00000001 com.ibm.ws.kernel.launch.internal.FrameworkManager           I CWWKE0002I: The kernel started after 1.195 seconds
+[12/9/15 15:42:32:282 IST] 00000017 com.ibm.ws.kernel.feature.internal.FeatureManager            I CWWKF0007I: Feature update started.
+[12/9/15 15:42:32:823 IST] 00000010 com.ibm.ws.app.manager.internal.monitor.DropinMonitor        A CWWKZ0058I: Monitoring dropins for applications. 
+[12/9/15 15:42:32:868 IST] 0000001a com.ibm.ws.tcpchannel.internal.TCPChannel                    I CWWKO0219I: TCP Channel defaultHttpEndpoint has been started and is now listening for requests on host localhost.localdomain  (IPv4: 127.0.0.1) port 9080.
+[12/9/15 15:42:33:241 IST] 00000021 com.ibm.ws.app.manager.AppMessageHelper                      I CWWKZ0018I: Starting application NotificationClient.
+[12/9/15 15:42:34:044 IST] 00000021 com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Loading Web Module: NotificationClient.
+[12/9/15 15:42:34:047 IST] 00000021 com.ibm.ws.webcontainer                                      I SRVE0250I: Web Module NotificationClient has been bound to default_host.
+[12/9/15 15:42:34:048 IST] 00000021 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Web application available (default_host): http://localhost:9080/NotificationClient/
+[12/9/15 15:42:34:052 IST] 00000021 com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0001I: Application NotificationClient started in 0.811 seconds.
+[12/9/15 15:42:34:056 IST] 00000017 com.ibm.ws.kernel.feature.internal.FeatureManager            A CWWKF0012I: The server installed the following features: [servlet-3.1, json-1.0, localConnector-1.0, jaxrs-1.1, javaMail-1.5].
+[12/9/15 15:42:34:056 IST] 00000017 com.ibm.ws.kernel.feature.internal.FeatureManager            I CWWKF0008I: Feature update completed in 1.802 seconds.
+[12/9/15 15:42:34:057 IST] 00000017 com.ibm.ws.kernel.feature.internal.FeatureManager            A CWWKF0011I: The server Notification03 is ready to run a smarter planet.
+[12/9/15 15:44:10:464 IST] 0000003e com.ibm.ws.session.WASSessionCore                            I SESN8501I: The session manager did not find a persistent storage location; HttpSession objects will be stored in the local application server's memory.
+[12/9/15 15:44:10:468 IST] 0000003e com.ibm.ws.session.WASSessionCore                            I SESN0176I: A new session context will be created for application key default_host/NotificationClient
+[12/9/15 15:44:10:479 IST] 0000003e com.ibm.ws.util                                              I SESN0172I: The session manager is using the Java default SecureRandom implementation for session ID generation.
+[12/9/15 15:44:10:804 IST] 0000003e apache.wink.server.internal.application.ApplicationProcessor I The following JAX-RS application has been processed: com.ibm.ws.jaxrs.webcontainer.JAXRSDefaultApplicationSubclassProxy
+[12/9/15 15:44:10:807 IST] 0000003e org.apache.wink.server.internal.log.Providers                I There are no custom JAX-RS providers defined in the application.
+[12/9/15 15:44:10:961 IST] 0000003e com.ibm.ws.webcontainer.servlet                              I SRVE0242I: [NotificationClient] [/NotificationClient] [JAX-RS Servlet]: Initialization successful.
+[12/9/15 15:44:11:006 IST] 0000003e com.ibm.ws.webcontainer.servlet                              I SRVE0242I: [NotificationClient] [/NotificationClient] [com.offla.rest.RestClientServlet]: Initialization successful.
+[12/9/15 15:44:11:006 IST] 0000003e SystemOut                                                    O ===doGet===
+[12/9/15 15:44:11:085 IST] 0000003e com.ibm.ws.webcontainer.util.ApplicationErrorUtils           E SRVE0777E: Exception thrown by application class 'org.apache.wink.common.internal.registry.metadata.ProviderMetadataCollector.parseAccessibleObject:122'
+java.lang.NoSuchMethodError: org.apache.wink.common.internal.utils.GenericsUtils.getClassType(Ljava/lang/reflect/Type;Ljava/lang/Class;)Ljava/lang/Class;
+	at org.apache.wink.common.internal.registry.metadata.ProviderMetadataCollector.parseAccessibleObject(ProviderMetadataCollector.java:122)
+	at org.apache.wink.common.internal.registry.metadata.AbstractMetadataCollector.parseFields(AbstractMetadataCollector.java:73)
+	at org.apache.wink.common.internal.registry.metadata.ProviderMetadataCollector.collectMetadata(ProviderMetadataCollector.java:104)
+	at org.apache.wink.common.internal.lifecycle.LifecycleManagerUtils.collectClassMetadata(LifecycleManagerUtils.java:74)
+	at org.apache.wink.common.internal.lifecycle.LifecycleManagerUtils.createSingletonObjectFactory(LifecycleManagerUtils.java:60)
+	at org.apache.wink.common.internal.lifecycle.DefaultLifecycleManager.createObjectFactory(DefaultLifecycleManager.java:86)
+	at org.apache.wink.common.internal.lifecycle.LifecycleManagersRegistry.getObjectFactory(LifecycleManagersRegistry.java:85)
+	at org.apache.wink.common.internal.registry.ProvidersRegistry.addProvider(ProvidersRegistry.java:110)
+	at org.apache.wink.common.internal.registry.ProvidersRegistry.addProvider(ProvidersRegistry.java:102)
+	at org.apache.wink.common.internal.registry.ProvidersRegistry.addProvider(ProvidersRegistry.java:173)
+	at org.apache.wink.client.RestClient.processClasses(RestClient.java:170)
+	at org.apache.wink.client.RestClient.processApplication(RestClient.java:158)
+	at org.apache.wink.client.RestClient.initProvidersRegistry(RestClient.java:140)
+	at org.apache.wink.client.RestClient.<init>(RestClient.java:83)
+	at com.offla.rest.RestClientServlet.doGet(RestClientServlet.java:30)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:687)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.service(ServletWrapper.java:1287)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:778)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:475)
+	at com.ibm.ws.webcontainer.filter.WebAppFilterManager.invokeFilters(WebAppFilterManager.java:1158)
+	at com.ibm.ws.webcontainer.webapp.WebApp.handleRequest(WebApp.java:4867)
+	at com.ibm.ws.webcontainer31.osgi.webapp.WebApp31.handleRequest(WebApp31.java:523)
+	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.handleRequest(DynamicVirtualHost.java:297)
+	at com.ibm.ws.webcontainer.WebContainer.handleRequest(WebContainer.java:997)
+	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.run(DynamicVirtualHost.java:262)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink$TaskWrapper.run(HttpDispatcherLink.java:955)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.ready(HttpDispatcherLink.java:341)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleDiscrimination(HttpInboundLink.java:470)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleNewRequest(HttpInboundLink.java:404)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.processRequest(HttpInboundLink.java:284)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.ready(HttpInboundLink.java:255)
+	at com.ibm.ws.tcpchannel.internal.NewConnectionInitialReadCallback.sendToDiscriminators(NewConnectionInitialReadCallback.java:174)
+	at com.ibm.ws.tcpchannel.internal.NewConnectionInitialReadCallback.complete(NewConnectionInitialReadCallback.java:83)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.requestComplete(WorkQueueManager.java:504)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.attemptIO(WorkQueueManager.java:574)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.workerRun(WorkQueueManager.java:929)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager$Worker.run(WorkQueueManager.java:1018)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+[12/9/15 15:44:56:501 IST] 00000030 com.ibm.ws.config.xml.internal.ConfigRefresher               A CWWKG0016I: Starting server configuration update.
+[12/9/15 15:44:56:557 IST] 00000030 com.ibm.ws.tcpchannel.internal.TCPChannel                    I CWWKO0220I: TCP Channel defaultHttpEndpoint has stopped listening for requests on host localhost.localdomain  (IPv4: 127.0.0.1) port 9080.
+[12/9/15 15:44:56:557 IST] 00000053 com.ibm.ws.config.xml.internal.ConfigRefresher               A CWWKG0017I: The server configuration was successfully updated in 0.057 seconds.
+[12/9/15 15:44:56:558 IST] 00000030 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0017I: Web application removed (default_host): http://localhost:9080/NotificationClient/
+[12/9/15 15:44:56:574 IST] 00000030 com.ibm.ws.tcpchannel.internal.TCPChannel                    I CWWKO0219I: TCP Channel defaultHttpEndpoint has been started and is now listening for requests on host localhost.localdomain  (IPv4: 127.0.0.1) port 9081.
+[12/9/15 15:44:56:574 IST] 00000030 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Web application available (default_host): http://localhost:9081/NotificationClient/
+[12/9/15 15:45:11:774 IST] 00000030 SystemOut                                                    O ===doGet===
+[12/9/15 15:45:11:781 IST] 00000030 com.ibm.ws.webcontainer.util.ApplicationErrorUtils           E SRVE0777E: Exception thrown by application class 'org.apache.wink.common.internal.registry.metadata.ProviderMetadataCollector.parseAccessibleObject:122'
+java.lang.NoSuchMethodError: org.apache.wink.common.internal.utils.GenericsUtils.getClassType(Ljava/lang/reflect/Type;Ljava/lang/Class;)Ljava/lang/Class;
+	at org.apache.wink.common.internal.registry.metadata.ProviderMetadataCollector.parseAccessibleObject(ProviderMetadataCollector.java:122)
+	at org.apache.wink.common.internal.registry.metadata.AbstractMetadataCollector.parseFields(AbstractMetadataCollector.java:73)
+	at org.apache.wink.common.internal.registry.metadata.ProviderMetadataCollector.collectMetadata(ProviderMetadataCollector.java:104)
+	at org.apache.wink.common.internal.lifecycle.LifecycleManagerUtils.collectClassMetadata(LifecycleManagerUtils.java:74)
+	at org.apache.wink.common.internal.lifecycle.LifecycleManagerUtils.createSingletonObjectFactory(LifecycleManagerUtils.java:60)
+	at org.apache.wink.common.internal.lifecycle.DefaultLifecycleManager.createObjectFactory(DefaultLifecycleManager.java:86)
+	at org.apache.wink.common.internal.lifecycle.LifecycleManagersRegistry.getObjectFactory(LifecycleManagersRegistry.java:85)
+	at org.apache.wink.common.internal.registry.ProvidersRegistry.addProvider(ProvidersRegistry.java:110)
+	at org.apache.wink.common.internal.registry.ProvidersRegistry.addProvider(ProvidersRegistry.java:102)
+	at org.apache.wink.common.internal.registry.ProvidersRegistry.addProvider(ProvidersRegistry.java:173)
+	at org.apache.wink.client.RestClient.processClasses(RestClient.java:170)
+	at org.apache.wink.client.RestClient.processApplication(RestClient.java:158)
+	at org.apache.wink.client.RestClient.initProvidersRegistry(RestClient.java:140)
+	at org.apache.wink.client.RestClient.<init>(RestClient.java:83)
+	at com.offla.rest.RestClientServlet.doGet(RestClientServlet.java:30)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:687)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.service(ServletWrapper.java:1287)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:778)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:475)
+	at com.ibm.ws.webcontainer.filter.WebAppFilterManager.invokeFilters(WebAppFilterManager.java:1158)
+	at com.ibm.ws.webcontainer.webapp.WebApp.handleRequest(WebApp.java:4867)
+	at com.ibm.ws.webcontainer31.osgi.webapp.WebApp31.handleRequest(WebApp31.java:523)
+	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.handleRequest(DynamicVirtualHost.java:297)
+	at com.ibm.ws.webcontainer.WebContainer.handleRequest(WebContainer.java:997)
+	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.run(DynamicVirtualHost.java:262)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink$TaskWrapper.run(HttpDispatcherLink.java:955)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.ready(HttpDispatcherLink.java:341)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleDiscrimination(HttpInboundLink.java:470)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleNewRequest(HttpInboundLink.java:404)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.processRequest(HttpInboundLink.java:284)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.ready(HttpInboundLink.java:255)
+	at com.ibm.ws.tcpchannel.internal.NewConnectionInitialReadCallback.sendToDiscriminators(NewConnectionInitialReadCallback.java:174)
+	at com.ibm.ws.tcpchannel.internal.NewConnectionInitialReadCallback.complete(NewConnectionInitialReadCallback.java:83)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.requestComplete(WorkQueueManager.java:504)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.attemptIO(WorkQueueManager.java:574)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.workerRun(WorkQueueManager.java:929)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager$Worker.run(WorkQueueManager.java:1018)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+[12/9/15 15:47:54:332 IST] 0000005f com.ibm.ws.config.xml.internal.ConfigRefresher               A CWWKG0016I: Starting server configuration update.
+[12/9/15 15:47:54:336 IST] 00000030 com.ibm.ws.config.xml.internal.ConfigRefresher               A CWWKG0017I: The server configuration was successfully updated in 0.003 seconds.
+[12/9/15 15:48:32:553 IST] 0000005f com.ibm.ws.config.xml.internal.ConfigRefresher               A CWWKG0016I: Starting server configuration update.
+[12/9/15 15:48:32:592 IST] 00000065 com.ibm.ws.app.manager.AppMessageHelper                      E CWWKZ0013E: It is not possible to start two applications called NotificationClient.
+[12/9/15 15:48:32:612 IST] 0000004e com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0017I: Web application removed (default_host): http://localhost:9081/NotificationClient/
+[12/9/15 15:48:32:630 IST] 0000004e com.ibm.ws.webcontainer.servlet                              I SRVE0253I: [NotificationClient] [/NotificationClient] [JAX-RS Servlet]: Destroy successful.
+[12/9/15 15:48:32:631 IST] 0000004e com.ibm.ws.webcontainer.servlet                              I SRVE0253I: [NotificationClient] [/NotificationClient] [com.offla.rest.RestClientServlet]: Destroy successful.
+[12/9/15 15:48:32:648 IST] 0000004e com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0009I: The application NotificationClient has stopped successfully.
+[12/9/15 15:48:32:650 IST] 00000068 com.ibm.ws.config.xml.internal.ConfigRefresher               A CWWKG0017I: The server configuration was successfully updated in 0.097 seconds.
+[12/9/15 15:48:32:666 IST] 0000004e com.ibm.ws.app.manager.AppMessageHelper                      I CWWKZ0018I: Starting application NotificationClient.
+[12/9/15 15:48:33:303 IST] 0000004e com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Loading Web Module: NotificationClient.
+[12/9/15 15:48:33:306 IST] 0000004e com.ibm.ws.webcontainer                                      I SRVE0250I: Web Module NotificationClient has been bound to default_host.
+[12/9/15 15:48:33:306 IST] 0000004e com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Web application available (default_host): http://localhost:9081/NotificationClient/
+[12/9/15 15:48:33:315 IST] 0000004e com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0003I: The application NotificationClient updated in 0.649 seconds.
+[12/9/15 15:48:45:511 IST] 00000063 com.ibm.ws.session.WASSessionCore                            I SESN0176I: A new session context will be created for application key default_host/NotificationClient
+[12/9/15 15:48:45:511 IST] 00000063 com.ibm.ws.util                                              I SESN0172I: The session manager is using the Java default SecureRandom implementation for session ID generation.
+[12/9/15 15:48:45:585 IST] 00000063 apache.wink.server.internal.application.ApplicationProcessor I The following JAX-RS application has been processed: com.ibm.ws.jaxrs.webcontainer.JAXRSDefaultApplicationSubclassProxy
+[12/9/15 15:48:45:585 IST] 00000063 org.apache.wink.server.internal.log.Providers                I There are no custom JAX-RS providers defined in the application.
+[12/9/15 15:48:45:598 IST] 00000063 com.ibm.ws.webcontainer.servlet                              I SRVE0242I: [NotificationClient] [/NotificationClient] [JAX-RS Servlet]: Initialization successful.
+[12/9/15 15:48:45:599 IST] 00000063 com.ibm.ws.webcontainer.servlet                              I SRVE0242I: [NotificationClient] [/NotificationClient] [com.offla.rest.RestClientServlet]: Initialization successful.
+[12/9/15 15:48:45:600 IST] 00000063 SystemOut                                                    O ===doGet===
+[12/9/15 15:48:52:456 IST] 00000063 SystemOut                                                    O Accepted
+[12/9/15 15:48:52:456 IST] 00000063 SystemOut                                                    O 202
+[12/9/15 15:48:52:461 IST] 00000063 SystemOut                                                    O {"messageId":"111112","message":{"message":{"alert":" http://offlafrontend.mybluemix.net/TextBitsMap"}}}
+[12/9/15 15:50:08:915 IST] 00000074 com.ibm.ws.runtime.update.internal.RuntimeUpdateManagerImpl  I CWWKE1100I: Begin server quiesce.
+[12/9/15 15:50:08:920 IST] 00000075 com.ibm.ws.tcpchannel.internal.TCPChannel                    I CWWKO0220I: TCP Channel defaultHttpEndpoint has stopped listening for requests on host localhost.localdomain  (IPv4: 127.0.0.1) port 9081.
+[12/9/15 15:50:08:921 IST] 00000075 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0017I: Web application removed (default_host): http://localhost:9081/NotificationClient/
+[12/9/15 15:50:08:922 IST] 00000074 com.ibm.ws.runtime.update.internal.RuntimeUpdateManagerImpl  I CWWKE1101I: Server quiesce complete.
+[12/9/15 15:50:08:949 IST] 00000072 com.ibm.ws.webcontainer.servlet                              I SRVE0253I: [NotificationClient] [/NotificationClient] [JAX-RS Servlet]: Destroy successful.
+[12/9/15 15:50:08:949 IST] 00000072 com.ibm.ws.webcontainer.servlet                              I SRVE0253I: [NotificationClient] [/NotificationClient] [com.offla.rest.RestClientServlet]: Destroy successful.
+[12/9/15 15:50:08:951 IST] 00000072 com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0009I: The application NotificationClient has stopped successfully.
+[12/9/15 15:50:09:223 IST] 00000001 com.ibm.ws.kernel.launch.internal.FrameworkManager           A CWWKE0036I: The server Notification03 stopped after 7 minutes, 38.166 seconds.

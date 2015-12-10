@@ -1,0 +1,6 @@
+
+ Index  Count  Time of first Occurrence    Time of last Occurrence     Exception SourceId ProbeId
+------+------+---------------------------+---------------------------+---------------------------
+     0      1    12/7/15 10:00:12:828 IST    12/7/15 10:00:12:828 IST java.lang.ClassNotFoundException com.ibm.ws.webcontainer.servlet.ServletWrapper.loadServlet 208
+                                                                            - /home/eyal/Programs/wlp/usr/servers/Notification/logs/ffdc/ffdc_15.12.07_10.00.12.0.log
+------+------+---------------------------+---------------------------+---------------------------

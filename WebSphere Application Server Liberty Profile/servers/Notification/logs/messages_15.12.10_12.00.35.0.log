@@ -1,0 +1,41 @@
+********************************************************************************
+product = WebSphere Application Server 8.5.5.7 (wlp-1.0.10.cl50720150827-0437)
+wlp.install.dir = /home/eyal/Programs/wlp/
+java.home = /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.60-14.b27.fc23.x86_64/jre
+java.version = 1.8.0_60
+java.runtime = OpenJDK Runtime Environment (1.8.0_60-b27)
+os = Linux (4.2.3-300.fc23.x86_64; amd64) (en_US)
+process = 4714@localhost.localdomain
+********************************************************************************
+[12/10/15 11:49:01:907 IST] 00000001 com.ibm.ws.kernel.launch.internal.FrameworkManager           A CWWKE0001I: The server Notification has been launched.
+[12/10/15 11:49:01:921 IST] 00000001 com.ibm.ws.kernel.launch.internal.FrameworkManager           A CWWKE0100I: This product is licensed for development, and limited production use. The full license terms can be viewed here: https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/license/base_ilan/ilan/8.5.5.7/lafiles/en.html
+[12/10/15 11:49:02:764 IST] 00000001 com.ibm.ws.kernel.launch.internal.FrameworkManager           I CWWKE0002I: The kernel started after 1.08 seconds
+[12/10/15 11:49:02:799 IST] 00000017 com.ibm.ws.kernel.feature.internal.FeatureManager            I CWWKF0007I: Feature update started.
+[12/10/15 11:49:03:374 IST] 00000010 com.ibm.ws.app.manager.internal.monitor.DropinMonitor        A CWWKZ0058I: Monitoring dropins for applications. 
+[12/10/15 11:49:03:507 IST] 0000001b com.ibm.ws.tcpchannel.internal.TCPChannel                    I CWWKO0219I: TCP Channel defaultHttpEndpoint has been started and is now listening for requests on host localhost.localdomain  (IPv4: 127.0.0.1) port 9081.
+[12/10/15 11:49:03:785 IST] 00000021 com.ibm.ws.app.manager.AppMessageHelper                      I CWWKZ0018I: Starting application NotificationClient.
+[12/10/15 11:49:04:492 IST] 00000021 com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Loading Web Module: NotificationClient.
+[12/10/15 11:49:04:494 IST] 00000021 com.ibm.ws.webcontainer                                      I SRVE0250I: Web Module NotificationClient has been bound to default_host.
+[12/10/15 11:49:04:495 IST] 00000021 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Web application available (default_host): http://localhost:9081/NotificationClient/
+[12/10/15 11:49:04:499 IST] 00000021 com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0001I: Application NotificationClient started in 0.714 seconds.
+[12/10/15 11:49:04:503 IST] 00000017 com.ibm.ws.kernel.feature.internal.FeatureManager            A CWWKF0012I: The server installed the following features: [servlet-3.1, json-1.0, localConnector-1.0, jaxrs-1.1, javaMail-1.5].
+[12/10/15 11:49:04:503 IST] 00000017 com.ibm.ws.kernel.feature.internal.FeatureManager            I CWWKF0008I: Feature update completed in 1.732 seconds.
+[12/10/15 11:49:04:503 IST] 00000017 com.ibm.ws.kernel.feature.internal.FeatureManager            A CWWKF0011I: The server Notification is ready to run a smarter planet.
+[12/10/15 11:49:18:905 IST] 00000027 com.ibm.ws.session.WASSessionCore                            I SESN8501I: The session manager did not find a persistent storage location; HttpSession objects will be stored in the local application server's memory.
+[12/10/15 11:49:18:908 IST] 00000027 com.ibm.ws.session.WASSessionCore                            I SESN0176I: A new session context will be created for application key default_host/NotificationClient
+[12/10/15 11:49:18:921 IST] 00000027 com.ibm.ws.util                                              I SESN0172I: The session manager is using the Java default SecureRandom implementation for session ID generation.
+[12/10/15 11:49:19:207 IST] 00000027 apache.wink.server.internal.application.ApplicationProcessor I The following JAX-RS application has been processed: com.ibm.ws.jaxrs.webcontainer.JAXRSDefaultApplicationSubclassProxy
+[12/10/15 11:49:19:208 IST] 00000027 org.apache.wink.server.internal.log.Providers                I There are no custom JAX-RS providers defined in the application.
+[12/10/15 11:49:19:469 IST] 00000027 com.ibm.ws.webcontainer.servlet                              I SRVE0242I: [NotificationClient] [/NotificationClient] [JAX-RS Servlet]: Initialization successful.
+[12/10/15 11:53:29:391 IST] 0000006a apache.wink.server.internal.application.ApplicationProcessor I The following JAX-RS application has been processed: com.ibm.ws.jaxrs.webcontainer.JAXRSDefaultApplicationSubclassProxy
+[12/10/15 11:53:29:392 IST] 0000006a org.apache.wink.server.internal.log.Resources                I The server has registered the JAX-RS resource class com.offla.rest.SimpleWS01 with @Path(/ws).
+[12/10/15 11:53:29:392 IST] 0000006a org.apache.wink.server.internal.log.Providers                I There are no custom JAX-RS providers defined in the application.
+[12/10/15 11:53:29:412 IST] 0000006a com.ibm.ws.webcontainer.servlet                              I SRVE0242I: [NotificationClient] [/NotificationClient] [com.offla.rest.MyRestApplication]: Initialization successful.
+[12/10/15 11:58:16:436 IST] 000000a8 com.ibm.ws.runtime.update.internal.RuntimeUpdateManagerImpl  I CWWKE1100I: Begin server quiesce.
+[12/10/15 11:58:16:440 IST] 000000a9 com.ibm.ws.tcpchannel.internal.TCPChannel                    I CWWKO0220I: TCP Channel defaultHttpEndpoint has stopped listening for requests on host localhost.localdomain  (IPv4: 127.0.0.1) port 9081.
+[12/10/15 11:58:16:441 IST] 000000a9 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0017I: Web application removed (default_host): http://localhost:9081/NotificationClient/
+[12/10/15 11:58:16:443 IST] 000000a8 com.ibm.ws.runtime.update.internal.RuntimeUpdateManagerImpl  I CWWKE1101I: Server quiesce complete.
+[12/10/15 11:58:16:465 IST] 00000089 com.ibm.ws.webcontainer.servlet                              I SRVE0253I: [NotificationClient] [/NotificationClient] [JAX-RS Servlet]: Destroy successful.
+[12/10/15 11:58:16:476 IST] 00000089 com.ibm.ws.webcontainer.servlet                              I SRVE0253I: [NotificationClient] [/NotificationClient] [com.offla.rest.MyRestApplication]: Destroy successful.
+[12/10/15 11:58:16:481 IST] 00000089 com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0009I: The application NotificationClient has stopped successfully.
+[12/10/15 11:58:16:776 IST] 00000001 com.ibm.ws.kernel.launch.internal.FrameworkManager           A CWWKE0036I: The server Notification stopped after 9 minutes, 15.092 seconds.

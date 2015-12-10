@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<archive>
+    <archive targetInArchive="/WEB-INF/lib/offla03JPA.jar">
+        <dir sourceOnDisk="/home/eyal/Workspaces/Git/offla03JPA/offla03JPA/build/classes" targetInArchive="/"/>
+    </archive>
+    <dir sourceOnDisk="/home/eyal/Workspaces/Git/offlaserver01WS/offlaserver01WS/WebContent" targetInArchive="/"/>
+</archive>

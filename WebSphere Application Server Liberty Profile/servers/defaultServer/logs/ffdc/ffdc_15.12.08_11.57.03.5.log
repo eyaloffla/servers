@@ -1,0 +1,55 @@
+------Start of DE processing------ = [12/8/15 11:57:03:344 IST]
+Exception = org.springframework.web.util.NestedServletException
+Source = com.ibm.ws.webcontainer.filter.WebAppFilterManager.invokeFilters
+probeid = 1064
+Stack Dump = org.springframework.web.util.NestedServletException: Request processing failed; nested exception is org.springframework.web.client.HttpServerErrorException: 500 Internal Server Error
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:978)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:868)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:707)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:842)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.service(ServletWrapper.java:1287)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:778)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:475)
+	at com.ibm.ws.webcontainer.filter.WebAppFilterManager.invokeFilters(WebAppFilterManager.java:1158)
+	at com.ibm.ws.webcontainer.webapp.WebApp.handleRequest(WebApp.java:4867)
+	at com.ibm.ws.webcontainer31.osgi.webapp.WebApp31.handleRequest(WebApp31.java:523)
+	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.handleRequest(DynamicVirtualHost.java:297)
+	at com.ibm.ws.webcontainer.WebContainer.handleRequest(WebContainer.java:997)
+	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.run(DynamicVirtualHost.java:262)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink$TaskWrapper.run(HttpDispatcherLink.java:955)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.ready(HttpDispatcherLink.java:341)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleDiscrimination(HttpInboundLink.java:470)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleNewRequest(HttpInboundLink.java:404)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.processRequest(HttpInboundLink.java:284)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.ready(HttpInboundLink.java:255)
+	at com.ibm.ws.tcpchannel.internal.NewConnectionInitialReadCallback.sendToDiscriminators(NewConnectionInitialReadCallback.java:174)
+	at com.ibm.ws.tcpchannel.internal.NewConnectionInitialReadCallback.complete(NewConnectionInitialReadCallback.java:83)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.requestComplete(WorkQueueManager.java:504)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.attemptIO(WorkQueueManager.java:574)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.workerRun(WorkQueueManager.java:929)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager$Worker.run(WorkQueueManager.java:1018)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.springframework.web.client.HttpServerErrorException: 500 Internal Server Error
+	at org.springframework.web.client.DefaultResponseErrorHandler.handleError(DefaultResponseErrorHandler.java:94)
+	at org.springframework.web.client.RestTemplate.handleResponseError(RestTemplate.java:615)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:573)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:529)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:447)
+	at com.offla.controller.Welcome.PersonDataSubmit(Welcome.java:72)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.springframework.web.bind.annotation.support.HandlerMethodInvoker.invokeHandlerMethod(HandlerMethodInvoker.java:175)
+	at org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter.invokeHandlerMethod(AnnotationMethodHandlerAdapter.java:446)
+	at org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter.handle(AnnotationMethodHandlerAdapter.java:434)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:877)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:966)
+	... 28 more
+
+Dump of callerThis
+null

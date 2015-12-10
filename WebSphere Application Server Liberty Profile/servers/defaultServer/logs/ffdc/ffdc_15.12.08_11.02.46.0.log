@@ -1,0 +1,416 @@
+------Start of DE processing------ = [12/8/15 11:02:46:043 IST]
+Exception = org.postgresql.xa.PGXAException
+Source = com.ibm.tx.jta.impl.RegisteredResources.deliverOutcome
+probeid = 1923
+Stack Dump = org.postgresql.xa.PGXAException: Error rolling back prepared transaction
+	at org.postgresql.xa.PGXAConnection.rollback(PGXAConnection.java:445)
+	at com.ibm.ws.rsadapter.spi.WSRdbXaResourceImpl.rollback(WSRdbXaResourceImpl.java:1026)
+	at com.ibm.ejs.j2c.XATransactionWrapper.rollback(XATransactionWrapper.java:1131)
+	at com.ibm.tx.jta.impl.JTAXAResourceImpl.rollback(JTAXAResourceImpl.java:381)
+	at com.ibm.tx.jta.impl.RegisteredResources.deliverOutcome(RegisteredResources.java:1613)
+	at com.ibm.tx.jta.impl.RegisteredResources.distributeOutcome(RegisteredResources.java:1852)
+	at com.ibm.tx.jta.embeddable.impl.EmbeddableRegisteredResources.rollbackResources(EmbeddableRegisteredResources.java:54)
+	at com.ibm.tx.jta.embeddable.impl.EmbeddableTransactionImpl.rollbackResources(EmbeddableTransactionImpl.java:141)
+	at com.ibm.tx.jta.embeddable.impl.EmbeddableTranManagerImpl.completeTxTimeout(EmbeddableTranManagerImpl.java:116)
+	at com.ibm.tx.jta.embeddable.impl.EmbeddableTranManagerSet.completeTxTimeout(EmbeddableTranManagerSet.java:92)
+	at com.ibm.ejs.csi.TransactionControlImpl.completeTxTimeout(TransactionControlImpl.java:1201)
+	at com.ibm.ejs.csi.TranStrategy.postInvoke(TranStrategy.java:196)
+	at com.ibm.ejs.csi.TransactionControlImpl.postInvoke(TransactionControlImpl.java:482)
+	at com.ibm.ejs.container.EJSContainer.postInvoke(EJSContainer.java:3989)
+	at com.offla.services.EJSLocal0SLAppfr1Bean_8d03ba1d.isPersonInDB(EJSLocal0SLAppfr1Bean_8d03ba1d.java)
+	at com.offla.ws.IsPersonOnDB.isPersonOnDataBase(IsPersonOnDB.java:43)
+	at com.offla.ws.EJSLocalNSLIsPersonOnDB_1c315ab8.isPersonOnDataBase(EJSLocalNSLIsPersonOnDB_1c315ab8.java)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at com.ibm.ws.jaxrs20.ejb.JaxRsFactoryBeanEJBCustomizer.serviceInvoke(JaxRsFactoryBeanEJBCustomizer.java:349)
+	at com.ibm.ws.jaxrs20.server.LibertyJaxRsServerFactoryBean.performInvocation(LibertyJaxRsServerFactoryBean.java:593)
+	at com.ibm.ws.jaxrs20.server.LibertyJaxRsInvoker.performInvocation(LibertyJaxRsInvoker.java:114)
+	at org.apache.cxf.service.invoker.AbstractInvoker.invoke(AbstractInvoker.java:97)
+	at com.ibm.ws.jaxrs20.server.LibertyJaxRsInvoker.invoke(LibertyJaxRsInvoker.java:195)
+	at org.apache.cxf.jaxrs.JAXRSInvoker.invoke(JAXRSInvoker.java:200)
+	at com.ibm.ws.jaxrs20.server.LibertyJaxRsInvoker.invoke(LibertyJaxRsInvoker.java:366)
+	at org.apache.cxf.jaxrs.JAXRSInvoker.invoke(JAXRSInvoker.java:99)
+	at org.apache.cxf.interceptor.ServiceInvokerInterceptor$1.run(ServiceInvokerInterceptor.java:61)
+	at org.apache.cxf.interceptor.ServiceInvokerInterceptor.handleMessage(ServiceInvokerInterceptor.java:99)
+	at org.apache.cxf.phase.PhaseInterceptorChain.doIntercept(PhaseInterceptorChain.java:307)
+	at org.apache.cxf.transport.ChainInitiationObserver.onMessage(ChainInitiationObserver.java:124)
+	at org.apache.cxf.transport.http.AbstractHTTPDestination.invoke(AbstractHTTPDestination.java:259)
+	at com.ibm.ws.jaxrs20.endpoint.AbstractJaxRsWebEndpoint.invoke(AbstractJaxRsWebEndpoint.java:134)
+	at com.ibm.websphere.jaxrs.server.IBMRestServlet.handleRequest(IBMRestServlet.java:149)
+	at com.ibm.websphere.jaxrs.server.IBMRestServlet.doGet(IBMRestServlet.java:115)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:687)
+	at com.ibm.websphere.jaxrs.server.IBMRestServlet.service(IBMRestServlet.java:99)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.service(ServletWrapper.java:1287)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:778)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:475)
+	at com.ibm.ws.webcontainer.filter.WebAppFilterManager.invokeFilters(WebAppFilterManager.java:1158)
+	at com.ibm.ws.webcontainer.webapp.WebApp.handleRequest(WebApp.java:4867)
+	at com.ibm.ws.webcontainer31.osgi.webapp.WebApp31.handleRequest(WebApp31.java:523)
+	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.handleRequest(DynamicVirtualHost.java:297)
+	at com.ibm.ws.webcontainer.WebContainer.handleRequest(WebContainer.java:997)
+	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.run(DynamicVirtualHost.java:262)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink$TaskWrapper.run(HttpDispatcherLink.java:955)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.ready(HttpDispatcherLink.java:341)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleDiscrimination(HttpInboundLink.java:470)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleNewRequest(HttpInboundLink.java:404)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.processRequest(HttpInboundLink.java:284)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.ready(HttpInboundLink.java:255)
+	at com.ibm.ws.tcpchannel.internal.NewConnectionInitialReadCallback.sendToDiscriminators(NewConnectionInitialReadCallback.java:174)
+	at com.ibm.ws.tcpchannel.internal.NewConnectionInitialReadCallback.complete(NewConnectionInitialReadCallback.java:83)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.requestComplete(WorkQueueManager.java:504)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.attemptIO(WorkQueueManager.java:574)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.workerRun(WorkQueueManager.java:929)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager$Worker.run(WorkQueueManager.java:1018)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.postgresql.util.PSQLException: This connection has been closed.
+	at org.postgresql.jdbc2.AbstractJdbc2Connection.checkClosed(AbstractJdbc2Connection.java:853)
+	at org.postgresql.jdbc2.AbstractJdbc2Connection.rollback(AbstractJdbc2Connection.java:870)
+	at org.postgresql.xa.PGXAConnection.rollback(PGXAConnection.java:420)
+	... 62 more
+
+Dump of callerThis
+Object type = com.ibm.tx.jta.embeddable.impl.EmbeddableRegisteredResources
+  tc = class com.ibm.ejs.ras.TraceComponent@2ea625a1
+    strings[0] = "TraceComponent[com.ibm.tx.jta.embeddable.impl.EmbeddableRegisteredResources,class com.ibm.tx.jta.embeddable.impl.EmbeddableRegisteredResources,[],null,null]"
+  tc = class com.ibm.ws.tx.util.logging.WASTraceComponent@738ec1b
+    _tc = class com.ibm.ejs.ras.TraceComponent@6ecb191e
+      strings[0] = "TraceComponent[com.ibm.tx.jta.impl.RegisteredResources,class com.ibm.tx.jta.impl.RegisteredResources,[Transaction],com.ibm.ws.Transaction.resources.TransactionMsgs,null]"
+  xaFlowCallbackEnabled = false
+  MAX_PDATA_SIZE = 3072
+  _resourceObjects = class java.util.ArrayList@75f84d9
+    serialVersionUID = 8683452581122892189
+    DEFAULT_CAPACITY = 10
+    EMPTY_ELEMENTDATA = class java.lang.Object[0]
+    DEFAULTCAPACITY_EMPTY_ELEMENTDATA = class java.lang.Object[0]
+    elementData = class java.lang.Object[10]
+      elementData[0] = class com.ibm.tx.jta.impl.JTAXAResourceImpl@16709c99
+      elementData[1] = null
+      elementData[2] = null
+      elementData[3] = null
+      elementData[4] = null
+      elementData[5] = null
+      elementData[6] = null
+      elementData[7] = null
+      elementData[8] = null
+      elementData[9] = null
+    size = 1
+    MAX_ARRAY_SIZE = 2147483639
+    modCount = 1
+    MAX_ARRAY_SIZE = 2147483639
+  _onePhaseResourceEnlisted = null
+  _failedResourceList = null
+  _txServiceXid = class com.ibm.tx.jta.impl.XidImpl@42044e8a
+    tc = class com.ibm.ws.tx.util.logging.WASTraceComponent@529131a8
+      _tc = class com.ibm.ejs.ras.TraceComponent@43d7d4e2
+    serialVersionUID = -4291259441393350686
+    nl = "
+"
+    _formatId = 1463898948
+    _gtrid = {0,0,1,81,-128,-46,37,95,0,0,0,6,3,72,-107,-124,109,-93,45,2,64,-106,-69,3,87,12,101,-80,-114,-120,115,-59,109,-124,-87,-89} /* array length = 36*/
+    _bqual = {0,0,1,81,-128,-46,37,95,0,0,0,6,3,72,-107,-124,109,-93,45,2,64,-106,-69,3,87,12,101,-80,-114,-120,115,-59,109,-124,-87,-89,0,0,0,1} /* array length = 40*/
+    _otid = {0,0,1,81,-128,-46,37,95,0,0,0,6,3,72,-107,-124,109,-93,45,2,64,-106,-69,3,87,12,101,-80,-114,-120,115,-59,109,-124,-87,-89,0,0,1,81,-128,-46,37,95,0,0,0,6,3,72,-107,-124,109,-93,45,2,64,-106,-69,3,87,12,101,-80,-114,-120,115,-59,109,-124,-87,-89,0,0,0,1} /* array length = 76*/
+    _primaryKey = null
+    ZOS_FID_CB390 = -1010695802
+    ZOS_FID_CBLT = -1010641949
+    ZOS_FID_WASZ = -423501079
+    WAS_FID_WASC = 1463898947
+    WAS_FID_WASD = 1463898948
+    WAS_FID_WASZ = 1463898970
+    WAS_FORMAT_ID = 1463898948
+    _configProvider = class com.ibm.ws.transaction.services.JTMConfigurationProvider@4fe35a4
+    digits = "0123456789ABCDEF"
+    BQUAL_PKEY_OFFSET = 0
+    BQUAL_PKEY_LENGTH = 16
+    BQUAL_UUID_OFFSET = 16
+    BQUAL_UUID_LENGTH = 20
+    GTRID_JTA_GTRID_LENGTH = 36
+    BQUAL_BRANCH_INDEX_OFFSET = 39
+    BQUAL_JTA_GTRID_LENGTH = 40
+    BQUAL_STOKEN_OFFSET = 40
+    BQUAL_STOKEN_LENGTH = 8
+    BQUAL_RECOVERY_ID_OFFSET_UNUSED = 48
+    BQUAL_RECOVERY_ID_LENGTH_UNUSED = 4
+    BQUAL_RM_SEQ_OFFSET = 52
+    BQUAL_RM_SEQ_LENGTH = 2
+    BQUAL_JTA_BQUAL_LENGTH = 54
+  _branchCount = 1
+  _LPSProhibited = false
+  _LPSEnabledTx = false
+  _retryCompletion = false
+  _transaction = class com.ibm.tx.jta.embeddable.impl.EmbeddableTransactionImpl@3bdd5d49
+    tc = class com.ibm.ejs.ras.TraceComponent@c15d7a3
+      strings[0] = "TraceComponent[com.ibm.tx.jta.embeddable.impl.EmbeddableTransactionImpl,class com.ibm.tx.jta.embeddable.impl.EmbeddableTransactionImpl,[],null,null]"
+    _inactivityTimeout = 60
+    _inactivityTimer = null
+    _inactivityTimerActive = false
+    _mostRecentThread = class java.util.Stack@60d7627c
+      serialVersionUID = 1224463164541339165
+      elementData = class java.lang.Object[10]
+      elementCount = 1
+      capacityIncrement = 0
+      serialVersionUID = -2767605614048989439
+      MAX_ARRAY_SIZE = 2147483639
+      modCount = 1
+      MAX_ARRAY_SIZE = 2147483639
+    TRANSACTION_LOG_NAME = "tranlog"
+    PARTNER_LOG_NAME = "partnerlog"
+    TRAN_STATE_SECTION = 0
+    CORBA_RESOURCE_SECTION = 1
+    XARESOURCE_SECTION = 2
+    GLOBALID_SECTION = 3
+    RECOVERYCOORD_SECTION = 4
+    RESOURCE_WSC_SECTION = 5
+    RECCOORD_WSC_SECTION = 6
+    RESOURCE_ADAPTER_SECTION = 7
+    HEURISTIC_OUTCOME_SECTION = 8
+    RECCOORD_WSAT_SECTION = 9
+    WSAT_ASYNC_RESOURCE_SECTION = 10
+    NEXT_ID_SECTION = 30
+    LOW_WATERMARK_SECTION = 31
+    SERVER_STATE_SECTION = 32
+    CLASSPATH_SECTION = 33
+    XARESOURCEDATA_SECTION = 34
+    WSCOORDINATOR_SECTION = 35
+    JCAPROVIDER_SECTION = 36
+    RESOURCE_PRIORITY_SECTION = 37
+    APPLID_DATA_SECTION = 253
+    EPOCH_DATA_SECTION = 254
+    SERVER_DATA_SECTION = 255
+    _status = class com.ibm.tx.jta.impl.TransactionState@5b8ec1c1
+      STATE_NONE = -1
+      STATE_ACTIVE = 0
+      STATE_PREPARING = 1
+      STATE_PREPARED = 2
+      STATE_COMMITTING_ONE_PHASE = 10
+      STATE_COMMITTING = 3
+      STATE_COMMITTED = 4
+      STATE_ROLLING_BACK = 5
+      STATE_ROLLED_BACK = 6
+      STATE_HEURISTIC_ON_COMMIT = 7
+      STATE_HEURISTIC_ON_ROLLBACK = 8
+      STATE_LAST_PARTICIPANT = 9
+      tc = class com.ibm.ws.tx.util.logging.WASTraceComponent@3d840b1b
+      _state = 0
+      _tran = class com.ibm.tx.jta.embeddable.impl.EmbeddableTransactionImpl@3bdd5d49
+      _tranLog = null
+      _logSection = null
+      _loggingFailed = false
+      _partnerLogTable = class com.ibm.tx.jta.impl.PartnerLogTable@493b973e
+      byteData = {0} /* array length = 1*/
+      validStateChange = class [Z[11]
+    _timeout = 120
+    _subordinate = false
+    _rollbackOnly = true
+    _originalException = null
+    _timedOut = true
+    _subRollback = false
+    _resources = class com.ibm.tx.jta.embeddable.impl.EmbeddableRegisteredResources@32797b38
+    _retryAlarm = null
+    _syncs = class com.ibm.tx.jta.impl.RegisteredSyncs@919c4e
+      tc = class com.ibm.ws.tx.util.logging.WASTraceComponent@6dee3997
+      SYNC_TIER_OUTER = 0
+      SYNC_TIER_NORMAL = 1
+      SYNC_TIER_INNER = 2
+      SYNC_TIER_RRS = 3
+      _tran = class com.ibm.tx.jta.embeddable.impl.EmbeddableTransactionImpl@3bdd5d49
+      SYNC_ARRAY_SIZE = 4
+      _syncs = class java.util.ArrayList[4]
+      DEFAULT_DEPTH_LIMIT = 5
+      _depthLimit = 5
+    _destroyCallbacks = null
+    _finishCount = 0
+    _logUnit = null
+    _tranLog = null
+    _systemExceptionOccured = false
+    _heuristicOnPrepare = null
+    _retryAttempts = 0
+    defaultRetryTime = 60
+    DISABLE_2PC_DEFAULT_PROPERTY = "com.ibm.tx.jta.disable2PC"
+    _expirationTime = 1449565354527
+    _xid = class com.ibm.tx.jta.impl.XidImpl@42044e8a
+    _localTID = 55088516
+    _tranName = null
+    _JCARecoveryData = null
+    _JCAXid = null
+    _disable2PCDefault = false
+    _disableTwoPhase = false
+    _needsManualCompletion = false
+    _failureScopeController = class com.ibm.tx.jta.impl.FailureScopeController@786fe8ac
+      tc = class com.ibm.ws.tx.util.logging.WASTraceComponent@40c95fed
+      _failureScope = class com.ibm.ws.recoverylog.spi.FileFailureScope@69db968d
+      _serverName = "Server"
+      _tranLog = class com.ibm.ws.recoverylog.spi.RecoveryLogImpl@3b9bec93
+      _xaLog = class com.ibm.ws.recoverylog.spi.RecoveryLogImpl@1aa6e166
+      _recoverXaLog = null
+      _partnerLogTable = class com.ibm.tx.jta.impl.PartnerLogTable@493b973e
+      _localFailureScope = true
+      _recoveryManager = class com.ibm.tx.jta.impl.RecoveryManager@7ce11f6a
+      _fslc = class com.ibm.ws.Transaction.JTA.FailureScopeLifeCycle@76dd112c
+      _transactions = class java.util.HashSet@12469410
+      SMP_THRESH = 4
+      isConcurrent = false
+    _inRecovery = false
+    _doNotRetryRecovery = false
+    _synchronizationRegistryResources = class java.util.HashMap@3bfa50fa
+      serialVersionUID = 362498820763181265
+      DEFAULT_INITIAL_CAPACITY = 16
+      MAXIMUM_CAPACITY = 1073741824
+      DEFAULT_LOAD_FACTOR = 0.75
+      TREEIFY_THRESHOLD = 8
+      UNTREEIFY_THRESHOLD = 6
+      MIN_TREEIFY_CAPACITY = 64
+      table = class java.util.HashMap$Node[16]
+      entrySet = null
+      size = 3
+      modCount = 3
+      threshold = 12
+      loadFactor = 0.75
+      keySet = null
+      values = null
+    GLOBAL_TRANSACTION_LOCAL_ID_MODIFIER = 6917529027641081856
+    _mostRecentThread = class java.lang.Thread@2ffea9e1
+      name = {Default Executor-thread-4} /* array length = 25*/
+      priority = 5
+      threadQ = null
+      eetop = 140448249169920
+      single_step = false
+      daemon = true
+      stillborn = false
+      target = class java.util.concurrent.ThreadPoolExecutor$Worker@6d2eaba4
+      group = class java.lang.ThreadGroup@10576d2b
+      contextClassLoader = class com.ibm.ws.classloading.internal.ThreadContextClassLoader@3ffe6146
+      inheritedAccessControlContext = class java.security.AccessControlContext@7bde32a6
+      threadInitNumber = 12
+      threadLocals = class java.lang.ThreadLocal$ThreadLocalMap@1fcd9abd
+      inheritableThreadLocals = class java.lang.ThreadLocal$ThreadLocalMap@3f32a52
+      stackSize = 0
+      nativeParkEventPointer = 140448249175536
+      tid = 31
+      threadSeqNumber = 102
+      threadStatus = 5
+      parkBlocker = null
+      blocker = null
+      blockerLock = class java.lang.Object@cbb900
+      MIN_PRIORITY = 1
+      NORM_PRIORITY = 5
+      MAX_PRIORITY = 10
+      EMPTY_STACK_TRACE = class java.lang.StackTraceElement[0]
+      SUBCLASS_IMPLEMENTATION_PERMISSION = class java.lang.RuntimePermission@7320d3d6
+      uncaughtExceptionHandler = null
+      defaultUncaughtExceptionHandler = null
+      threadLocalRandomSeed = 3528682741264284408
+      threadLocalRandomProbe = 1013904242
+      threadLocalRandomSecondarySeed = 2125294147
+    _isZos = false
+    _configProvider = class com.ibm.ws.transaction.services.JTMConfigurationProvider@4fe35a4
+      tc = class com.ibm.websphere.ras.TraceComponent@d4b1561
+      locationService = class com.ibm.ws.kernel.service.location.internal.WsLocationAdminImpl@73bf26de
+      _runtimeMetaDataProvider = class com.ibm.ws.transaction.services.LibertyRuntimeMetaDataProvider@6d750df4
+      _props = class org.apache.felix.scr.impl.helper.ReadOnlyDictionary@4bb5e25e
+      _cc = class org.apache.felix.scr.impl.manager.ComponentContextImpl@4770c952
+      logDir = "/home/eyal/Programs/wlp/usr/servers/defaultServer/tranlog/"
+      defaultLogDir = "$(server.output.dir)/tranlog"
+      _transactionSettingsProviders = class com.ibm.wsspi.kernel.service.utils.ConcurrentServiceReferenceSet@4d739eb4
+      dataSourceFactoryRef = class com.ibm.wsspi.kernel.service.utils.AtomicServiceReference@82c3043
+      _isSQLRecoveryLog = false
+      theDataSourceFactory = null
+      _recoveryIdentity = ""
+      _recoveryGroup = ""
+      tmsRef = class com.ibm.ws.transaction.services.TransactionManagerService@4ccbe09f
+      _applId = {109,-93,45,2,64,-106,-69,3,87,12,101,-80,-114,-120,115,-59,109,-124,-87,-89} /* array length = 20*/
+      serialVersionUID = 7313199724208668118
+      _alarmManager = class com.ibm.tx.jta.util.alarm.AlarmManagerImpl@6cef940a
+      _applId = null
+      _runtimeMetaDataProvider = class com.ibm.tx.jta.config.DefaultConfigurationProvider$1@2d14ea9c
+      _heuristicCompletionDirction = 1
+      _heuristicRetryInterval = 0
+      _heuristicRetryLimit = 0
+      _totalTransactionLifetimeTimeout = 120
+      _logDir = "logs/recovery"
+      _logSize = 1024
+      _logForHeuristicReporting = false
+      _level = class java.util.logging.Level@7cc357b4
+      _defaultMaximumShutdownDelay = 2
+      _acceptHeuristicHazard = true
+      _auditRecovery = false
+      _recoverOnStartup = false
+      _waitForRecovery = false
+      _propagateXAResourceTransactionTimeout = false
+    auditRecovery = false
+    _completedLTCBoundary = null
+    _taskId = null
+    _timeoutInfo = class com.ibm.tx.jta.impl.TimeoutManager$TimeoutInfo@6f36c653
+      _tran = class com.ibm.tx.jta.embeddable.impl.EmbeddableTransactionImpl@3bdd5d49
+      _duration = 120
+      _timeoutType = 3
+      _alarm = class com.ibm.tx.jta.util.alarm.AlarmImpl@e1df3b5
+      _alarmManager = class com.ibm.tx.jta.util.alarm.AlarmManagerImpl@6cef940a
+    _txType = 1
+    tc = class com.ibm.ws.tx.util.logging.WASTraceComponent@421b82bd
+      _tc = class com.ibm.ejs.ras.TraceComponent@4050fa25
+    tcSummary = class com.ibm.ws.tx.util.logging.WASTraceComponent@4ee4055c
+      _tc = class com.ibm.ejs.ras.TraceComponent@6b1005d5
+  _resourceTable = class java.util.HashMap@7bc5361d
+    serialVersionUID = 362498820763181265
+    DEFAULT_INITIAL_CAPACITY = 16
+    MAXIMUM_CAPACITY = 1073741824
+    DEFAULT_LOAD_FACTOR = 0.75
+    TREEIFY_THRESHOLD = 8
+    UNTREEIFY_THRESHOLD = 6
+    MIN_TREEIFY_CAPACITY = 64
+    table = class java.util.HashMap$Node[16]
+      table[0] = null
+      table[1] = null
+      table[2] = null
+      table[3] = null
+      table[4] = null
+      table[5] = null
+      table[6] = null
+      table[7] = null
+      table[8] = null
+      table[9] = null
+      table[10] = null
+      table[11] = null
+      table[12] = null
+      table[13] = class java.util.HashMap$Node@5276d030
+      table[14] = null
+      table[15] = null
+    entrySet = null
+    size = 1
+    modCount = 1
+    threshold = 12
+    loadFactor = 0.75
+    keySet = null
+    values = null
+  _logUnit = null
+  _logSection = null
+  _xalogSection = null
+  _hoSection = null
+  _resourcesLogged = false
+  _heuristicOutcome = 0
+  _loggedHeuristicOutcome = 0
+  _systemException = null
+  _retryRequired = false
+  _outcome = false
+  _errorCode = -3
+  XA_OK = 0
+  XA_RDONLY = 3
+  ONE_PHASE_OPT = 10
+  ONE_PHASE_OPT_ROLLBACK = 11
+  ONE_PHASE_OPT_FAILED = 12
+  _disableTwoPhase = false
+  _diagnosticsRequired = false
+  _gotPriorityResourcesEnlisted = false
+  _isCheckingSameRM = false
+  _sameRMMasterResource = null
+  _sameRMResource = null
+  _sorted = false
+  _retryImmediately = false
+  _prepareResult = 0
+  _okVoteCount = 0
+  prepareComparator = class com.ibm.tx.jta.impl.RegisteredResources$1@c70cf0
+

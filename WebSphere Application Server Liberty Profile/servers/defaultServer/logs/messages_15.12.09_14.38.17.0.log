@@ -1,0 +1,88 @@
+********************************************************************************
+product = WebSphere Application Server 8.5.5.7 (wlp-1.0.10.cl50720150827-0437)
+wlp.install.dir = /home/eyal/Programs/wlp/
+java.home = /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.60-14.b27.fc23.x86_64/jre
+java.version = 1.8.0_60
+java.runtime = OpenJDK Runtime Environment (1.8.0_60-b27)
+os = Linux (4.2.3-300.fc23.x86_64; amd64) (en_US)
+process = 18373@localhost.localdomain
+********************************************************************************
+[12/9/15 14:32:39:130 IST] 00000001 com.ibm.ws.kernel.launch.internal.FrameworkManager           A CWWKE0001I: The server defaultServer has been launched.
+[12/9/15 14:32:39:146 IST] 00000001 com.ibm.ws.kernel.launch.internal.FrameworkManager           A CWWKE0100I: This product is licensed for development, and limited production use. The full license terms can be viewed here: https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/license/base_ilan/ilan/8.5.5.7/lafiles/en.html
+[12/9/15 14:32:40:144 IST] 00000001 com.ibm.ws.kernel.launch.internal.FrameworkManager           I CWWKE0002I: The kernel started after 1.199 seconds
+[12/9/15 14:32:40:172 IST] 00000017 com.ibm.ws.kernel.feature.internal.FeatureManager            I CWWKF0007I: Feature update started.
+[12/9/15 14:32:40:819 IST] 00000010 com.ibm.ws.security.ready.internal.SecurityReadyServiceImpl  I CWWKS0007I: The security service is starting...
+[12/9/15 14:32:41:374 IST] 0000001c com.ibm.ws.security.ready.internal.SecurityReadyServiceImpl  I CWWKS0008I: The security service is ready.
+[12/9/15 14:32:41:375 IST] 0000001c com.ibm.ws.security.token.ltpa.internal.LTPAKeyCreator       I CWWKS4105I: LTPA configuration is ready after 0.052 seconds.
+[12/9/15 14:32:41:582 IST] 00000010 com.ibm.ws.app.manager.internal.monitor.DropinMonitor        A CWWKZ0058I: Monitoring dropins for applications. 
+[12/9/15 14:32:41:644 IST] 0000001e com.ibm.ws.tcpchannel.internal.TCPChannel                    I CWWKO0219I: TCP Channel defaultHttpEndpoint has been started and is now listening for requests on host localhost.localdomain  (IPv4: 127.0.0.1) port 9080.
+[12/9/15 14:32:41:653 IST] 0000001e com.ibm.ws.tcpchannel.internal.TCPChannel                    I CWWKO0219I: TCP Channel defaultHttpEndpoint-ssl has been started and is now listening for requests on host localhost.localdomain  (IPv4: 127.0.0.1) port 9443.
+[12/9/15 14:32:42:657 IST] 00000010 com.ibm.ws.cache.ServerCache                                 I DYNA1001I: WebSphere Dynamic Cache instance named baseCache initialized successfully.
+[12/9/15 14:32:42:659 IST] 00000010 com.ibm.ws.cache.ServerCache                                 I DYNA1071I: The cache provider default is being used.
+[12/9/15 14:32:42:660 IST] 00000010 com.ibm.ws.cache.CacheServiceImpl                            I DYNA1056I: Dynamic Cache (object cache) initialized successfully.
+[12/9/15 14:32:42:787 IST] 0000001e com.ibm.ws.app.manager.AppMessageHelper                      I CWWKZ0018I: Starting application offlaserver01WS.
+[12/9/15 14:32:42:788 IST] 00000024 com.ibm.ws.app.manager.AppMessageHelper                      I CWWKZ0018I: Starting application offlaFrontEnd.
+[12/9/15 14:32:44:451 IST] 0000001e com.ibm.ws.rsadapter.DSConfigHelper                          W DSRA0174W: Warning: GenericDataStoreHelper is being used.
+[12/9/15 14:32:44:555 IST] 0000001e com.ibm.ws.recoverylog.spi.RecoveryDirectorImpl              I CWRLS0010I: Performing recovery processing for local WebSphere server (Server).
+[12/9/15 14:32:44:672 IST] 0000001e com.ibm.ws.recoverylog.spi.RecoveryDirectorImpl              I CWRLS0012I: All persistent services have been directed to perform recovery processing for this WebSphere server (Server).
+[12/9/15 14:32:44:670 IST] 00000027 com.ibm.tx.jta.impl.RecoveryManager                          I WTRN0135I: Transaction service recovering no transactions.
+[12/9/15 14:32:44:705 IST] 00000024 com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Loading Web Module: offlaFrontEnd.
+[12/9/15 14:32:44:727 IST] 00000024 com.ibm.ws.webcontainer                                      I SRVE0250I: Web Module offlaFrontEnd has been bound to default_host.
+[12/9/15 14:32:44:728 IST] 00000024 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Web application available (default_host): http://localhost:9080/offlaFrontEnd/
+[12/9/15 14:32:44:738 IST] 00000024 com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0001I: Application offlaFrontEnd started in 1.950 seconds.
+[12/9/15 14:32:45:208 IST] 0000001e com.ibm.ws.ejbcontainer.osgi.internal.EJBRuntimeImpl         I CNTR4000I: The offlaserver01WS.war EJB module in the offlaserver01WS application is starting.
+[12/9/15 14:32:45:213 IST] 0000001e com.ibm.ws.ejbcontainer.runtime.AbstractEJBRuntime           I CNTR0167I: The server is binding the com.offla.ws.NotificationSenderWSTestReceptor interface of the NotificationSenderWSTestReceptor enterprise bean in the offlaserver01WS.war module of the offlaserver01WS application.  The binding location is: java:global/offlaserver01WS/NotificationSenderWSTestReceptor!com.offla.ws.NotificationSenderWSTestReceptor
+[12/9/15 14:32:45:218 IST] 0000001e com.ibm.ws.ejbcontainer.runtime.AbstractEJBRuntime           I CNTR0167I: The server is binding the com.offla.ws.GoogleTokensWS interface of the GoogleTokensWS enterprise bean in the offlaserver01WS.war module of the offlaserver01WS application.  The binding location is: java:global/offlaserver01WS/GoogleTokensWS!com.offla.ws.GoogleTokensWS
+[12/9/15 14:32:45:219 IST] 0000001e com.ibm.ws.ejbcontainer.runtime.AbstractEJBRuntime           I CNTR0167I: The server is binding the com.offla.ws.IsPersonOnDB interface of the IsPersonOnDB enterprise bean in the offlaserver01WS.war module of the offlaserver01WS application.  The binding location is: java:global/offlaserver01WS/IsPersonOnDB!com.offla.ws.IsPersonOnDB
+[12/9/15 14:32:45:219 IST] 0000001e com.ibm.ws.ejbcontainer.runtime.AbstractEJBRuntime           I CNTR0167I: The server is binding the com.offla.ws.HolaWS interface of the HolaWS enterprise bean in the offlaserver01WS.war module of the offlaserver01WS application.  The binding location is: java:global/offlaserver01WS/HolaWS!com.offla.ws.HolaWS
+[12/9/15 14:32:45:219 IST] 0000001e com.ibm.ws.ejbcontainer.runtime.AbstractEJBRuntime           I CNTR0167I: The server is binding the com.offla.celarix.PersonOnDB interface of the PersonOnDB enterprise bean in the offlaserver01WS.war module of the offlaserver01WS application.  The binding location is: java:global/offlaserver01WS/PersonOnDB!com.offla.celarix.PersonOnDB
+[12/9/15 14:32:45:219 IST] 0000001e com.ibm.ws.ejbcontainer.runtime.AbstractEJBRuntime           I CNTR0167I: The server is binding the com.offla.services.IAppfr1Service interface of the Appfr1Bean enterprise bean in the offlaserver01WS.war module of the offlaserver01WS application.  The binding location is: java:global/offlaserver01WS/Appfr1Bean!com.offla.services.IAppfr1Service
+[12/9/15 14:32:45:220 IST] 0000001e com.ibm.ws.ejbcontainer.runtime.AbstractEJBRuntime           I CNTR0167I: The server is binding the com.offla.services.ICellarixTxnLocal interface of the CellarixTxnBean enterprise bean in the offlaserver01WS.war module of the offlaserver01WS application.  The binding location is: java:global/offlaserver01WS/CellarixTxnBean!com.offla.services.ICellarixTxnLocal
+[12/9/15 14:32:45:220 IST] 0000001e com.ibm.ws.ejbcontainer.runtime.AbstractEJBRuntime           I CNTR0167I: The server is binding the com.offla.services.IGoogleService interface of the GoogleIdsBean enterprise bean in the offlaserver01WS.war module of the offlaserver01WS application.  The binding location is: java:global/offlaserver01WS/GoogleIdsBean!com.offla.services.IGoogleService
+[12/9/15 14:32:45:220 IST] 0000001e com.ibm.ws.ejbcontainer.osgi.internal.EJBRuntimeImpl         I CNTR4001I: The offlaserver01WS.war EJB module in the offlaserver01WS application has started successfully.
+[12/9/15 14:32:45:222 IST] 0000001e com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Loading Web Module: offlaserver01WS.
+[12/9/15 14:32:45:222 IST] 0000001e com.ibm.ws.webcontainer                                      I SRVE0250I: Web Module offlaserver01WS has been bound to default_host.
+[12/9/15 14:32:45:223 IST] 0000001e com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Web application available (default_host): http://localhost:9080/offlaserver01WS/
+[12/9/15 14:32:45:224 IST] 0000001e com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0001I: Application offlaserver01WS started in 2.436 seconds.
+[12/9/15 14:32:45:231 IST] 00000017 com.ibm.ws.kernel.feature.internal.FeatureManager            A CWWKF0012I: The server installed the following features: [jsp-2.3, ejbLite-3.2, servlet-3.1, ssl-1.0, jndi-1.0, localConnector-1.0, appSecurity-2.0, jdbc-4.1, jaxrs-2.0, jaxrsClient-2.0, el-3.0, json-1.0, distributedMap-1.0, jpa-2.1].
+[12/9/15 14:32:45:232 IST] 00000017 com.ibm.ws.kernel.feature.internal.FeatureManager            I CWWKF0008I: Feature update completed in 5.086 seconds.
+[12/9/15 14:32:45:232 IST] 00000017 com.ibm.ws.kernel.feature.internal.FeatureManager            A CWWKF0011I: The server defaultServer is ready to run a smarter planet.
+[12/9/15 14:32:50:334 IST] 00000027 com.ibm.ws.logging.internal.impl.IncidentImpl                I FFDC1015I: An FFDC Incident has been created: "org.postgresql.util.PSQLException: The server requested password-based authentication, but no password was provided. com.ibm.ws.rsadapter.spi.InternalGenericDataStoreHelper.getPooledCon 1298" at ffdc_15.12.09_14.32.50.0.log
+[12/9/15 14:32:50:517 IST] 00000027 com.ibm.ws.logging.internal.impl.IncidentImpl                I FFDC1015I: An FFDC Incident has been created: "com.ibm.ws.rsadapter.exceptions.DataStoreAdapterException: DSRA8100E: Unable to get a XAConnection from the DataSource. com.ibm.ws.jdbc.DataSourceService 328" at ffdc_15.12.09_14.32.50.1.log
+[12/9/15 14:32:50:759 IST] 0000001b com.ibm.ws.session.WASSessionCore                            I SESN8501I: The session manager did not find a persistent storage location; HttpSession objects will be stored in the local application server's memory.
+[12/9/15 14:32:50:762 IST] 0000001b com.ibm.ws.session.WASSessionCore                            I SESN0176I: A new session context will be created for application key default_host/offlaFrontEnd
+[12/9/15 14:32:50:779 IST] 0000001b com.ibm.ws.util                                              I SESN0172I: The session manager is using the Java default SecureRandom implementation for session ID generation.
+[12/9/15 14:32:50:797 IST] 0000001b com.ibm.ws.jsp                                               I JSPG8502I: The value of the JSP attribute jdkSourceLevel is "15".
+[12/9/15 14:32:50:921 IST] 0000001b com.ibm.ws.cache.CacheServiceImpl                            I DYNA1056I: Dynamic Cache (object cache) initialized successfully.
+[12/9/15 14:32:50:939 IST] 0000001b com.ibm.ws.webcontainer.webapp                               I SRVE0292I: Servlet Message - [offlaFrontEnd]:.No Spring WebApplicationInitializer types detected on classpath
+[12/9/15 14:32:51:180 IST] 0000001b com.ibm.ws.webcontainer.webapp                               I SRVE0292I: Servlet Message - [offlaFrontEnd]:.Initializing Spring FrameworkServlet 'offla'
+[12/9/15 14:32:51:181 IST] 0000001b org.springframework.web.servlet.DispatcherServlet            I FrameworkServlet 'offla': initialization started
+[12/9/15 14:32:51:233 IST] 0000001b springframework.web.context.support.XmlWebApplicationContext I Refreshing WebApplicationContext for namespace 'offla-servlet': startup date [Wed Dec 09 14:32:51 IST 2015]; root of context hierarchy
+[12/9/15 14:32:51:309 IST] 0000001b rg.springframework.beans.factory.xml.XmlBeanDefinitionReader I Loading XML bean definitions from ServletContext resource [/WEB-INF/offla-servlet.xml]
+[12/9/15 14:32:52:011 IST] 0000001b k.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping I Mapped URL path [/TextBitsMap] onto handler 'textBitsMap'
+[12/9/15 14:32:52:012 IST] 0000001b k.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping I Mapped URL path [/TextBitsMap.*] onto handler 'textBitsMap'
+[12/9/15 14:32:52:012 IST] 0000001b k.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping I Mapped URL path [/TextBitsMap/] onto handler 'textBitsMap'
+[12/9/15 14:32:52:016 IST] 0000001b k.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping I Mapped URL path [/welcome] onto handler 'welcome'
+[12/9/15 14:32:52:017 IST] 0000001b k.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping I Mapped URL path [/welcome.*] onto handler 'welcome'
+[12/9/15 14:32:52:018 IST] 0000001b k.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping I Mapped URL path [/welcome/] onto handler 'welcome'
+[12/9/15 14:32:52:242 IST] 0000001b org.springframework.web.servlet.DispatcherServlet            I FrameworkServlet 'offla': initialization completed in 1060 ms
+[12/9/15 14:32:52:242 IST] 0000001b com.ibm.ws.webcontainer.servlet                              I SRVE0242I: [offlaFrontEnd] [/offlaFrontEnd] [offla]: Initialization successful.
+[12/9/15 14:32:52:321 IST] 0000001b org.springframework.web.servlet.PageNotFound                 W No mapping found for HTTP request with URI [/offlaFrontEnd/] in DispatcherServlet with name 'offla'
+[12/9/15 14:33:05:031 IST] 00000024 com.ibm.ws.webcontainer.servlet                              I SRVE0242I: [offlaFrontEnd] [/offlaFrontEnd] [/WEB-INF/jsp/welcome.jsp]: Initialization successful.
+[12/9/15 14:37:30:173 IST] 00000089 com.ibm.ws.runtime.update.internal.RuntimeUpdateManagerImpl  I CWWKE1100I: Begin server quiesce.
+[12/9/15 14:37:30:185 IST] 0000008a com.ibm.ws.tcpchannel.internal.TCPChannel                    I CWWKO0220I: TCP Channel defaultHttpEndpoint-ssl has stopped listening for requests on host localhost.localdomain  (IPv4: 127.0.0.1) port 9443.
+[12/9/15 14:37:30:203 IST] 0000008a com.ibm.ws.tcpchannel.internal.TCPChannel                    I CWWKO0220I: TCP Channel defaultHttpEndpoint has stopped listening for requests on host localhost.localdomain  (IPv4: 127.0.0.1) port 9080.
+[12/9/15 14:37:30:205 IST] 0000008a com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0017I: Web application removed (default_host): http://localhost:9080/offlaFrontEnd/
+[12/9/15 14:37:30:205 IST] 0000008a com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0017I: Web application removed (default_host): http://localhost:9080/offlaserver01WS/
+[12/9/15 14:37:30:207 IST] 00000089 com.ibm.ws.runtime.update.internal.RuntimeUpdateManagerImpl  I CWWKE1101I: Server quiesce complete.
+[12/9/15 14:37:30:296 IST] 00000071 com.ibm.ws.webcontainer.webapp                               I SRVE0292I: Servlet Message - [offlaFrontEnd]:.Destroying Spring FrameworkServlet 'offla'
+[12/9/15 14:37:30:297 IST] 00000071 springframework.web.context.support.XmlWebApplicationContext I Closing WebApplicationContext for namespace 'offla-servlet': startup date [Wed Dec 09 14:32:51 IST 2015]; root of context hierarchy
+[12/9/15 14:37:30:298 IST] 00000074 com.ibm.ws.ejbcontainer.osgi.internal.EJBRuntimeImpl         I CNTR4003I: The offlaserver01WS.war EJB module in the offlaserver01WS application is stopping.
+[12/9/15 14:37:30:302 IST] 00000071 com.ibm.ws.webcontainer.servlet                              I SRVE0253I: [offlaFrontEnd] [/offlaFrontEnd] [offla]: Destroy successful.
+[12/9/15 14:37:30:303 IST] 00000071 com.ibm.ws.webcontainer.servlet                              I SRVE0253I: [offlaFrontEnd] [/offlaFrontEnd] [/WEB-INF/jsp/welcome.jsp]: Destroy successful.
+[12/9/15 14:37:30:306 IST] 00000074 com.ibm.ws.ejbcontainer.osgi.internal.EJBRuntimeImpl         I CNTR4004I: The offlaserver01WS.war EJB module in the offlaserver01WS application has stopped successfully.
+[12/9/15 14:37:30:324 IST] 00000071 com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0009I: The application offlaFrontEnd has stopped successfully.
+[12/9/15 14:37:30:328 IST] 00000074 eclipselink.server                                           I CWWJP9990I: Detected server platform: org.eclipse.persistence.platform.server.was.WebSphere_Liberty_Platform.
+[12/9/15 14:37:30:330 IST] 00000074 com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0009I: The application offlaserver01WS has stopped successfully.
+[12/9/15 14:37:30:358 IST] 00000089 com.ibm.ws.security.ready.internal.SecurityReadyServiceImpl  I CWWKS0009I: The security service has stopped.
+[12/9/15 14:37:31:038 IST] 00000001 com.ibm.ws.kernel.launch.internal.FrameworkManager           A CWWKE0036I: The server defaultServer stopped after 4 minutes, 52.092 seconds.

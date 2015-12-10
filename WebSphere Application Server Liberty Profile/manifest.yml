@@ -1,0 +1,6 @@
+---
+applications:
+- name: NotificationServer
+  memory: 512M
+  host: NotificationServer
+  domain: mybluemix.net

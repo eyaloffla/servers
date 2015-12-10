@@ -1,0 +1,8 @@
+
+ Index  Count  Time of first Occurrence    Time of last Occurrence     Exception SourceId ProbeId
+------+------+---------------------------+---------------------------+---------------------------
+     0    115    12/9/15 14:38:28:340 IST    12/9/15 15:20:08:642 IST org.postgresql.util.PSQLException com.ibm.ws.rsadapter.spi.InternalGenericDataStoreHelper.getPooledCon 1298
+                                                                            - /home/eyal/Programs/wlp/usr/servers/defaultServer/logs/ffdc/ffdc_15.12.09_14.38.28.0.log
+     1    115    12/9/15 14:38:28:359 IST    12/9/15 15:20:08:643 IST com.ibm.ws.rsadapter.exceptions.DataStoreAdapterException com.ibm.ws.jdbc.DataSourceService 328
+                                                                            - /home/eyal/Programs/wlp/usr/servers/defaultServer/logs/ffdc/ffdc_15.12.09_14.38.28.1.log
+------+------+---------------------------+---------------------------+---------------------------

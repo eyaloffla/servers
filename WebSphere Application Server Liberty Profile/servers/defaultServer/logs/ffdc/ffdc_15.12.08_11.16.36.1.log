@@ -1,0 +1,203 @@
+------Start of DE processing------ = [12/8/15 11:16:36:712 IST]
+Exception = javax.resource.ResourceException
+Source = com.ibm.ws.rsadapter.jdbc.WSJdbcDataSource.getConnection
+probeid = 299
+Stack Dump = javax.resource.ResourceException: addSync: caught Exception
+	at com.ibm.ejs.j2c.XATransactionWrapper.addSync(XATransactionWrapper.java:205)
+	at com.ibm.ejs.j2c.ConnectionManager.initializeForUOW(ConnectionManager.java:1570)
+	at com.ibm.ejs.j2c.ConnectionManager.involveMCInTran(ConnectionManager.java:1280)
+	at com.ibm.ejs.j2c.ConnectionManager.allocateConnection(ConnectionManager.java:712)
+	at com.ibm.ws.rsadapter.jdbc.WSJdbcDataSource.getConnection(WSJdbcDataSource.java:354)
+	at com.ibm.ws.rsadapter.jdbc.WSJdbcDataSource.getConnection(WSJdbcDataSource.java:440)
+	at org.eclipse.persistence.sessions.JNDIConnector.connect(JNDIConnector.java:144)
+	at org.eclipse.persistence.sessions.DatasourceLogin.connectToDatasource(DatasourceLogin.java:162)
+	at org.eclipse.persistence.internal.sessions.DatabaseSessionImpl.setOrDetectDatasource(DatabaseSessionImpl.java:212)
+	at org.eclipse.persistence.internal.sessions.DatabaseSessionImpl.loginAndDetectDatasource(DatabaseSessionImpl.java:764)
+	at org.eclipse.persistence.internal.jpa.EntityManagerFactoryProvider.login(EntityManagerFactoryProvider.java:253)
+	at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl.deploy(EntityManagerSetupImpl.java:733)
+	at org.eclipse.persistence.internal.jpa.EntityManagerFactoryDelegate.getAbstractSession(EntityManagerFactoryDelegate.java:205)
+	at org.eclipse.persistence.internal.jpa.EntityManagerFactoryDelegate.createEntityManagerImpl(EntityManagerFactoryDelegate.java:305)
+	at org.eclipse.persistence.internal.jpa.EntityManagerFactoryImpl.createEntityManagerImpl(EntityManagerFactoryImpl.java:337)
+	at org.eclipse.persistence.internal.jpa.EntityManagerFactoryImpl.createEntityManager(EntityManagerFactoryImpl.java:318)
+	at com.ibm.ws.jpa.container.v21.internal.JPA21Runtime.createEntityManagerInstance(JPA21Runtime.java:104)
+	at com.ibm.ws.jpa.management.JPAEMPool.getEntityManager(JPAEMPool.java:177)
+	at com.ibm.ws.jpa.management.JPATxEntityManager.getEMInvocationInfo(JPATxEntityManager.java:256)
+	at com.ibm.ws.jpa.management.JPATxEntityManager.getEMInvocationInfo(JPATxEntityManager.java:166)
+	at com.ibm.ws.jpa.management.JPAEntityManager.find(JPAEntityManager.java:236)
+	at com.offla.services.Appfr1Bean.getAppfr1ById(Appfr1Bean.java:33)
+	at com.offla.services.Appfr1Bean.isPersonInDB(Appfr1Bean.java:22)
+	at com.offla.services.EJSLocal0SLAppfr1Bean_8d03ba1d.isPersonInDB(EJSLocal0SLAppfr1Bean_8d03ba1d.java)
+	at com.offla.ws.IsPersonOnDB.isPersonOnDataBase(IsPersonOnDB.java:43)
+	at com.offla.ws.EJSLocalNSLIsPersonOnDB_1c315ab8.isPersonOnDataBase(EJSLocalNSLIsPersonOnDB_1c315ab8.java)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at com.ibm.ws.jaxrs20.ejb.JaxRsFactoryBeanEJBCustomizer.serviceInvoke(JaxRsFactoryBeanEJBCustomizer.java:349)
+	at com.ibm.ws.jaxrs20.server.LibertyJaxRsServerFactoryBean.performInvocation(LibertyJaxRsServerFactoryBean.java:593)
+	at com.ibm.ws.jaxrs20.server.LibertyJaxRsInvoker.performInvocation(LibertyJaxRsInvoker.java:114)
+	at org.apache.cxf.service.invoker.AbstractInvoker.invoke(AbstractInvoker.java:97)
+	at com.ibm.ws.jaxrs20.server.LibertyJaxRsInvoker.invoke(LibertyJaxRsInvoker.java:195)
+	at org.apache.cxf.jaxrs.JAXRSInvoker.invoke(JAXRSInvoker.java:200)
+	at com.ibm.ws.jaxrs20.server.LibertyJaxRsInvoker.invoke(LibertyJaxRsInvoker.java:366)
+	at org.apache.cxf.jaxrs.JAXRSInvoker.invoke(JAXRSInvoker.java:99)
+	at org.apache.cxf.interceptor.ServiceInvokerInterceptor$1.run(ServiceInvokerInterceptor.java:61)
+	at org.apache.cxf.interceptor.ServiceInvokerInterceptor.handleMessage(ServiceInvokerInterceptor.java:99)
+	at org.apache.cxf.phase.PhaseInterceptorChain.doIntercept(PhaseInterceptorChain.java:307)
+	at org.apache.cxf.transport.ChainInitiationObserver.onMessage(ChainInitiationObserver.java:124)
+	at org.apache.cxf.transport.http.AbstractHTTPDestination.invoke(AbstractHTTPDestination.java:259)
+	at com.ibm.ws.jaxrs20.endpoint.AbstractJaxRsWebEndpoint.invoke(AbstractJaxRsWebEndpoint.java:134)
+	at com.ibm.websphere.jaxrs.server.IBMRestServlet.handleRequest(IBMRestServlet.java:149)
+	at com.ibm.websphere.jaxrs.server.IBMRestServlet.doGet(IBMRestServlet.java:115)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:687)
+	at com.ibm.websphere.jaxrs.server.IBMRestServlet.service(IBMRestServlet.java:99)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.service(ServletWrapper.java:1287)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:778)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:475)
+	at com.ibm.ws.webcontainer.filter.WebAppFilterManager.invokeFilters(WebAppFilterManager.java:1158)
+	at com.ibm.ws.webcontainer.webapp.WebApp.handleRequest(WebApp.java:4867)
+	at com.ibm.ws.webcontainer31.osgi.webapp.WebApp31.handleRequest(WebApp31.java:523)
+	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.handleRequest(DynamicVirtualHost.java:297)
+	at com.ibm.ws.webcontainer.WebContainer.handleRequest(WebContainer.java:997)
+	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.run(DynamicVirtualHost.java:262)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink$TaskWrapper.run(HttpDispatcherLink.java:955)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.ready(HttpDispatcherLink.java:341)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleDiscrimination(HttpInboundLink.java:470)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleNewRequest(HttpInboundLink.java:404)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.processRequest(HttpInboundLink.java:284)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.ready(HttpInboundLink.java:255)
+	at com.ibm.ws.tcpchannel.internal.NewConnectionInitialReadCallback.sendToDiscriminators(NewConnectionInitialReadCallback.java:174)
+	at com.ibm.ws.tcpchannel.internal.NewConnectionInitialReadCallback.complete(NewConnectionInitialReadCallback.java:83)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.requestComplete(WorkQueueManager.java:504)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.attemptIO(WorkQueueManager.java:574)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.workerRun(WorkQueueManager.java:929)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager$Worker.run(WorkQueueManager.java:1018)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: javax.transaction.RollbackException: Transaction rolled back
+	at com.ibm.tx.jta.impl.TransactionImpl.registerSynchronization(TransactionImpl.java:2544)
+	at com.ibm.tx.jta.embeddable.impl.EmbeddableTranManagerSet.registerSynchronization(EmbeddableTranManagerSet.java:247)
+	at com.ibm.tx.jta.embeddable.impl.EmbeddableTranManagerSet.registerSynchronization(EmbeddableTranManagerSet.java:234)
+	at com.ibm.ws.transaction.services.TransactionManagerService.registerSynchronization(TransactionManagerService.java:410)
+	at com.ibm.ejs.j2c.XATransactionWrapper.addSync(XATransactionWrapper.java:195)
+	... 71 more
+
+Dump of callerThis
+Object type = com.ibm.ws.rsadapter.jdbc.WSJdbcDataSource
+  strings[0] = "_______________________________________________________________________"
+  strings[1] = ""
+  strings[2] = "    First Failure Data Capture information for"
+  strings[3] = "          com.ibm.ws.rsadapter.jdbc.WSJdbcDataSource@1a3eccfc"
+  strings[4] = "_______________________________________________________________________"
+  strings[5] = ""
+  strings[6] = "ResourceRefInfo:"
+  strings[7] = "  
+[Resource-ref CMConfigData key items]
+
+	res-sharing-scope:        0 (SHAREABLE)
+	res-isolation-level:      0 (TRANSACTION_NONE)
+	res-auth:                 1 (APPLICATION)
+	commitPriority            0
+	branchCoupling            -1
+	loginConfigurationName:   null
+	loginConfigProperties:    null
+	Resource ref name:        not set
+
+"
+  strings[8] = "Current Configuration ID: 1
+"
+  strings[9] = "Connection Manager:"
+  strings[10] = "  [ConnectionManager]@7f775391
+JNDI Name <jdbc/postgresql-cloud>
+shareable <true>
+
+"
+  strings[11] = "_______________________________________________________________________"
+  strings[12] = ""
+  strings[13] = "    First Failure Data Capture information for"
+  strings[14] = "          com.ibm.ws.rsadapter.spi.WSManagedConnectionFactoryImpl@4562483d"
+  strings[15] = "_______________________________________________________________________"
+  strings[16] = ""
+  strings[17] = "com.ibm.ws.rsadapter.DSConfig@59c00d1"
+  strings[18] = "[beginTranForResultSetScrollingAPIs, true, beginTranForVendorAPIs, true, commitOrRollbackOnCleanup, null, connectionSharing, 0, isolationLevel, -1, jndiName, jdbc/postgresql-cloud, queryTimeout, null, resultSetUnusableWhenNoMoreResults, false, statementCacheSize, 10, supplementalJDBCTrace, null, syncQueryTimeoutWithTransactionTimeout, false, transactional, true]"
+  strings[19] = "[com.ibm.ws.classloading.internal.AppClassLoader@5c882c81, true, ExceptionChecking, false, interface javax.sql.XADataSource]"
+  strings[20] = "{dataSourceClass=org.postgresql.xa.PGXADataSource, portNumber=10929, databaseName=offla01, serverName=aws-us-east-1-portal.5.dblayer.com}"
+  strings[21] = "Resource Adapter:"
+  strings[22] = "  null
+"
+  strings[23] = "Database Type:"
+  strings[24] = "  null
+"
+  strings[25] = "Description:"
+  strings[26] = "  null
+"
+  strings[27] = "Log Writer:"
+  strings[28] = "  null
+"
+  strings[29] = "Transaction Branches are set to be Loosely Coupled: "
+  strings[30] = "  false
+"
+  strings[31] = "Counter of fatal connection errors on ManagedConnections created by this MCF:"
+  strings[32] = "  0
+"
+  strings[33] = "Validate existing connections on cleanup after a fatal connection error is detected?"
+  strings[34] = "  true
+"
+  strings[35] = "ResetConnectionByBackendDatabase: "
+  strings[36] = "  false
+"
+  strings[37] = "Backend id checking is: "
+  strings[38] = "  true
+"
+  strings[39] = "JMSOnePhaseOptimization: "
+  strings[40] = "  false
+"
+  strings[41] = "Reauthentication: "
+  strings[42] = "  false
+"
+  strings[43] = "newDBConnectionValidationEnabled: "
+  strings[44] = "  false
+"
+  strings[45] = "connectionRetriesDuringDBFailover: "
+  strings[46] = "  100
+"
+  strings[47] = "connRetryDurationDuringDBFailover: "
+  strings[48] = "  3000
+"
+  strings[49] = "Failover count: "
+  strings[50] = "  0
+"
+  strings[51] = "OracleImplicitConnectionPooling enabled: "
+  strings[52] = "  false
+"
+  strings[53] = ""
+  strings[54] = "_______________________________________________________________________"
+  strings[55] = ""
+  strings[56] = "    First Failure Data Capture information for"
+  strings[57] = "          com.ibm.ws.rsadapter.spi.WSRdbDataSource@6954a9c"
+  strings[58] = "_______________________________________________________________________"
+  strings[59] = ""
+  strings[60] = "DataSource Implementation Class Name:"
+  strings[61] = "  org.postgresql.xa.PGXADataSource
+"
+  strings[62] = "DataSource Name:"
+  strings[63] = "  null
+"
+  strings[64] = "DataStoreHelper:"
+  strings[65] = "  com.ibm.websphere.rsadapter.GenericDataStoreHelper@67c43cbe
+"
+  strings[66] = "DataSource properties:"
+  strings[67] = "  {dataSourceClass=org.postgresql.xa.PGXADataSource, portNumber=10929, databaseName=offla01, serverName=aws-us-east-1-portal.5.dblayer.com}
+"
+  strings[68] = "TWO PHASE ENABLED
+"
+  strings[69] = "Underlying DataSource Object: org.postgresql.xa.PGXADataSource@b590db0"
+  strings[70] = "  org.postgresql.xa.PGXADataSource@b590db0
+"
+  strings[71] = "Counter of unique, modified DataSource configurations: 0
+"
+  strings[72] = "Failover servers list: "
+  strings[73] = "  [Ljava.lang.Object;@2e5c7e54
+"
+

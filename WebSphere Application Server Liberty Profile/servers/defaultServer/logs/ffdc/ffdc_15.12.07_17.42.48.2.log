@@ -1,0 +1,424 @@
+------Start of DE processing------ = [12/7/15 17:42:48:277 IST]
+Exception = javax.transaction.TransactionRolledbackException
+Source = com.ibm.ejs.csi.TransactionControlImpl.completeTxTimeout
+probeid = 1390
+Stack Dump = javax.transaction.TransactionRolledbackException: Transaction is ended due to timeout
+	at com.ibm.tx.jta.embeddable.impl.EmbeddableTranManagerImpl.completeTxTimeout(EmbeddableTranManagerImpl.java:118)
+	at com.ibm.tx.jta.embeddable.impl.EmbeddableTranManagerSet.completeTxTimeout(EmbeddableTranManagerSet.java:92)
+	at com.ibm.ejs.csi.TransactionControlImpl.completeTxTimeout(TransactionControlImpl.java:1201)
+	at com.ibm.ejs.csi.TranStrategy.postInvoke(TranStrategy.java:196)
+	at com.ibm.ejs.csi.TransactionControlImpl.postInvoke(TransactionControlImpl.java:482)
+	at com.ibm.ejs.container.EJSContainer.postInvoke(EJSContainer.java:3989)
+	at com.offla.services.EJSLocal0SLAppfr1Bean_8d03ba1d.isPersonInDB(EJSLocal0SLAppfr1Bean_8d03ba1d.java)
+	at com.offla.ws.IsPersonOnDB.isPersonOnDataBase(IsPersonOnDB.java:43)
+	at com.offla.ws.EJSLocalNSLIsPersonOnDB_1c315ab8.isPersonOnDataBase(EJSLocalNSLIsPersonOnDB_1c315ab8.java)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at com.ibm.ws.jaxrs20.ejb.JaxRsFactoryBeanEJBCustomizer.serviceInvoke(JaxRsFactoryBeanEJBCustomizer.java:349)
+	at com.ibm.ws.jaxrs20.server.LibertyJaxRsServerFactoryBean.performInvocation(LibertyJaxRsServerFactoryBean.java:593)
+	at com.ibm.ws.jaxrs20.server.LibertyJaxRsInvoker.performInvocation(LibertyJaxRsInvoker.java:114)
+	at org.apache.cxf.service.invoker.AbstractInvoker.invoke(AbstractInvoker.java:97)
+	at com.ibm.ws.jaxrs20.server.LibertyJaxRsInvoker.invoke(LibertyJaxRsInvoker.java:195)
+	at org.apache.cxf.jaxrs.JAXRSInvoker.invoke(JAXRSInvoker.java:200)
+	at com.ibm.ws.jaxrs20.server.LibertyJaxRsInvoker.invoke(LibertyJaxRsInvoker.java:366)
+	at org.apache.cxf.jaxrs.JAXRSInvoker.invoke(JAXRSInvoker.java:99)
+	at org.apache.cxf.interceptor.ServiceInvokerInterceptor$1.run(ServiceInvokerInterceptor.java:61)
+	at org.apache.cxf.interceptor.ServiceInvokerInterceptor.handleMessage(ServiceInvokerInterceptor.java:99)
+	at org.apache.cxf.phase.PhaseInterceptorChain.doIntercept(PhaseInterceptorChain.java:307)
+	at org.apache.cxf.transport.ChainInitiationObserver.onMessage(ChainInitiationObserver.java:124)
+	at org.apache.cxf.transport.http.AbstractHTTPDestination.invoke(AbstractHTTPDestination.java:259)
+	at com.ibm.ws.jaxrs20.endpoint.AbstractJaxRsWebEndpoint.invoke(AbstractJaxRsWebEndpoint.java:134)
+	at com.ibm.websphere.jaxrs.server.IBMRestServlet.handleRequest(IBMRestServlet.java:149)
+	at com.ibm.websphere.jaxrs.server.IBMRestServlet.doGet(IBMRestServlet.java:115)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:687)
+	at com.ibm.websphere.jaxrs.server.IBMRestServlet.service(IBMRestServlet.java:99)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.service(ServletWrapper.java:1287)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:778)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:475)
+	at com.ibm.ws.webcontainer.filter.WebAppFilterManager.invokeFilters(WebAppFilterManager.java:1158)
+	at com.ibm.ws.webcontainer.webapp.WebApp.handleRequest(WebApp.java:4867)
+	at com.ibm.ws.webcontainer31.osgi.webapp.WebApp31.handleRequest(WebApp31.java:523)
+	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.handleRequest(DynamicVirtualHost.java:297)
+	at com.ibm.ws.webcontainer.WebContainer.handleRequest(WebContainer.java:997)
+	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.run(DynamicVirtualHost.java:262)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink$TaskWrapper.run(HttpDispatcherLink.java:955)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.ready(HttpDispatcherLink.java:341)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleDiscrimination(HttpInboundLink.java:470)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleNewRequest(HttpInboundLink.java:404)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.processRequest(HttpInboundLink.java:284)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.ready(HttpInboundLink.java:255)
+	at com.ibm.ws.tcpchannel.internal.NewConnectionInitialReadCallback.sendToDiscriminators(NewConnectionInitialReadCallback.java:174)
+	at com.ibm.ws.tcpchannel.internal.NewConnectionInitialReadCallback.complete(NewConnectionInitialReadCallback.java:83)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.requestComplete(WorkQueueManager.java:504)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.attemptIO(WorkQueueManager.java:574)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.workerRun(WorkQueueManager.java:929)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager$Worker.run(WorkQueueManager.java:1018)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+Dump of callerThis
+Object type = com.ibm.ejs.csi.TransactionControlImpl
+  tc = class com.ibm.ejs.ras.TraceComponent@48d33c1b
+    strings[0] = "TraceComponent[com.ibm.ejs.csi.TransactionControlImpl,class com.ibm.ejs.csi.TransactionControlImpl,[EJBContainer],com.ibm.ejs.container.container,null]"
+  CLASS_NAME = "com.ibm.ejs.csi.TransactionControlImpl"
+  txService = class com.ibm.tx.jta.embeddable.impl.EmbeddableTranManagerSet@2ff90e8d
+    tc = class com.ibm.ejs.ras.TraceComponent@4aee7652
+      strings[0] = "TraceComponent[com.ibm.tx.jta.embeddable.impl.EmbeddableTranManagerSet,class com.ibm.tx.jta.embeddable.impl.EmbeddableTranManagerSet,[Transaction],com.ibm.ws.Transaction.resources.TransactionMsgs,null]"
+    _callbackManager = class com.ibm.ws.uow.UOWScopeCallbackManager@66a45308
+      tc = class com.ibm.ws.tx.util.logging.WASTraceComponent@715149b0
+      _callbacks = null
+    tc = class com.ibm.ws.tx.util.logging.WASTraceComponent@3592c4b7
+      _tc = class com.ibm.ejs.ras.TraceComponent@2919f202
+    _instance = class com.ibm.tx.jta.embeddable.impl.EmbeddableTranManagerSet@2ff90e8d
+    _replayComplete = true
+    _quiesced = false
+    _thread = class com.ibm.tx.jta.embeddable.impl.EmbeddableTranManagerSet$1@565cedc3
+      threadLocalHashCode = -681183658
+      nextHashCode = class java.util.concurrent.atomic.AtomicInteger@4cc45207
+      HASH_INCREMENT = 1640531527
+  uowCurrent = class com.ibm.tx.jta.embeddable.impl.EmbeddableTranManagerSet@2ff90e8d
+  ltcCurrent = class com.ibm.tx.ltc.embeddable.impl.EmbeddableLocalTranCurrentSet@589e7d70
+    _callbackManager = class com.ibm.ws.uow.UOWScopeCallbackManager@109156d9
+      tc = class com.ibm.ws.tx.util.logging.WASTraceComponent@715149b0
+      _callbacks = null
+    _context = class com.ibm.tx.ltc.embeddable.impl.EmbeddableLocalTranCurrentSet$1@4607a5d2
+      tc = class com.ibm.ejs.ras.TraceComponent@53cde0ea
+      count = 8
+      index = 2
+      SUSPECTED_MISUSAGE_THRESHOLD = 200
+      threadLocalHashCode = 71788095
+      nextHashCode = class java.util.concurrent.atomic.AtomicInteger@4cc45207
+      HASH_INCREMENT = 1640531527
+    _instance = class com.ibm.tx.ltc.embeddable.impl.EmbeddableLocalTranCurrentSet@589e7d70
+  txStrategies = class com.ibm.ejs.csi.TranStrategy[7]
+    txStrategies[0] = class com.ibm.ejs.csi.NotSupported@6acd83cf
+      tc = class com.ibm.ejs.ras.TraceComponent@7187b43a
+      CLASS_NAME = "com.ibm.ejs.csi.TranStrategy"
+      tc = class com.ibm.ejs.ras.TraceComponent@181f1a36
+      svUOWSynchReg = class com.ibm.ws.uow.embeddable.EmbeddableUOWManagerImpl@4b3ba8d8
+      txCtrl = class com.ibm.ejs.csi.TransactionControlImpl@3dc23b66
+      ltcCurrent = class com.ibm.tx.ltc.embeddable.impl.EmbeddableLocalTranCurrentSet@589e7d70
+      txManager = class com.ibm.tx.jta.embeddable.impl.EmbeddableTranManagerSet@2ff90e8d
+    txStrategies[1] = class com.ibm.ejs.csi.BeanManaged@2eb5a18d
+      tc = class com.ibm.ejs.ras.TraceComponent@20b001f
+      suspendedBeans = class java.util.Hashtable@6beceedd
+      tm = class com.ibm.tx.jta.embeddable.impl.EmbeddableTranManagerSet@2ff90e8d
+      CLASS_NAME = "com.ibm.ejs.csi.BeanManaged"
+      CLASS_NAME = "com.ibm.ejs.csi.TranStrategy"
+      tc = class com.ibm.ejs.ras.TraceComponent@181f1a36
+      svUOWSynchReg = class com.ibm.ws.uow.embeddable.EmbeddableUOWManagerImpl@4b3ba8d8
+      txCtrl = class com.ibm.ejs.csi.TransactionControlImpl@3dc23b66
+      ltcCurrent = class com.ibm.tx.ltc.embeddable.impl.EmbeddableLocalTranCurrentSet@589e7d70
+      txManager = class com.ibm.tx.jta.embeddable.impl.EmbeddableTranManagerSet@2ff90e8d
+    txStrategies[2] = class com.ibm.ejs.csi.Required@d216f90
+      tc = class com.ibm.ejs.ras.TraceComponent@35e0a120
+      CLASS_NAME = "com.ibm.ejs.csi.TranStrategy"
+      tc = class com.ibm.ejs.ras.TraceComponent@181f1a36
+      svUOWSynchReg = class com.ibm.ws.uow.embeddable.EmbeddableUOWManagerImpl@4b3ba8d8
+      txCtrl = class com.ibm.ejs.csi.TransactionControlImpl@3dc23b66
+      ltcCurrent = class com.ibm.tx.ltc.embeddable.impl.EmbeddableLocalTranCurrentSet@589e7d70
+      txManager = class com.ibm.tx.jta.embeddable.impl.EmbeddableTranManagerSet@2ff90e8d
+    txStrategies[3] = class com.ibm.ejs.csi.Supports@3c22a902
+      tc = class com.ibm.ejs.ras.TraceComponent@55f4825c
+      CLASS_NAME = "com.ibm.ejs.csi.TranStrategy"
+      tc = class com.ibm.ejs.ras.TraceComponent@181f1a36
+      svUOWSynchReg = class com.ibm.ws.uow.embeddable.EmbeddableUOWManagerImpl@4b3ba8d8
+      txCtrl = class com.ibm.ejs.csi.TransactionControlImpl@3dc23b66
+      ltcCurrent = class com.ibm.tx.ltc.embeddable.impl.EmbeddableLocalTranCurrentSet@589e7d70
+      txManager = class com.ibm.tx.jta.embeddable.impl.EmbeddableTranManagerSet@2ff90e8d
+    txStrategies[4] = class com.ibm.ejs.csi.RequiresNew@3af786b2
+      tc = class com.ibm.ejs.ras.TraceComponent@5238a52a
+      CLASS_NAME = "com.ibm.ejs.csi.TranStrategy"
+      tc = class com.ibm.ejs.ras.TraceComponent@181f1a36
+      svUOWSynchReg = class com.ibm.ws.uow.embeddable.EmbeddableUOWManagerImpl@4b3ba8d8
+      txCtrl = class com.ibm.ejs.csi.TransactionControlImpl@3dc23b66
+      ltcCurrent = class com.ibm.tx.ltc.embeddable.impl.EmbeddableLocalTranCurrentSet@589e7d70
+      txManager = class com.ibm.tx.jta.embeddable.impl.EmbeddableTranManagerSet@2ff90e8d
+    txStrategies[5] = class com.ibm.ejs.csi.Mandatory@39cdf1a8
+      tc = class com.ibm.ejs.ras.TraceComponent@6afca724
+      CLASS_NAME = "com.ibm.ejs.csi.TranStrategy"
+      tc = class com.ibm.ejs.ras.TraceComponent@181f1a36
+      svUOWSynchReg = class com.ibm.ws.uow.embeddable.EmbeddableUOWManagerImpl@4b3ba8d8
+      txCtrl = class com.ibm.ejs.csi.TransactionControlImpl@3dc23b66
+      ltcCurrent = class com.ibm.tx.ltc.embeddable.impl.EmbeddableLocalTranCurrentSet@589e7d70
+      txManager = class com.ibm.tx.jta.embeddable.impl.EmbeddableTranManagerSet@2ff90e8d
+    txStrategies[6] = class com.ibm.ejs.csi.Never@3f9654ee
+      tc = class com.ibm.ejs.ras.TraceComponent@f8aebe0
+      CLASS_NAME = "com.ibm.ejs.csi.TranStrategy"
+      tc = class com.ibm.ejs.ras.TraceComponent@181f1a36
+      svUOWSynchReg = class com.ibm.ws.uow.embeddable.EmbeddableUOWManagerImpl@4b3ba8d8
+      txCtrl = class com.ibm.ejs.csi.TransactionControlImpl@3dc23b66
+      ltcCurrent = class com.ibm.tx.ltc.embeddable.impl.EmbeddableLocalTranCurrentSet@589e7d70
+      txManager = class com.ibm.tx.jta.embeddable.impl.EmbeddableTranManagerSet@2ff90e8d
+  userTransactionImpl = class com.ibm.ws.transaction.services.UserTransactionService@7d55d615
+    ut = class com.ibm.tx.jta.embeddable.impl.EmbeddableUserTransactionImpl@3161a99e
+      tc = class com.ibm.ejs.ras.TraceComponent@b69b37a
+      _instance = class com.ibm.tx.jta.embeddable.impl.EmbeddableUserTransactionImpl@3161a99e
+      isDisabled = class com.ibm.tx.jta.embeddable.impl.EmbeddableUserTransactionImpl$1@103eff47
+      tc = class com.ibm.ws.tx.util.logging.WASTraceComponent@655f8f0
+      _callbackManager = class com.ibm.ws.uow.UOWScopeCallbackManager@7d323d43
+      _tm = null
+      _instance = class com.ibm.tx.jta.impl.UserTransactionImpl@71a4be3e
+    serialVersionUID = -1625627843543890907
+    $$$tc$$$ = class com.ibm.websphere.ras.TraceComponent@277d52d0
+      strings[0] = "TraceComponent[com.ibm.ws.transaction.services.UserTransactionService,class com.ibm.ws.transaction.services.UserTransactionService,[transaction],com.ibm.ws.transaction.services.TransactionMessages,null]"
+  stickyLocalTxTable = class com.ibm.ejs.util.FastHashtable@1a3f3254
+    buckets = class com.ibm.ejs.util.Bucket[251]
+      buckets[0] = null
+      buckets[1] = null
+      buckets[2] = null
+      buckets[3] = null
+      buckets[4] = null
+      buckets[5] = null
+      buckets[6] = null
+      buckets[7] = null
+      buckets[8] = null
+      buckets[9] = null
+      buckets[10] = null
+      buckets[11] = null
+      buckets[12] = null
+      buckets[13] = null
+      buckets[14] = null
+      buckets[15] = null
+      buckets[16] = null
+      buckets[17] = null
+      buckets[18] = null
+      buckets[19] = null
+      buckets[20] = null
+      buckets[21] = null
+      buckets[22] = null
+      buckets[23] = null
+      buckets[24] = null
+      buckets[25] = null
+      buckets[26] = null
+      buckets[27] = null
+      buckets[28] = null
+      buckets[29] = null
+      buckets[30] = null
+      buckets[31] = null
+      buckets[32] = null
+      buckets[33] = null
+      buckets[34] = null
+      buckets[35] = null
+      buckets[36] = null
+      buckets[37] = null
+      buckets[38] = null
+      buckets[39] = null
+      buckets[40] = null
+      buckets[41] = null
+      buckets[42] = null
+      buckets[43] = null
+      buckets[44] = null
+      buckets[45] = null
+      buckets[46] = null
+      buckets[47] = null
+      buckets[48] = null
+      buckets[49] = null
+      buckets[50] = null
+      buckets[51] = null
+      buckets[52] = null
+      buckets[53] = null
+      buckets[54] = null
+      buckets[55] = null
+      buckets[56] = null
+      buckets[57] = null
+      buckets[58] = null
+      buckets[59] = null
+      buckets[60] = null
+      buckets[61] = null
+      buckets[62] = null
+      buckets[63] = null
+      buckets[64] = null
+      buckets[65] = null
+      buckets[66] = null
+      buckets[67] = null
+      buckets[68] = null
+      buckets[69] = null
+      buckets[70] = null
+      buckets[71] = null
+      buckets[72] = null
+      buckets[73] = null
+      buckets[74] = null
+      buckets[75] = null
+      buckets[76] = null
+      buckets[77] = null
+      buckets[78] = null
+      buckets[79] = null
+      buckets[80] = null
+      buckets[81] = null
+      buckets[82] = null
+      buckets[83] = null
+      buckets[84] = null
+      buckets[85] = null
+      buckets[86] = null
+      buckets[87] = null
+      buckets[88] = null
+      buckets[89] = null
+      buckets[90] = null
+      buckets[91] = null
+      buckets[92] = null
+      buckets[93] = null
+      buckets[94] = null
+      buckets[95] = null
+      buckets[96] = null
+      buckets[97] = null
+      buckets[98] = null
+      buckets[99] = null
+      buckets[100] = null
+      buckets[101] = null
+      buckets[102] = null
+      buckets[103] = null
+      buckets[104] = null
+      buckets[105] = null
+      buckets[106] = null
+      buckets[107] = null
+      buckets[108] = null
+      buckets[109] = null
+      buckets[110] = null
+      buckets[111] = null
+      buckets[112] = null
+      buckets[113] = null
+      buckets[114] = null
+      buckets[115] = null
+      buckets[116] = null
+      buckets[117] = null
+      buckets[118] = null
+      buckets[119] = null
+      buckets[120] = null
+      buckets[121] = null
+      buckets[122] = null
+      buckets[123] = null
+      buckets[124] = null
+      buckets[125] = null
+      buckets[126] = null
+      buckets[127] = null
+      buckets[128] = null
+      buckets[129] = null
+      buckets[130] = null
+      buckets[131] = null
+      buckets[132] = null
+      buckets[133] = null
+      buckets[134] = null
+      buckets[135] = null
+      buckets[136] = null
+      buckets[137] = null
+      buckets[138] = null
+      buckets[139] = null
+      buckets[140] = null
+      buckets[141] = null
+      buckets[142] = null
+      buckets[143] = null
+      buckets[144] = null
+      buckets[145] = null
+      buckets[146] = null
+      buckets[147] = null
+      buckets[148] = null
+      buckets[149] = null
+      buckets[150] = null
+      buckets[151] = null
+      buckets[152] = null
+      buckets[153] = null
+      buckets[154] = null
+      buckets[155] = null
+      buckets[156] = null
+      buckets[157] = null
+      buckets[158] = null
+      buckets[159] = null
+      buckets[160] = null
+      buckets[161] = null
+      buckets[162] = null
+      buckets[163] = null
+      buckets[164] = null
+      buckets[165] = null
+      buckets[166] = null
+      buckets[167] = null
+      buckets[168] = null
+      buckets[169] = null
+      buckets[170] = null
+      buckets[171] = null
+      buckets[172] = null
+      buckets[173] = null
+      buckets[174] = null
+      buckets[175] = null
+      buckets[176] = null
+      buckets[177] = null
+      buckets[178] = null
+      buckets[179] = null
+      buckets[180] = null
+      buckets[181] = null
+      buckets[182] = null
+      buckets[183] = null
+      buckets[184] = null
+      buckets[185] = null
+      buckets[186] = null
+      buckets[187] = null
+      buckets[188] = null
+      buckets[189] = null
+      buckets[190] = null
+      buckets[191] = null
+      buckets[192] = null
+      buckets[193] = null
+      buckets[194] = null
+      buckets[195] = null
+      buckets[196] = null
+      buckets[197] = null
+      buckets[198] = null
+      buckets[199] = null
+      buckets[200] = null
+      buckets[201] = null
+      buckets[202] = null
+      buckets[203] = null
+      buckets[204] = null
+      buckets[205] = null
+      buckets[206] = null
+      buckets[207] = null
+      buckets[208] = null
+      buckets[209] = null
+      buckets[210] = null
+      buckets[211] = null
+      buckets[212] = null
+      buckets[213] = null
+      buckets[214] = null
+      buckets[215] = null
+      buckets[216] = null
+      buckets[217] = null
+      buckets[218] = null
+      buckets[219] = null
+      buckets[220] = null
+      buckets[221] = null
+      buckets[222] = null
+      buckets[223] = null
+      buckets[224] = null
+      buckets[225] = null
+      buckets[226] = null
+      buckets[227] = null
+      buckets[228] = null
+      buckets[229] = null
+      buckets[230] = null
+      buckets[231] = null
+      buckets[232] = null
+      buckets[233] = null
+      buckets[234] = null
+      buckets[235] = null
+      buckets[236] = null
+      buckets[237] = null
+      buckets[238] = null
+      buckets[239] = null
+      buckets[240] = null
+      buckets[241] = null
+      buckets[242] = null
+      buckets[243] = null
+      buckets[244] = null
+      buckets[245] = null
+      buckets[246] = null
+      buckets[247] = null
+      buckets[248] = null
+      buckets[249] = null
+      buckets[250] = null
+    size = 0
+  TIMEOUT_CLOCK_START = 0
+  TIMEOUT_CLOCK_STOP = 2
+

@@ -1,0 +1,6 @@
+
+ Index  Count  Time of first Occurrence    Time of last Occurrence     Exception SourceId ProbeId
+------+------+---------------------------+---------------------------+---------------------------
+     0      2   12/10/15 14:05:28:146 IST   12/10/15 14:05:46:339 IST java.lang.IllegalArgumentException com.ibm.ws.kernel.feature.internal.FeatureManager reportErrors
+                                                                            - /home/eyal/Programs/wlp/usr/servers/Notification/logs/ffdc/ffdc_15.12.10_14.05.28.0.log
+------+------+---------------------------+---------------------------+---------------------------
